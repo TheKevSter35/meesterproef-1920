@@ -84,4 +84,31 @@
     text-align: center;
 }
 
+#webtoolsmap iframe {
+    width: 100%;
+}
+
+#webtoolsmap iframe {
+    width: 100%;
+}
+
+.btnFilters {
+    border: none;
+    color: white;
+    background-color: #151513;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.active, #overzichtfilters > button:hover {
+    color: #151513;
+    background-color: #fff;
+}
+
+#overzichtfilters {
+    margin-bottom: 1em;
+}
+
 /****************************/

@@ -312,3 +312,30 @@ body#detail section:nth-of-type(3) h2 {
   font-size: 2em;
   text-align: center;
 }
+
+#webtoolsmap iframe {
+  width: 100%;
+}
+
+#webtoolsmap iframe {
+  width: 100%;
+}
+
+.btnFilters {
+  border: none;
+  color: #fff;
+  background-color: #151513;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#overzichtfilters>button:hover,
+.active {
+  color: #151513;
+  background-color: #fff;
+}
+
+#overzichtfilters {
+  margin-bottom: 1em;
+}
