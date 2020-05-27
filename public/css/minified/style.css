@@ -43,6 +43,55 @@ footer a {
   font-weight: 700;
   font-size: 1.3em;
 }
+input[type=password],
+input[type=text] {
+  padding: .75em .25em;
+  font-size: .75em;
+  margin-top: .5em;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  max-width: 14em;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: capitalize;
+  margin: auto;
+}
+
+form label:first-of-type {
+  margin-bottom: .75em;
+}
+
+form[action="/login"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 40em;
+  margin: 0 auto;
+  align-items: center;
+}
+
+form button {
+  width: 12em;
+  margin: 0 auto;
+  margin-top: 5em;
+  height: 5em;
+  background-color: #d4e34b;
+  border-radius: .25em;
+  border: .25em solid rgba(0,0,0,0);
+  transition: border ease-out .4s;
+}
+
+form button:focus,
+form button:hover {
+  background-color: #b0bd3e;
+  border: .25em solid #fff;
+}
 @font-face {
   font-family: Streamster;
   src: url("../source/fonts/SFAlienEncounters-Italic.ttf");
@@ -62,32 +111,9 @@ html {
   color: #000f;
 }
 
-#start form {
-  display: flex;
-  flex-direction: column;
-  max-width: 40em;
-  margin: 0 auto;
-}
-
-#start form button {
-  width: 9em;
-  margin: 0 auto;
-  margin-top: 3em;
-  height: 5em;
-}
-
 main {
-  padding-top: 6em!important;
+  padding-top: 6em;
   position: relative;
-}
-
-input[type=password],
-input[type=text] {
-  width: 100%;
-  padding: 10px 15px;
-  text-align: left;
-  font-size: 2em;
-  border: none;
 }
 
 body {
@@ -123,6 +149,10 @@ img {
 
 button {
   font-weight: 700;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 h1,
@@ -171,8 +201,6 @@ body main h1 {
   }
 
   body main>section {
-    padding: 112px 32px;
-    padding: 7em 2em;
     text-shadow: 0 0 #000;
   }
 
@@ -229,6 +257,10 @@ nav li a {
   color: #fff;
   text-decoration: none;
 }
+#overview main {
+  padding-top: 6em;
+}
+
 #toolkits h1 {
   color: #fff;
   text-align: center;
@@ -338,4 +370,55 @@ body#detail section:nth-of-type(3) h2 {
 
 #overzichtfilters {
   margin-bottom: 1em;
+}
+#quiz main {
+  padding-top: calc(100vh - 75vh);
+}
+
+#quiz section img {
+  width: 18em;
+}
+
+#quiz section {
+  text-align: center;
+}
+
+#quiz section h2 {
+  color: #fff;
+  padding: 2em 1em;
+}
+
+#quiz label {
+  background-color: #fff;
+  width: 17em;
+  margin: 1em 2em;
+  min-height: 5em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  color: #000;
+}
+
+#quiz input[type=radio i] {
+  height: 100%;
+  width: 100%;
+  margin: 0!important;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#quiz form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
