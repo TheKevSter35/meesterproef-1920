@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+
+<body id="quiz">
+    <%- include ('../../partials/nav.ejs') %>
+    <main>
+        
+    <div id="question2">
+        <section>
+            <img src="../source/pictures/quiz/vraag1img.png" alt="">
+            <h2>Je opened je e-mail. en je krijgt een mail van je bank dat je account. Blijkt dat je pas is gedeactiveerd en wordt gevraagd om in te loggen met je rekeningnummer en pincode om het weer te activeren. 
+            </h2>
+        </section>
+        <form action="#question3">
+            <label for="answer1-question2">
+                <input type="radio" id="answer1-question2" name="question2" value="0" data-score="0">
+                Dit is wel belangrijk de bank stuurt dit niet zomaar.</label>
+            <label for="answer2-question2">
+                <input type="radio" id="answer2-question2" name="question2" value="1" data-score="1">
+                Misschien toch contact opnemen met mijn bank en vragen waarom mijn pas is gedeactiveerd.</label>
+        </form>
+    </div>
+    
+    </main>
+
+
+
+
+    <script src="../js/quiz/quiz.js"></script>
+
+
+</body>
+
+
+</html>

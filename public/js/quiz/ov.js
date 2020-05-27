@@ -3,13 +3,15 @@
 
 
 
-const correctQuestion1 = document.getElementById("answer2-question1")
-correctQuestion1.addEventListener("click", correctAnswer1 )
+const answer1 = document.getElementById("answer2-question1")
+answer1.addEventListener("click", selectAnswer1 )
 
-function correctAnswer1 (){
+function selectAnswer1 (){
 
+    const elem = document.querySelector(".answer1")
+    elem.parentNode.removeChild(elem);
     document.querySelector(".answer2").style.backgroundColor = "#C1D8B5"
-    document.querySelector("#question1 section h2").innerHTML = " Correct: Het is beter voor elk account een andere wachtwoord te bedenken. Een internetcrimineel heeft dan ook geen toegang tot alle accounts "
+    document.querySelector("#question1 section ").innerHTML = "  <h2> checkin: 10:03 Centraal Station </h2> <p> saldo: 150 euro</p> "
     setTimeout(function(){ 
         window.location.replace("/overview")
     // document.getElementById("question1").style.opacity = "0"
@@ -20,13 +22,14 @@ function correctAnswer1 (){
     
 }
 
-const wrongQuestion1 = document.getElementById("answer1-question1")
-wrongQuestion1.addEventListener("click", wrongtAnswer1 )
+const answer2 = document.getElementById("answer1-question1")
+answer2.addEventListener("click", selectAnswer2 )
 
-function wrongtAnswer1 (){
-
-    document.querySelector(".answer1").style.backgroundColor = "red"
-    document.querySelector("#question1 section h2").innerHTML = "Helaas: Als een internetcrimineel heeft dan toegang tot alle accounts  "
+function selectAnswer2 (){
+    const elem = document.querySelector(".answer2")
+    elem.parentNode.removeChild(elem);
+    document.querySelector(".answer1").style.backgroundColor = "#C1D8B5"
+    document.querySelector("#question1 section").innerHTML = " <h2> checkin: 10:03 Centraal Station </h2> <p> Henk meijer</p> <p> 11-2-1980</p> <p> man</p> <p> henk@email.nl </p> <p> saldo: 150 euro</p> "
     setTimeout(function(){ 
         window.location.replace("/overview")
     // document.getElementById("question1").style.opacity = "0"
