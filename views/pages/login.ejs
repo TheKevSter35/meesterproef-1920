@@ -1,31 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="nl">
     <%- include ('../partials/head.ejs') %>
-
 <body id="start">
-  
-    <main>
-        <section>
-            <h1>Login</h1>
-            <form action="/overview">
-            <label for="username"  > Naam</label>
-            <input type="text" name="username" placeholder="Gebruikersnaam">
-    
-        <label for="username">wachtwoord</label>
-            <input type="password" placeholder="wachtwoord">
-        
-            <button type="submit">Submit</button>
-        </form>
-        </section>
-    </main>
-
-
-    <!-- <script src="js/script.js"></script> -->
-
-
+	<main>
+		<h1>Inloggen</h1>
+		<form action="/login" method="POST">
+			<label>gebruikersnaam<input type="text" name="username" minlength="2" placeholder="Voer hier de gebruikersnaam in"></label>
+			<label>wachtwoord<input type="password" name="password" minlength="7" placeholder="Voer hier het wachtwoord in"></label>
+			<button type="submit">Login</button>
+		</form>
+	</main>
 </body>
-
-
 </html>
