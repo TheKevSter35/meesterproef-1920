@@ -1,10 +1,10 @@
-let express = require('express')
-let bodyParser = require('body-parser')
-let path = require('path')
-// let fetch = require('node-fetch')
-let app = express()
-let port = process.env.PORT || 5000
-let compression = require('compression')
+const express = require('express')
+const bodyParser = require('body-parser')
+const path = require('path')
+// const fetch = require('node-fetch')
+const app = express()
+const port = process.env.PORT || 5000
+const compression = require('compression')
 
 app.use(compression())
 

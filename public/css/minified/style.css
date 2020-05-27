@@ -227,6 +227,10 @@ nav li a {
   color: #fff;
   text-decoration: none;
 }
+#overview main {
+  padding-top: 6em;
+}
+
 #toolkits h1 {
   color: #fff;
   text-align: center;
