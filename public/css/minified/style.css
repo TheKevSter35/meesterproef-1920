@@ -237,9 +237,12 @@ nav li a {
 #toolkits-list {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   width: 100%;
+  min-height: 37.5em;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 1em;
 }
 
 #toolkits-list li:hover {
@@ -313,8 +316,8 @@ body#detail section:nth-of-type(3) h2 {
   text-align: center;
 }
 
-#webtoolsmap iframe {
-  width: 100%;
+#webtoolsmap {
+  height: 37.5em;
 }
 
 #webtoolsmap iframe {
