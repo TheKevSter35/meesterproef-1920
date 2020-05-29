@@ -43,6 +43,55 @@ footer a {
   font-weight: 700;
   font-size: 1.3em;
 }
+input[type=password] {
+  padding: .75em .25em;
+  font-size: .75em;
+  margin-top: .5em;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  max-width: 14em;
+  font-size: 1.5em;
+  color: #fff;
+  text-transform: capitalize;
+  margin: auto;
+}
+
+form label:first-of-type {
+  margin-bottom: .75em;
+}
+
+form[action="/login"] {
+  display: flex;
+  flex-direction: column;
+  max-width: 40em;
+  margin: 0 auto;
+  align-items: center;
+}
+
+form button {
+  width: 12em;
+  margin: 0 auto;
+  margin-top: 5em;
+  height: 5em;
+  background-color: #d4e34b;
+  border-radius: .25em;
+  border: .25em solid rgba(0,0,0,0);
+  transition: border ease-out .4s;
+}
+
+form button:focus,
+form button:hover {
+  background-color: #b0bd3e;
+  border: .25em solid #fff;
+}
+
 input[type=password],
 input[type=text] {
   padding: .75em .25em;
@@ -268,9 +317,12 @@ nav li a {
 #toolkits-list {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   width: 100%;
+  min-height: 37.5em;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 1em;
 }
 
 #toolkits-list li:hover {
@@ -344,8 +396,8 @@ body#detail section:nth-of-type(3) h2 {
   text-align: center;
 }
 
-#webtoolsmap iframe {
-  width: 100%;
+#webtoolsmap {
+  height: 37.5em;
 }
 
 #webtoolsmap iframe {
