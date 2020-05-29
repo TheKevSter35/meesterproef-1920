@@ -114,4 +114,7 @@
     margin-bottom: 1em;
 }
 
+#mapid {
+    min-height: 37.5em;
+}
 /****************************/
