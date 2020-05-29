@@ -1,26 +1,7 @@
-/*Import Google Fonts*/
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-@font-face {
-    font-family: Streamster;
-    src: url(../source/fonts/SFAlienEncounters-Italic.ttf);
-}
-
-@font-face {
-    font-family: Nixies;
-    src: url(../source/fonts/NixiesRegular-anra.ttf);
-}
-
 /****************************/
 /* Preset codes toepasbaar voor elke pagina*/
 * {
     box-sizing: border-box;
-}
-
-html {
-
-    font-family: 'Raleway', sans-serif;
-    color: #000f;
 }
 
 main {
@@ -30,8 +11,11 @@ main {
 
 body {
     margin: 0 auto;
-    min-height: calc(100vh - 0px);
-    background-color: #202024;
+	min-height: calc(100vh - 0px);
+	font-family: "Avenir", Helvetica, Roboto, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+    background-color: white;
 }
 
 ul {
@@ -46,13 +30,20 @@ p {
     margin: 0;
     font-size: 16px;
     font-size: 1em;
-    font-family: 'Raleway', sans-serif;
     padding: 5px 0;
 }
 
 h1 a {
     color: #000;
     text-decoration: none;
+}
+
+.btn {
+	border: none;
+	color: white;
+	background-color: #151513;
+	padding: 0.85em 1.75em;
+	font-size: 1em;
 }
 
 img {
