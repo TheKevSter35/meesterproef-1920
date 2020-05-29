@@ -17,8 +17,16 @@ app.set('views', 'views')
 
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
+app.use(session({
+	secret: 'user', // replace secret with .env later
+	saveUninitialized: true,
+	resave: true,
+	cookie: {
+		maxAge: 6 * 60 * 60 * 1000
+	}
+}))
 app.use(router) // Routes
-app.use(session({secret: 'user', saveUninitialized: true, resave: true}))
+
 
 // Set Static path for non html code like pictures and CSS
 app.use(express.static(path.join(__dirname + 'public')))
