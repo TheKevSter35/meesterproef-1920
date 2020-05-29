@@ -1,28 +1,14 @@
 module.exports = function (app) {
   app.get('/quiz-detail', (req, res) => {
-    res.render('pages/quiz-detail')
+    res.render('pages/quiz/quiz-detail')
   })
-  app.get('/quiz1', (req, res) => {
-    res.render('pages/quiz/quiz1')
+  app.get('/quiz-game', (req, res) => { 
+    res.render('pages/quiz/quiz-game', { queries: req.query })
   })
-  app.get('/quiz2', (req, res) => {
-    res.render('pages/quiz/quiz2')
+  app.get('/quiz-result', (req, res) => {
+    res.render('pages/quiz/quiz-result', { queries: req.query })
   })
-  app.get('/quiz3', (req, res) => {
-    res.render('pages/quiz/quiz3')
-  })
-  app.get('/quiz4', (req, res) => {
-    res.render('pages/quiz/quiz4')
-  })
-  app.get('/quiz5', (req, res) => {
-    res.render('pages/quiz/quiz5')
-  })
-  app.get('/quiz6', (req, res) => {
-    res.render('pages/quiz/quiz6')
-  })
-  app.get('/quiz7', (req, res) => {
-    res.render('pages/quiz/quiz3')
-  })
-  
+
+
   
 }

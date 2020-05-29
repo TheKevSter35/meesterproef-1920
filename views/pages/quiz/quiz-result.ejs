@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+<body id="quiz-result">
+    <%- include ('../../partials/nav.ejs') %>
+    <main>
+        <H1>Resultaat</H1>
+
+        <section class="result">
+
+            <ul>
+
+
+
+                <% if(queries.question1 == "1") { %>
+                <li class=correct>
+                    <button class="accordion"><strong>Je opened je e-mail. en je krijgt een mail van je bank dat je accounts is
+                        gedeactiveerd en wordt gevraagd om in te loggen om het weer te
+                        activeren.
+                    </strong></button>
+                    <div class="panel">
+                    <p> Misschien toch contact opnemen met mijn bank en vragen waarom mijn pas is gedeactiveerd.</p>
+                </div>
+
+
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion"><strong>Je Je opened je e-mail. en je krijgt een mail van je bank dat je accounts is
+                        gedeactiveerd en wordt gevraagd om in te loggen om het weer te
+                        activeren.
+                    </strong></button>
+                        <div class="panel">
+                    <p> is wel belangrijk de bank stuurt dit niet zomaar.</p>
+
+                        </div>
+                </li>
+                <% } %>
+
+                <% if(queries.question2 == "1") { %>
+                <li class=correct>
+                    <button class="accordion"><strong>is dit een goed beveiligde website?
+                    </strong></button>
+                    <div class="panel">
+                    <p> Nee</p>
+                </div>
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion"><strong>is dit een goed beveiligde website?
+                    </strong></button>
+                    <div class="panel">
+                    <p> Ja</p>
+                </div>
+                </li>
+                <% } %>
+
+                <% if(queries.question3 == "1") { %>
+                <li class=correct>
+                    <button class="accordion"><strong>De wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
+                    </strong></button>
+                    <div class="panel">
+                    <p> Ik maak wel een nieuwe wachtwoord</p>
+                </div>
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion"><strong>De wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
+                    </strong></button>
+                    <div class="panel">
+                    <p> Ik doe hetzelfde wachtwoord. Makkelijk te onthouden</p>
+                </div>
+                </li>
+                <% } %>
+                <% if(queries.question4 == "1") { %>
+                <li class=correct>
+                    <button class="accordion"><strong>Er komt een man op je af. Hij zegt dat als je enquête invulled dat je kans maakt voor een
+                        nieuwe telefoon. Je hoeft alleen maar een qr code te scannen waar je de enquête kan invullen.
+                    </strong></button>
+                    <div class="panel">
+                    <p> Nee dit kan te mooi om waar te zijn.</p>
+                </div>
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion"><strong>Er komt een man op je af. Hij zegt dat als je enquête invulled dat je kans maakt voor een
+                        nieuwe telefoon. Je hoeft alleen maar een qr code te scannen waar je de enquête kan invullen.
+                    </strong></button>
+                    <div class="panel">
+                    <p> Leuk heb wel een nieuwe telefoon nodig kan geen kwaad.</p>
+                </div>
+                </li>
+                <% } %>
+                <% if(queries.question5 == "1") { %>
+                <li class=correct>
+                    <button class="accordion"><strong>Je pc heeft een update melding wat ga je doen?
+                    </strong></button>
+                    <div class="panel">
+                    <p> Meteen uitvoeren.</p>
+                </div>
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion"><strong>Je pc heeft een update melding wat ga je doen?
+                    </strong></button>
+                    <div class="panel">
+                    <p> Later uitvoeren.</p>
+                </div>
+                </li>
+                <% } %>
+                <% if(queries.question6 == "1") { %>
+                <li class=correct>
+                    <button class="accordion">
+                        Is dit een goed wachtwoord om te gebruiken? (DqtiM@DL,n^neO)
+                    </strong></button>
+                    <div class="panel">
+                    <p> Ja</p>
+                </div>
+                </li>
+                <% } else  { %>
+                <li class=incorrect>
+                    <button class="accordion">
+                        Is dit een goed wachtwoord om te gebruiken? (DqtiM@DL,n^neO)
+                    </strong></button>
+                    <div class="panel">
+                    <p> Nee</p>
+                </div>
+                </li>
+                <% } %>
+                
+            </ul>
+
+        </section>
+
+    </main>
+    <script>
+        const acc = document.getElementsByClassName("accordion");
+        let i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            if (panel.style.height === "100%") {
+              panel.style.height = "0";
+            } else {
+              panel.style.height = "100%";
+            }
+          });
+        }
+        </script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/printscript.js"></script> -->
+
+
+
+    </script>
+</body>
+
+
+</html>
