@@ -25,16 +25,16 @@ exports.get = function (req, res) {
 exports.process = function (req, res) {
 	const username = req.body.username
 	const password = req.body.password
-	if (!email && !password) {
+	if (!username && !password) {
 		res.redirect('/')
 	}
 	users.map((user) => {
 		if (user.user === username && user.password === password) {
-			req.session.user = username
+			req.session.name = username
 			req.session.score = user.totalpoints
 			res.redirect('/overzicht')
 		} else {
-			res.redirect('/')
+			res.redirect('/login')
 		}
 	})	
 }
