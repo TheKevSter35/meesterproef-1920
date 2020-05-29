@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+
+<body id="quiz">
+    <%- include ('../../partials/nav.ejs') %>
+    <main>
+        <!-- <h2>1/10</h2> -->
+        <form action="/quiz-result">
+            <div id="question1">
+                <section>
+                    <img id="ing" src="../source/pictures/quiz/ing-mail.png" alt="">
+
+                </section>
+                <section>
+                    <h2>Je opened je e-mail. en je krijgt een mail van je bank dat je accounts is
+                        gedeactiveerd en wordt gevraagd om in te loggen om het weer te
+                        activeren.
+                    </h2>
+                    <h2 class="incorrect hidden">
+                        fout
+                    </h2>
+                    <h2 class="correct hidden">
+                        goed
+                    </h2>
+                    <label for="question1-answer1" class="question1-answer1">
+                        <input type="radio" id="question1-answer1" name="question1" data-score="0" value="0"
+                            <% if (queries.question1 == "0") { %>
+                            <% } %>>
+                        Dit is wel belangrijk de bank stuurt dit niet zomaar.
+                    </label>
+                    <label for="question1-answer2" class="question1-answer2">
+                        <input type="radio" id="question1-answer2" name="question1" data-score="1" value="1"
+                            <% if (queries.question1 == "1") { %>
+                            <% } %>>
+                        Misschien toch contact opnemen met mijn bank en vragen waarom mijn pas is gedeactiveerd.</label>
+                </section>
+            </div>
+            <div id="question2">
+                <section>
+                    <img id="ing" src="../source/pictures/quiz/ing-homepage.png" alt="">
+
+
+                </section>
+                <section>
+                    <h2>is dit een goed beveiligde website?
+                    </h2>
+                    <h2 class="incorrect hidden">
+                        fout
+                    </h2>
+                    <h2 class="correct hidden">
+                        goed
+                    </h2>
+                    <label for="question2-answer1" class="question2-answer1">
+                        <input type="radio" id="question2-answer1" name="question2" data-score="0" value="Ja"
+                            <% if (queries.question2 == "ja") { %> <% } %>>
+                        Ja </label>
+                    <label for="question2-answer2" class="question2-answer2">
+                        <input type="radio" id="question2-answer2" name="question2" data-score="0" value="Nee"
+                            <% if (queries.question2 == "Nee") { %> <% } %>>
+
+                        Nee </label>
+                </section>
+            </div>
+            <div id="question3">
+                <section>
+                    <img src="../source/pictures/quiz/vraag1img.png" alt="">
+                   
+
+                </section>
+                <section>
+                    <h2>De wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
+                    </h2>
+                    <label for="question3-answer1" class="question3-answer1">
+                        <input type="radio" id="question3-answer1" name="question3" data-score="0"
+                            value="Ik doe hetzelfde wachtwoord. Makkelijk te onthouden"
+                            <% if (queries.question3 == "0") { %>
+                            <% } %>>
+                        Ik doe hetzelfde wachtwoord. Makkelijk te onthouden</label>
+                    <label for="question3-answer2" class="question3-answer2">
+                        <input type="radio" id="question3-answer2" name="question3" data-score="1"
+                            value="1"
+                            <% if (queries.question3 == " 1") { %> <% } %>>
+                        Ik maak wel een nieuwe wachtwoord</label>
+                </section>
+            </div>
+            <div id="question4">
+                <section>
+                    <img src="../source/pictures/quiz/vraag3img.png" alt="">
+                  
+
+                </section>
+                <section>
+                    <h2>Er komt een man op je af. Hij zegt dat als je enquête invulled dat je kans maakt voor een nieuwe telefoon. Je hoeft alleen maar een qr code te scannen waar je de enquête kan invullen.  
+                    </h2>
+                    <label for="question4-answer1" class="question4-answer1">
+                        <input type="radio" id="question4-answer1" name="question4" data-score="1"
+                            value="1"
+                            <% if (queries.question4 == "1") { %>
+                            <% } %>>
+                            Nee dit kan te mooi om waar te zijn.</label>
+                    <label for="question4-answer2" class="question4-answer2">
+                        <input type="radio" id="question4-answer2" name="question4" data-score="0"
+                            value="0"
+                            <% if (queries.question4 == " 0") { %> <% } %>>
+                            Leuk heb wel een nieuwe telefoon nodig kan geen kwaad.</label>
+                </section>
+            </div>
+            <div id="question5">
+                <section>
+                    <img src="../source/pictures/quiz/vraag3img.png" alt="">
+                    
+
+                </section>
+                <section>
+                    <h2>Je pc heeft een update melding wat ga je doen?
+                    </h2>
+                    <label for="question5-answer1" class="question5-answer1">
+                        <input type="radio" id="question5-answer1" name="question5" data-score="1"
+                            value="1"
+                            <% if (queries.question5 == "1") { %>
+                            <% } %>>
+                            Meteen uitvoeren.</label>
+                    <label for="question5-answer2" class="question5-answer2">
+                        <input type="radio" id="question5-answer2" name="question5" data-score="0"
+                            value="0"
+                            <% if (queries.question5 == " 0") { %> <% } %>>
+                            Later uitvoeren.</label>
+                </section>
+            </div>
+            <div id="question6">
+                <section>
+                    <img src="../source/pictures/quiz/ww1.png" alt="">
+                    
+                </section>
+                <section>
+                    <h2>Is dit een goed wachtwoord om te gebruiken? 
+                    </h2>
+
+                    <label for="question6-answer1" class="question6-answer1">
+                        <input type="radio" id="question6-answer1" name="question6" data-score="1"
+                            value="1"
+                            <% if (queries.question5 == "1") { %>
+                            <% } %>>
+                            Ja </label>
+                    <label for="question6-answer2" class="question6-answer2">
+                        <input type="radio" id="question6-answer2" name="question6" data-score="0"
+                            value="0"
+                            <% if (queries.question6 == " 0") { %> <% } %>>
+                            Nee</label>
+                </section>
+            </div>
+            <div class="form-container" >
+                <button type="submit">Submit</button>
+                </div>
+        </form>
+    </main>
+
+
+
+
+    <!-- <script src="../js/quiz/quiz.js"></script> -->
+
+
+</body>
+
+
+</html>
