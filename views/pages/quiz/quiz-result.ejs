@@ -22,7 +22,8 @@
                         activeren.
                     </strong></button>
                     <div class="panel">
-                    <p> Misschien toch contact opnemen met mijn bank en vragen waarom mijn pas is gedeactiveerd.</p>
+                    <p> <b>Correct: De bank vraagt nooit om in  te loggen op Mijn Bank (Internetbankieren) via een sms of e-mail.</b></p>
+                    <p> Heb je een phishingbericht ontvangen en niet geopend? Stuur een mail naar valse-email@bank.nl .</p>
                 </div>
 
 
@@ -34,7 +35,18 @@
                         activeren.
                     </strong></button>
                         <div class="panel">
-                    <p> is wel belangrijk de bank stuurt dit niet zomaar.</p>
+                            <hr>
+                    <p> <b>Incorrect: De bank vraagt nooit om in  te loggen op Mijn Bank (Internetbankieren) via een sms of e-mail.</b></p>
+                    <p>
+                        <ul>
+                            <li>In het bericht zit meestal een urgente reden voor actie verwerkt. </li>
+                            <li>Je wordt verzocht op een link te klikken. Ongemerkt kom je op een nep website, waar je gevraagd wordt in te loggen met je beveiligingscodes.   </li>
+                            <li>In het bericht zit meestal een urgente reden voor actie verwerkt. </li>
+                        </ul>
+                        
+
+                    </p>
+                    <p> Heb je een phishingbericht geopend?  meldt dit direct bij de Alarmlijn via 020 12 333 45..</p>
 
                         </div>
                 </li>
@@ -77,8 +89,7 @@
                 <% } %>
                 <% if(queries.question4 == "1") { %>
                 <li class=correct>
-                    <button class="accordion"><strong>Er komt een man op je af. Hij zegt dat als je enquête invulled dat je kans maakt voor een
-                        nieuwe telefoon. Je hoeft alleen maar een qr code te scannen waar je de enquête kan invullen.
+                    <button class="accordion"><strong>Mijn wachtwoorden in een boekje opschrijven is veilig
                     </strong></button>
                     <div class="panel">
                     <p> Nee dit kan te mooi om waar te zijn.</p>
@@ -86,8 +97,7 @@
                 </li>
                 <% } else  { %>
                 <li class=incorrect>
-                    <button class="accordion"><strong>Er komt een man op je af. Hij zegt dat als je enquête invulled dat je kans maakt voor een
-                        nieuwe telefoon. Je hoeft alleen maar een qr code te scannen waar je de enquête kan invullen.
+                    <button class="accordion"><strong>Mijn wachtwoorden in een boekje opschrijven is veilig
                     </strong></button>
                     <div class="panel">
                     <p> Leuk heb wel een nieuwe telefoon nodig kan geen kwaad.</p>
@@ -130,7 +140,25 @@
                 </div>
                 </li>
                 <% } %>
-                
+                <% if(queries.question7 == "1") { %>
+                    <li class=correct>
+                        <button class="accordion">
+                            Met een slotje in de adresbalk ben ik altijd veilig
+                        </strong></button>
+                        <div class="panel">
+                        <p> Ja</p>
+                    </div>
+                    </li>
+                    <% } else  { %>
+                    <li class=incorrect>
+                        <button class="accordion">
+                            Met een slotje in de adresbalk ben ik altijd veilig
+                        </strong></button>
+                        <div class="panel">
+                        <p> Nee</p>
+                    </div>
+                    </li>
+                    <% } %>
             </ul>
 
         </section>

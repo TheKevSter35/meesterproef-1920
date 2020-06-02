@@ -1,52 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="nl">
 
 <%- include ('../partials/head.ejs') %>
 
-
 <body id="overview">
+	<header>
     <%- include ('../partials/nav.ejs') %>
-    <main>
-        <section id="profile">
-            <p><img src="../source/pictures/person.svg"" alt=""></p>
-            <strong>Naam</strong>
-            <h2>
-                40p
-            </h2>
-            
-        </section>
-    </main>
+	</header>
+	
+    <section id="profile">
+		<img src="../source/pictures/person.svg" alt=" avatar">
+        <h2><%= user.name %></h2>
+    	<p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
+    </section>
 
-    <section id="toolkits">
+	<main id="toolkits">
         <h1>Toolbox</h1>
-        <div id="overzichtfilters">
+        <div>
             <button class="btnFilters active" id="btnLijstWeergave">Lijst</button>
             <button class="btnFilters" id="btnKaartweergave">Kaart</button>
         </div>
-        <ul id="toolkits-list">
+        <ul>
             <li>
                 <h2>Quiz</h2>
                 <img src="../source/pictures/quiz.svg" alt="store">
-                <strong>40/100p</strong>
+                <p>40/100p</p>
                 <a href="/quiz-detail">Meer info</a>
             </li>
             <li>
                 <h2>Quiz</h2>
                 <img src="../source/pictures/quiz.svg" alt="store">
-                <strong>40/100p</strong>
-                <a href="/quiz-detail">Meer info</a>
+                <p>40/100p</p>
+				<a href="/quiz-detail">Meer info</a>               
             </li>
             <li>
                 <h2>Quiz</h2>
                 <img src="../source/pictures/quiz.svg" alt="store">
-                <strong>40/100p</strong>
+                <p>40/100p</p>
                 <a href="/quiz3">Meer info</a>
             </li>
             <li>
                 <h2>Quiz</h2>
                 <img src="../source/pictures/quiz.svg" alt="store">
-                <strong>40/100p</strong>
+                <p>40/100p</p>
                 <a href="/quiz4">Meer info</a>
             </li>
         </ul>
@@ -55,15 +51,16 @@
             <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1lODhvLw9rzClo9mademZrYNE-Jb1jTO0" width="640" height="480"></iframe>
         </section>
 
-
+        <div id="mapid"></div>
     </section>
 
 
 
+     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
      <script src="js/script.js"></script>
-
+     <script src="js/map.js"></script>
 
 </body>
-
-
 </html>
