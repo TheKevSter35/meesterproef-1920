@@ -12,6 +12,6 @@ router.get('/', welcome)
 	.get('/login', login.get)
 	.get('/overzicht', overview.get)
 	.get('/account-aanmaken', signup.get)
-	.post('/login', login.process)
+	.post("/login", login.process)
 
 module.exports = router
