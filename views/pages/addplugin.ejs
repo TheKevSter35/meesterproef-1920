@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <%- include ('../partials/head.ejs') %>
+
+<body id="start">
+  
+    <main>
+        <section>
+            <h1>Add plugin</h1>
+            <form action="/overview">
+
+            <label for="pluginIcon"> Plugin icoon:</label>
+            <input type="file" name="pluginIcon">
+
+            <label for="pluginName"> Naam:</label>
+            <input type="text" name="pluginName" placeholder="Naam plugin">
+
+            <label for="pluginDescription"> Omschrijving:</label>
+            <textarea name="pluginDescription" placeholder="Omschrijf de plugin"></textarea>
+
+            <label for="pluginType"> Plugin type:</label>
+            <select name="pluginType">
+                <option value="quiz">Quiz</option>
+                <option value="game">Game</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        </section>
+    </main>
+
+
+    <!-- <script src="js/script.js"></script> -->
+
+
+</body>
+
+
+</html>
