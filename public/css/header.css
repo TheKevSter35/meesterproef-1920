@@ -13,7 +13,9 @@ body > header {
 nav:first-of-type {
 	display: flex;
     color: white;
-	margin: 1em 0.75em;
+	background-color: #7F78D5;
+	padding:2em;
+	
 }
 
 nav:first-of-type > img {

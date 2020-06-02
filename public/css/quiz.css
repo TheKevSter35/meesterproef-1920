@@ -9,23 +9,20 @@
 }
 #quiz main > h2 {
     text-align: center;
-    color: #fff;
     min-height: 2.5em;
 }
 
 #quiz section {
     text-align: center;
-    color:#fff
 }
 
 #quiz form section {
     text-align: center;
-    color: #fff;
     width: 50%;
     margin: 0 2em;
 }
 #quiz form h2 {
-    color: #fff;
+    color: inherit;
     padding-bottom: 2em;
     font-size: 1.4em;
     padding-top: 1em;
@@ -38,23 +35,31 @@
 
 #quiz form {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    padding: 1em;
+    padding: 1em 2em;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
-
-
 #quiz form div {
     display: flex;
-    padding: 1em;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    margin-bottom: 2em;
+    color: #000;
+    border-radius: 2em;
+    flex-shrink: 0;
+    height: auto;
+    transform: scale(1);
+    margin: 0 50px;
+    min-width: auto;
+    transform-origin: center center;
+    scroll-snap-align: start;
+    width: 100%;
+    height: auto;
 }
 #quiz label {
     border-radius: 1em;
-    background-color: #fff;
+    background-color: #002b37;
     margin-bottom: 1em;
     padding: 1em;
     display: flex;
@@ -64,25 +69,12 @@
     position: relative;
     margin: 0 0 3em;
     font-size: 1em;
-    color: #000;
+    color: #fff;
     min-height: 3em;
     max-width: 100%;
     text-align: center;
 }
 
-/* #quiz input[type=radio i] {
-    height: 100%;
-    width: 100%;
-    margin: 0!important;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-} */
 
 
 .hidden {
@@ -90,6 +82,17 @@
 }
 
 #quiz-result main   {    padding-top: calc(100vh - 85vh);}
+#quiz-result main h1 {
+    color:#000;
+}
+#quiz-result .panel ul {
+    list-style: circle;
+}
+#quiz-result .result li .panel li {
+    padding: 0;
+    margin-bottom: 0;
+}
+
 #quiz-result .result li {
     padding: 1em;
     margin-bottom: 2em;
