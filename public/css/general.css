@@ -11,7 +11,6 @@ main {
 
 body {
     margin: 0 auto;
-	min-height: calc(100vh - 0px);
 	font-family: "Avenir", Helvetica, Roboto, Arial, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -38,11 +37,11 @@ h1 a {
     text-decoration: none;
 }
 
-.btn {
+button {
 	border: none;
 	color: white;
 	background-color: #151513;
-	padding: 0.85em 1.75em;
+	padding: 1em 2em;
 	font-size: 1em;
 }
 
@@ -58,22 +57,29 @@ button:hover {
 	cursor: pointer;
 }
 
+/* vertically align: https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center/35047036 */
+.center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+}
+
 /****************************/
 /* Headings font en kleur */
 h1,
 h2,
 h3 {
-
     color: #000;
     font-weight: bold;
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
     color: #000;
 }
@@ -83,14 +89,15 @@ h3 {
     text-align: center;
 }
 
-body {
-    background-color: white;
-    height: 100vh;
+p {
+	font-family: Avenir,Helvetica,Roboto,Arial,sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 main,
 section {
-    max-width: 1170px;
+    max-width: 30em;
     margin: 0 auto;
     padding: 1em;
 }
@@ -101,13 +108,36 @@ body main h1 {
 }
 
 /*+++++MEDIA QUERIES+++++*/
-/*Bij de aangegeven max-width wordt de code uitgevoerd!*/
+/*Bij de aangegeven min-witdh & max-width wordt de code uitgevoerd!*/
 /*Desktop en laptop*/
-@media (max-width:1280px) {}
+@media (min-width: 30em) {
+	body > header {
+		margin: 25vh auto 0 auto;
+	}
+
+	main.choose > p:first-of-type {
+		max-width: initial;
+	}
+
+	main.choose > p span:first-of-type {
+		position: relative;
+		top: initial;
+		left: initial;
+	}
+
+	main.choose p a:last-of-type, main.choose > p span:first-of-type {
+		margin-left: 2.5em;
+	}
+}
 
 /*tablets landscape mode*/
 @media (max-width:960px) {
-    h1 {
+    
+}
+
+/*tablet*/
+@media (min-width: 30em) and (max-width: 60em) {
+	h1 {
         font-size: 40px;
         font-size: 2.5em;
     }
@@ -117,24 +147,12 @@ body main h1 {
     }
     body section {
         padding-bottom: 0em;
-    }
-
-
+	}
+	
+	header div > h1 {
+		font-size: 2em;
+	}
 }
-/*tablets portrait mode*/
-@media (max-width:720px) {
-
-    
-}
-
-
-
-/*mobile */
-@media (max-width:480px) {
-}
-
-/****************************/
-/*+++++++++++++++++++++++*/
 
 
 @keyframes colorshift
