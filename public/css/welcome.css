@@ -1,3 +1,68 @@
-header.welcome p {
-	font-size: 1em;
+body > header {
+	max-width: 40em;
+	margin: 4em auto 0 auto;
+}
+
+body > header div {
+	margin: 0 auto;
+	max-width: 22em;
+}
+
+body > header h1 {
+	color: #000549;
+	max-width: 8em;
+	margin: 0 auto 0 2em;
+}
+
+header h1 ~ p {
+	margin: 1.25em 0 0 1.25em;
+	max-width: 30em;
+	font-weight: 500;
+	font-style: oblique;
+	color: #000549;
+	line-height: 2em;
+	text-decoration: underline 0.2em #fe9f9f;
+	text-underline-offset: 0.4em;
+}
+
+h1 ~ svg {
+	fill: #feebc0;
+	position: absolute;
+	margin-top: -9.25em;
+	max-width: 22em;
+	z-index: -2;
+}
+
+main.choose {
+	max-width: 60em;
+	padding: initial;
+	margin-top: 8em;
+	margin-top: calc(5vh * 5);
+}
+
+main.choose > p {
+	text-align: center;
+	max-width: 14em;
+	margin: 0 auto;
+}
+
+main.choose > p button {
+	border-radius: 0.5em;
+	background-color: #7a84dc;
+	border-bottom: solid 0.25em #9cb3dd;
+	margin-bottom: 4em;
+}
+
+main.choose > p button:last-of-type::first-letter {
+	text-transform: capitalize;
+}
+
+main.choose > p a:focus button, main.choose > p a:hover button {
+	background-color: #484f97;
+}
+
+main.choose > p span {
+	position: absolute;
+	left: -999em;
+	top: -999em;
 }
