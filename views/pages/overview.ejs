@@ -4,7 +4,7 @@
 <%- include ('../partials/head.ejs') %>
 
 <body id="overview">
-	<header>
+	<header class="user">
     <%- include ('../partials/nav.ejs') %>
 	</header>
 	
@@ -31,7 +31,7 @@
                 <h2>Quiz</h2>
                 <img src="../source/pictures/quiz.svg" alt="store">
                 <p>40/100p</p>
-				<a href="/quiz-detail">Meer info</a>               
+                <a href="/quiz-detail">Meer info</a>
             </li>
             <li>
                 <h2>Quiz</h2>
@@ -51,10 +51,8 @@
             <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1lODhvLw9rzClo9mademZrYNE-Jb1jTO0" width="640" height="480"></iframe>
         </section>
 
-        <div id="mapid"></div>
-    </section>
-
-
+		<div id="mapid"></div>
+    </main>
 
      <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
