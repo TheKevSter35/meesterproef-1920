@@ -1,4 +1,8 @@
 body > header {
+	margin: 0 auto;
+}
+
+body > header.user {
 	position: fixed;
 	z-index: 2;
 	top: 0;
@@ -10,12 +14,15 @@ body > header {
 	width: 100%;
 }
 
+body > header h1 {
+	font-weight: 900;
+	margin: 0;
+}
+
 nav:first-of-type {
 	display: flex;
     color: white;
-	background-color: #7F78D5;
-	padding:2em;
-	
+	margin: 1em 0.75em;
 }
 
 nav:first-of-type > img {
