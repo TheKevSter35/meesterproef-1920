@@ -638,12 +638,18 @@ body#detail section:nth-of-type(3) h2 {
   text-align: center;
 }
 
+#quiz label input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
 .hidden {
   display: none;
 }
 
 #quiz-result main {
-  padding-top: calc(100vh - 85vh);
+  padding-top: calc(100vh - 95vh);
 }
 
 #quiz-result main h1 {
@@ -706,6 +712,11 @@ body#detail section:nth-of-type(3) h2 {
   background-color: inherit;
   overflow: hidden;
   height: 0;
+}
+
+.panel hr {
+  background-color: #000;
+  border-color: #000;
 }
 header.welcome p {
   font-size: 1em;

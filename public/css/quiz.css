@@ -74,14 +74,18 @@
     max-width: 100%;
     text-align: center;
 }
-
+#quiz label input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
 
 
 .hidden {
     display: none;
 }
 
-#quiz-result main   {    padding-top: calc(100vh - 85vh);}
+#quiz-result main   {    padding-top: calc(100vh - 95vh);}
 #quiz-result main h1 {
     color:#000;
 }
@@ -141,3 +145,7 @@
     overflow: hidden;
     height:0 ;
   }
+  .panel hr {
+    background-color: #000;
+    border-color: #000;
+}
