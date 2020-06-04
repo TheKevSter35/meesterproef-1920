@@ -62,7 +62,7 @@ form label {
 	flex-direction: column;
 	max-width: 14em;
 	font-size: 1.5em;
-	color: white;
+	color: black;
 	margin: auto;
 }
 
@@ -89,8 +89,34 @@ form button {
 	transition: border ease-out 0.4s;
 }
 
+#uploadFoto {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 16em;
+	min-width: 16em;
+	background-color: #F4F9F9;
+	border: 2px dashed #CCDCE2;
+}
+
+#imagePlacholder {
+	width: 8em;
+	z-index: 1;
+	position: absolute;
+	cursor: pointer;
+}
+
+input[name="pluginIcon"] {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	direction: ltr;
+	cursor: pointer;
+}
+
 form button:hover, form button:focus {
 	background-color: #B0BD3E;
 	border: 0.25em solid white;
 >>>>>>> quiz
 }
+
