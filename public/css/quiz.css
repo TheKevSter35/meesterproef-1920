@@ -114,6 +114,18 @@
     color: #000;
 }
 
+#quiz .selected {
+    background-color: #00607b;
+}
+
+#quiz .correct {
+    background-color: #C1D8B5;
+}
+
+#quiz .incorrect {
+    background-color:#EDB9B8;
+}
+
 #quiz-result .result li button {
     background-color: inherit;
     font-size: 1.1em;
