@@ -122,6 +122,17 @@ footer a {
   font-weight: 700;
   font-size: 1.3em;
 }
+
+#footerDevelopers {
+  background: #ff445b;
+  width: 100%;
+  padding: 10em;
+  color: #fff;
+}
+
+#footerDevelopers a {
+  color: #002b37;
+}
 input[type=password],
 input[type=text] {
   padding: .75em .25em;

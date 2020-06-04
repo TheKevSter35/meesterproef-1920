@@ -14,4 +14,16 @@ footer a {
     font-weight: bold;
     font-size: 1.3em;
 }
+
+#footerDevelopers {
+    background: #ff445b;
+    width: 100%;
+    padding: 10em;
+    color: #fff;
+}
+
+#footerDevelopers a {
+    color: #002b37;
+}
+
 /* ------------------- */
