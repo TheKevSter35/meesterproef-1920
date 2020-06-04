@@ -2,7 +2,7 @@
  #quiz-detail main    {    padding-top: calc(100vh - 90vh);}
 #quiz main {
     padding-top: calc(100vh - 75vh);
-    max-width: 70em;
+    max-width: 95em;
 }
 #quiz-result main {
     padding-top: calc(100vh - 90vh);
@@ -40,28 +40,29 @@
 
 #quiz form {
     display: flex;
-    padding: 1em 2em;
     overflow: hidden;
     scroll-behavior: smooth;
+    width: 100%;
 }
+
 #quiz form div {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f6f6f6;
-    margin-bottom: 2em;
     color: #000;
     border-radius: 2em;
     flex-shrink: 0;
     height: auto;
     transform: scale(1);
-    margin: 0 50px;
     min-width: auto;
     transform-origin: center center;
     scroll-snap-align: start;
     width: 100%;
     height: auto;
+    margin-bottom: 2em;
 }
+
 #quiz label {
     border-radius: 1em;
     background-color: #002b37;

@@ -1,26 +1,29 @@
+#detail main {
+  margin-top: calc(100vh - 80vh);
+}
+
 #detail main ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: calc(100vh - 90vh);
 }
 
 #detail main ul li {
   padding: 1em 2em;
-  color: #fff;
+  color: #000;
   position: relative;
 }
 
 #detail main ul li h2 {
-  color: #fff;
+  color: #000;
 }
 
 #detail main ul li a {
   padding: 1em;
-  background-color: #fff;
+  background-color: #fb5258;
   position: absolute;
   margin: 1em 0;
   border-radius: 1em;
-  color: #000;
+  color: #fff;
   text-decoration: none;
   width: auto;
   text-align: center;
@@ -282,6 +285,7 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #fff;
+  min-height: 100vh;
 }
 
 ul {
@@ -361,7 +365,7 @@ p {
 
 main,
 section {
-  max-width: 30em;
+  max-width: 70em;
   margin: 0 auto;
   padding: 1em;
 }
@@ -424,22 +428,22 @@ body main h1 {
     background-position: 0 100%;
   }
 }
-body>header {
+header {
   margin: 0 auto;
 }
 
-body>header.user {
-  position: fixed;
+header.user {
+  position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: #83bd61;
-  background: linear-gradient(5deg,#6052d1,#167cc1);
+  background: url("../img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
   border-bottom: .15em solid #4a2a58;
   width: 100%;
+  margin: 0;
 }
 
-body>header h1 {
+header h1 {
   font-weight: 900;
   margin: 0;
 }
@@ -468,31 +472,93 @@ nav:first-of-type li {
 nav:first-of-type a {
   color: #fff;
 }
-#overview main {
-  padding-top: 6em;
-}
-
-#toolkits h1 {
+#overview {
+  display: flex;
   color: #fff;
-  text-align: center;
 }
 
-#toolkits-list {
+#overview main {
+  padding: 0;
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
+}
+
+#overview main>div {
+  padding: 5em;
+  text-align: left;
+}
+
+#overview h1 {
+  color: #fff;
+  text-align: left;
+}
+
+sidebar {
+  background-color: #f6f6f6;
+  color: #000;
+  position: fixed;
+  z-index: 3;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  width: calc(100% - 15em);
+  background: #f6f6f6;
+  max-width: 400px;
+  height: 100%;
+  max-width: 400px;
+  height: 100%;
+  padding: 2em;
+}
+
+.overview-info {
+  position: relative;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: url("../img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  border-bottom: .15em solid #4a2a58;
+  width: 100%;
+  margin: 0;
+}
+
+.overview-info p {
+  font-size: 1.3em;
+}
+
+.plugins-list>h2 {
+  margin-bottom: 1em;
+  padding: 1em .2em;
+  display: flex;
+}
+
+.plugins-list>h2:before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  height: 32px;
+  width: 7px;
+  border-radius: 10px;
+  background: #ff445b;
+}
+
+.plugins-list ul {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: inherit;
   width: 100%;
-  min-height: 37.5em;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   padding-top: 1em;
+  margin-bottom: 2em;
 }
 
-#toolkits-list li:hover {
-  border-color: green;
+.plugins-list ul li:hover {
+  border-color: #fb5258;
 }
 
-#toolkits-list li {
+.plugins-list ul li {
   list-style: none;
   color: #fff;
   display: flex;
@@ -500,20 +566,23 @@ nav:first-of-type a {
   width: 17.2em;
   position: relative;
   text-align: center;
-  border: 2px solid #252525;
-  background-color: #252525;
+  border: 2px solid transparent;
+  background-color: #fff;
   margin-bottom: .7em;
   transition: .3s ease 0s;
-  padding: 2em;
+  padding: 1em;
+  margin-right: 1em;
+  border-radius: 1em;
+  box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
 }
 
-#toolkits-list li img {
+.plugins-list ul li img {
   width: 9em;
   margin: auto;
   padding: 1em;
 }
 
-#toolkits-list li a {
+.plugins-list ul li a {
   position: absolute;
   top: 0;
   left: 0;
@@ -523,39 +592,31 @@ nav:first-of-type a {
   text-indent: -9999px;
 }
 
-#toolkits-list li h2 {
-  color: #fff;
+.plugins-list ul li h2 {
+  color: #000;
 }
 
 #profile img {
   width: 6em;
   padding: 1em;
-  background-color: #fff;
+  background-color: #fb5258;
   border-radius: 100%;
 }
 
 #profile {
+  z-index: 999;
+  color: #000;
+  width: 100%;
   text-align: center;
-  color: #fff;
+  padding-bottom: 5em;
 }
 
 #profile h2 {
-  color: #fff;
+  color: #000;
 }
 
-#overview>h2,
-body#detail section:nth-of-type(3) h2 {
-  color: #fff;
-  padding: 2em;
-  font-size: 3em;
-  text-align: center;
-}
-
-#detail section:nth-of-type(3) h3,
-#overview>h2 {
-  color: #fff;
-  padding: 1em;
-  font-size: 2em;
+.ranklijst,
+.statistieken {
   text-align: center;
 }
 
@@ -589,13 +650,48 @@ body#detail section:nth-of-type(3) h2 {
 #mapid {
   min-height: 37.5em;
 }
+
+.settings {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.settings p {
+  padding: 1em;
+  position: relative;
+  margin: 3em;
+}
+
+.settings a {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #002b37;
+  padding: 1.5em;
+  margin: 1em;
+  line-height: 0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2em;
+  transition: .3s ease-in-out 0s;
+}
+
+.settings a:hover {
+  background-color: #fb5258;
+}
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
 }
 
 #quiz main {
   padding-top: calc(100vh - 75vh);
-  max-width: 70em;
+  max-width: 95em;
 }
 
 #quiz-result main {
@@ -637,9 +733,9 @@ body#detail section:nth-of-type(3) h2 {
 
 #quiz form {
   display: flex;
-  padding: 1em 2em;
   overflow: hidden;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 #quiz form div {
@@ -647,18 +743,17 @@ body#detail section:nth-of-type(3) h2 {
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
-  margin-bottom: 2em;
   color: #000;
   border-radius: 2em;
   flex-shrink: 0;
   height: auto;
   transform: scale(1);
-  margin: 0 50px;
   min-width: auto;
   transform-origin: center center;
   scroll-snap-align: start;
   width: 100%;
   height: auto;
+  margin-bottom: 2em;
 }
 
 #quiz label {
@@ -759,23 +854,23 @@ body#detail section:nth-of-type(3) h2 {
   background-color: #000;
   border-color: #000;
 }
-body>header {
+#start>header {
   max-width: 40em;
   margin: 4em auto 0 auto;
 }
 
-body>header div {
+#start>header div {
   margin: 0 auto;
   max-width: 22em;
 }
 
-body>header h1 {
+#start>header h1 {
   color: #000549;
   max-width: 8em;
   margin: 0 auto 0 2em;
 }
 
-header h1~p {
+#start header h1~p {
   margin: 1.25em 0 0 1.25em;
   max-width: 30em;
   font-weight: 500;
@@ -786,7 +881,7 @@ header h1~p {
   text-underline-offset: .4em;
 }
 
-h1~svg {
+#start h1~svg {
   fill: #feebc0;
   position: absolute;
   margin-top: -9.25em;
@@ -794,36 +889,36 @@ h1~svg {
   z-index: -2;
 }
 
-main.choose {
+#start main.choose {
   max-width: 60em;
   padding: initial;
   margin-top: 8em;
   margin-top: calc(5vh * 5);
 }
 
-main.choose>p {
+#start main.choose>p {
   text-align: center;
   max-width: 14em;
   margin: 0 auto;
 }
 
-main.choose>p button {
+#start main.choose>p button {
   border-radius: .5em;
   background-color: #7a84dc;
   border-bottom: solid .25em #9cb3dd;
   margin-bottom: 4em;
 }
 
-main.choose>p button:last-of-type::first-letter {
+#start main.choose>p button:last-of-type::first-letter {
   text-transform: capitalize;
 }
 
-main.choose>p a:focus button,
+#start main.choose>p a:focus button,
 main.choose>p a:hover button {
   background-color: #484f97;
 }
 
-main.choose>p span {
+#start main.choose>p span {
   position: absolute;
   left: -999em;
   top: -999em;

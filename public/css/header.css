@@ -1,20 +1,19 @@
-body > header {
+header {
 	margin: 0 auto;
 }
 
-body > header.user {
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	background-color: #83bd61;
-	/* background: linear-gradient(-25deg,#4a2a58,#6052d1); */
-	background: linear-gradient(5deg, #6052d1,#167cc1);
-	border-bottom: 0.15em solid #4a2a58;
-	width: 100%;
+header.user {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: url(../img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    border-bottom: .15em solid #4a2a58;
+    width: 100%;
+    margin: 0;
 }
 
-body > header h1 {
+header h1 {
 	font-weight: 900;
 	margin: 0;
 }

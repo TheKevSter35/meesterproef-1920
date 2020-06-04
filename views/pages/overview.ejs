@@ -4,61 +4,152 @@
 <%- include ('../partials/head.ejs') %>
 
 <body id="overview">
-	<header class="user">
-    <%- include ('../partials/nav.ejs') %>
-	</header>
-	
-    <section id="profile">
-		<img src="../source/pictures/person.svg" alt=" avatar">
-        <h2><%= user.name %></h2>
-    	<p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
-    </section>
 
-	<main id="toolkits">
-        <h1>Toolbox</h1>
-        <div>
+
+    <main id="toolkits">
+        <!-- <%- include ('../partials/nav.ejs') %> -->
+        <div class="overview-info">
+            <h1>Digi Wijzer</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis excepturi cum earum voluptatum
+                libero sint possimus modi, quo suscipit unde in dignissimos odio laborum laudantium fugiat aliquid.
+                Eaque, laudantium debitis!</p>
+        </div>
+
+        <!-- <div>
             <button class="btnFilters active" id="btnLijstWeergave">Lijst</button>
             <button class="btnFilters" id="btnKaartweergave">Kaart</button>
+        </div> -->
+        <div class="plugins-list">
+            <h2>Phishing</h2>
+            <ul class="plugins">
+
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Phishing Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Phishing Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Phishing Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+
+
+            </ul>
+            <h2>Data Gebruik</h2>
+            <ul class="plugins">
+
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Data Gebruik</h2>
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Data Gebruik</h2>
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Data Gebruik</h2>
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+
+                <li>
+
+                    <img src="../source/pictures/quiz.svg" alt="store">
+                    <h2>Data Gebruik</h2>
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+
+
+            </ul>
         </div>
-        <ul>
-            <li>
-                <h2>Quiz</h2>
-                <img src="../source/pictures/quiz.svg" alt="store">
-                <p>40/100p</p>
-                <a href="/quiz-detail">Meer info</a>
-            </li>
-            <li>
-                <h2>Quiz</h2>
-                <img src="../source/pictures/quiz.svg" alt="store">
-                <p>40/100p</p>
-                <a href="/quiz-detail">Meer info</a>
-            </li>
-            <li>
-                <h2>Quiz</h2>
-                <img src="../source/pictures/quiz.svg" alt="store">
-                <p>40/100p</p>
-                <a href="/quiz3">Meer info</a>
-            </li>
-            <li>
-                <h2>Quiz</h2>
-                <img src="../source/pictures/quiz.svg" alt="store">
-                <p>40/100p</p>
-                <a href="/quiz4">Meer info</a>
-            </li>
-        </ul>
-
-        <section id="webtoolsmap">
+        <!-- <section id="webtoolsmap">
             <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1lODhvLw9rzClo9mademZrYNE-Jb1jTO0" width="640" height="480"></iframe>
-        </section>
-
-		<div id="mapid"></div>
+        </section> -->
+        <!-- 
+		<div id="mapid"></div> -->
     </main>
 
-     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>
-     <script src="js/script.js"></script>
-     <script src="js/map.js"></script>
+    <sidebar>
+        <div id="profile">
+   
+                <img src="../source/pictures/person.svg" alt=" avatar">
+                <h2><%= user.name %></h2>
+                <p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
+        </div>
+        <div class="statistieken">
+            <h3>Statistieken</h3>
+            <ul>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+            </ul>
+            
+        </div>
+        <div class=" ranklijst">
+            <h3>Ranklijst</h3>
+            <ul>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class=" settings">
+            <p>
+                <a href="/">Log-out</a>
+            </p>
+        </div>
+    </sidebar>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
 
 </body>
+
 </html>

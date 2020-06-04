@@ -1,24 +1,26 @@
+#detail main {
+    margin-top: calc(100vh - 80vh);
+}
 #detail main ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: calc(100vh - 90vh);
 }
 #detail main ul li {
     padding: 1em 2em;
-    color: #Fff;
+    color: #000;
     position: relative;
 }
 #detail main ul li h2 {
-    color: #Fff;
+    color: #000;
 
 }
 #detail main ul li a {
     padding: 1em;
-    background-color: #fff;
+    background-color: #FB5258;
     position: absolute;
     margin: 1em 0;
     border-radius: 1em;
-    color: #000;
+    color: #FFF;
     text-decoration: none;
     width: auto;
     text-align: center;

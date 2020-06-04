@@ -15,6 +15,7 @@ body {
 	font-weight: 400;
 	font-style: normal;
     background-color: white;
+    min-height: 100vh;
 }
 
 ul {
@@ -97,7 +98,7 @@ p {
 
 main,
 section {
-    max-width: 30em;
+    max-width: 70em;
     margin: 0 auto;
     padding: 1em;
 }

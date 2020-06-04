@@ -1,28 +1,85 @@
+#overview {
+    display: flex;
+    color: #fff;
+}
 #overview main {
-    padding-top: 6em;
+    padding: 0;
+    position: relative;
+    margin: unset;
+    max-width: unset;
+    width: calc(100% - 400px);
+}
+#overview main>div {
+    padding: 5em;
+    text-align: left;
+}
+#overview h1 {
+    color: #fff;
+    text-align: left;
 }
 
-
-/* homepage */
-
-#toolkits h1{
-    color:#fff;
-    text-align: center;
+sidebar {
+    background-color: #f6f6f6;
+    color: #000;
+    position: fixed;
+    z-index: 3;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    width: calc(100% - 15em);
+    background: #f6f6f6;
+    max-width: 400px;
+    height: 100%;
+    max-width: 400px;
+    height: 100%;
+    padding: 2em;
 }
-#toolkits-list {
+
+.overview-info {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: url(../img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    border-bottom: .15em solid #4a2a58;
+    width: 100%;
+    margin: 0;
+}
+.overview-info p {
+    font-size: 1.3em;
+}
+
+/* plugins */
+
+.plugins-list > h2{
+    margin-bottom: 1em;
+    padding: 1em 0.2em;
+    display: flex;
+}
+
+.plugins-list > h2:before {
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    height: 32px;
+    width: 7px;
+    border-radius: 10px;
+    background: #ff445b;
+}
+.plugins-list ul {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: inherit;
     width: 100%;
-    min-height: 37.5em;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     padding-top: 1em;
+    margin-bottom:2em ;
 }
-#toolkits-list li:hover {
-    border-color: green;
+.plugins-list ul li:hover {
+    border-color: #FB5258;
 }
-#toolkits-list li {
+.plugins-list ul li {
     list-style: none;
     color: #fff;
     display: flex;
@@ -30,20 +87,24 @@
     width: 17.2em;
     position: relative;
     text-align: center;
-    border: 2px solid #252525;
-    background-color: #252525;
-    margin-bottom: 0.7em;
-    transition: 0.3s ease 0s;
-    padding: 2em;
+    border: 2px solid transparent;
+    background-color: #fff;
+    margin-bottom: .7em;
+    transition: .3s ease 0s;
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 1em;
+    box-shadow: 6px 12px 22px 0 rgba(0, 0, 0, 0.57);
 }
 
-#toolkits-list li img {
+
+.plugins-list ul li img {
     width: 9em;
     margin: auto;
     padding: 1em;
 }
 
-#toolkits-list li a {
+.plugins-list ul li a {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,38 +114,32 @@
     text-indent: -9999px;
 }
 
-#toolkits-list li h2 {
-    color: #fff;
+.plugins-list ul li h2 {
+    color: #000;
 }
 #profile img {
     width: 6em;
     padding: 1em;
-    background-color: #fff;
+    background-color: #FB5258;
     border-radius: 100%;
 }
 
 #profile {
+    z-index: 999;
+    color: #000;
+    width: 100%;
     text-align: center;
-    color: #Fff;
+    padding-bottom: 5em;
 }
 
 #profile h2 {
-    color: #FFF;
+    color: #000;
 }
-#overview > h2, body#detail section:nth-of-type(3) h2 {
-    color: #fff;
-    padding: 2em;
-    font-size: 3em;
+
+.statistieken, .ranklijst {
     text-align: center;
 }
 
-
-#overview > h2, #detail section:nth-of-type(3) h3{
-    color: #fff;
-    padding: 1em;
-    font-size: 2em;
-    text-align: center;
-}
 
 #webtoolsmap {
     height: 37.5em;
@@ -115,5 +170,40 @@
 
 #mapid {
     min-height: 37.5em;
+}
+
+
+.settings {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-bottom: 2em;
+}
+.settings p {
+    padding: 1em;
+    position: relative;
+    margin: 3em;
+}
+.settings a {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: #002B37;
+    padding: 1.5em;
+    margin: 1em;
+    line-height: 0px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2em;
+    transition: 0.3s ease-in-out 0s;
+}
+.settings a:hover {
+   
+    background-color: #FB5258;
+
 }
 /****************************/
