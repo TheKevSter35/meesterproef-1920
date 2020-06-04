@@ -7,7 +7,8 @@
 <body id="quiz-result">
     <%- include ('../../partials/nav.ejs') %>
     <main>
-        <H1>Resultaat</H1>
+		<H1>Resultaat</H1>
+		<p>Je hebt in totaal <%= score.earnedPoints %> punten verdiend van de <%= score.totalPoints %>.</p>
         <section class="result">
             <ul>
                 <% if(queries.question1 == "1") { %>
