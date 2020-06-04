@@ -4,6 +4,10 @@
     padding-top: calc(100vh - 75vh);
     max-width: 70em;
 }
+#quiz-result main {
+    padding-top: calc(100vh - 90vh);
+    max-width: 70em;
+}
 
 #quiz section img {
     width: 100%;
