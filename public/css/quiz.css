@@ -2,7 +2,7 @@
  #quiz-detail main    {    padding-top: calc(100vh - 90vh);}
 #quiz main {
     padding-top: calc(100vh - 75vh);
-    width: 70em;
+    max-width: 70em;
 }
 
 #quiz section img {
