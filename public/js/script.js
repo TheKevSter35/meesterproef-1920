@@ -3,8 +3,8 @@ let btnLijstWeergave    = document.querySelector('#btnLijstWeergave');
 let btnKaartweergave    = document.querySelector('#btnKaartweergave');
 
 // Views
-let listView    = document.querySelector('#toolkits-list');
-let mapView     = document.querySelector('#webtoolsmap');
+let listView    = document.querySelector('.plugins-list');
+let mapView     = document.querySelector('.localfocusvisual');
 
 // Set this als default
 window.onload = function () {
@@ -17,7 +17,7 @@ btnLijstWeergave.addEventListener('click', function (e) {
     btnKaartweergave.classList.remove('active');
     btnLijstWeergave.classList.add('active');
 
-    listView.style.display  = 'flex';
+    listView.style.display  = 'block';
     mapView.style.display   = 'none';
 });
 

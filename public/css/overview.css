@@ -172,7 +172,6 @@ sidebar {
     min-height: 37.5em;
 }
 
-
 .settings {
     position: absolute;
     bottom: 0;
@@ -205,5 +204,10 @@ sidebar {
    
     background-color: #FB5258;
 
+}
+
+.localfocusvisual {
+    padding: 5em;
+    height: 39em;
 }
 /****************************/

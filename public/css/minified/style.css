@@ -710,6 +710,11 @@ sidebar {
 .settings a:hover {
   background-color: #fb5258;
 }
+
+.localfocusvisual {
+  padding: 5em;
+  height: 39em;
+}
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
 }
