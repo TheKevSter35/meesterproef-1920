@@ -923,7 +923,6 @@ sidebar {
 
 #start main.choose>p {
   text-align: center;
-  max-width: 14em;
   margin: 0 auto;
 }
 
@@ -941,10 +940,4 @@ sidebar {
 #start main.choose>p a:focus button,
 main.choose>p a:hover button {
   background-color: #484f97;
-}
-
-#start main.choose>p span {
-  position: absolute;
-  left: -999em;
-  top: -999em;
 }
