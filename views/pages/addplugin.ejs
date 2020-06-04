@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <%- include ('../partials/head.ejs') %>
+
+<body id="start">
+  
+    <main>
+        <section>
+            <h1>Add plugin</h1>
+            <form action="/overview">
+
+            <label for="pluginIcon"> Plugin icoon:</label>
+
+            <div id="uploadFoto">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;" viewBox="0 0 8467 10583.75" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd" id="imagePlacholder">
+                    <defs>
+                        <style type="text/css">
+                            .fil0 {fill:#CCDCE2}
+                        </style>
+                    </defs>
+                    <g>
+                        <path class="fil0" d="M265 1720l0 5027c0,364 297,661 661,661l6615 0c363,0 661,-297 661,-661l0 -5027c0,-364 -298,-662 -661,-662l-6615 0c-364,0 -661,298 -661,662zm1003 141l5931 0c63,0 119,55 119,118l0 4508c0,64 -56,119 -119,119l-5931 0c-64,0 -119,-56 -119,-119l0 -4508c0,-63 55,-118 119,-118l0 0z"/>
+                        <polygon class="fil0" points="1623,4471 1623,6131 6843,6131 6843,5420 5657,4233 5064,4827 3166,2928 "/>
+                        <path class="fil0" d="M4317 3091c0,393 319,712 712,712 393,0 712,-319 712,-712 0,-393 -319,-712 -712,-712 -393,0 -712,319 -712,712z"/>
+                    </g>
+                    <text x="0" y="8482" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by IcoMoon</text>
+                    <text x="0" y="8487" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+                </svg>
+                <input type="file" name="pluginIcon" id="uploadFotoInput">
+
+            </div>
+                
+            <label for="pluginName"> Naam:</label>
+            <input type="text" name="pluginName" placeholder="Naam plugin">
+
+            <label for="latitude"> Latitude:</label>
+            <input type="number" id="quantity" name="latitude">
+
+            <label for="longitude"> Longitude:</label>
+            <input type="number" id="quantity" name="longitude">
+
+            <label for="pluginDescription"> Omschrijving:</label>
+            <textarea name="pluginDescription" placeholder="Omschrijf de plugin"></textarea>
+
+            <label for="pluginType"> Plugin type:</label>
+            <select name="pluginType">
+                <option value="quiz">Quiz</option>
+                <option value="game">Game</option>
+            </select>
+
+            <label for="appDemoLink"> App demo:</label>
+            <input type="text" name="appDemoLink" placeholder="http://appdemo.com">
+
+            <label for="repoLink"> Github repo:</label>
+            <input type="text" name="repoLink" placeholder="http://github.com">
+
+            <button type="submit">Submit</button>
+        </form>
+        </section>
+    </main>
+
+
+     <script src="js/addPlugin.js"></script>
+
+
+</body>
+
+
+</html>
