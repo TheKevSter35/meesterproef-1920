@@ -8,7 +8,7 @@
 <body id="quiz">
     <%- include ('../../partials/nav.ejs') %>
     <main>
-        <form action="/quiz-result">
+        <form action="/quiz-result" method="POST">
             <div id="question1">
                 <section>
                     <img  src="../source/pictures/quiz/bank-mail.png" alt="">
@@ -60,7 +60,7 @@
                     </h2>
                     <label for="question3-answer1" class="question3-answer1">
                         <input type="radio" id="question3-answer1" name="question3" data-score="0"
-                            value="Ik doe hetzelfde wachtwoord. Makkelijk te onthouden"
+                            value="0"
                             <% if (queries.question3 == "0") { %> <% } %>>
                         Ik doe hetzelfde wachtwoord. Makkelijk te onthouden</label>
                     <label for="question3-answer2" class="question3-answer2">

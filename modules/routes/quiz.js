@@ -7,8 +7,22 @@ module.exports = function (app) {
 			queries: req.query
 		})
 	})
-	app.get('/quiz-result', (req, res) => {
+	app.post('/quiz-result', (req, res) => {
+		const answers = req.body
+		let totalScore = score = 0
+		Object.entries(answers).map((answer) => {
+			if (answer[1] === "1") {
+				score += 10
+			}
+			totalScore += 10
+		})
+		const results = {
+			earnedPoints: score,
+			totalPoints: totalScore
+		}
+		req.session.score = score
 		res.render('pages/quiz/quiz-result', {
+			score: results,
 			queries: req.query
 		})
 	})

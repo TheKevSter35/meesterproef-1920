@@ -841,6 +841,18 @@ sidebar {
   color: #000;
 }
 
+#quiz .selected {
+  background-color: #00607b;
+}
+
+#quiz .correct {
+  background-color: #c1d8b5;
+}
+
+#quiz .incorrect {
+  background-color: #edb9b8;
+}
+
 #quiz-result .result li button {
   background-color: inherit;
   font-size: 1.1em;
