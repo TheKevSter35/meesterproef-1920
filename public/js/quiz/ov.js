@@ -1,8 +1,4 @@
 
-
-
-
-
 const answer1 = document.getElementById('answer2-question1')
 answer1.addEventListener('click', selectAnswer1 )
 
