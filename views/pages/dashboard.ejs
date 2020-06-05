@@ -4,6 +4,34 @@
 
 <body>
 	<main class="dashboard">
+		<h1>Welkom <%= user.name %></h1>
+		<p>Hier leer je wat voor voetsporen je achterlaat op het internet,<span> en leer wat je moet doen om veilig het internet te gebruiken.</span></p>
+		<section>
+			<h2>Plugins (hulpmiddelen)</h2>
+			<section>
+			<h3>Nieuw</h3>
+			<ul>
+				<li>
+					<div>
+						<img src="../source/pictures/quiz.svg" alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+						<a href="/quiz-detail">Phishing Quiz</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="/data-gebruik">
+						<img src="../source/pictures/quiz.svg" alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+						<span>Data Gebruik</span>
+					</a>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Meest gebruikt</h3>
+			<p>Je hebt nog geen plugin gebruikt. <a href="/overzicht">Ga naar de Digi-wijzer om te beginnen.</a></p>
+		</section>
+	</section>
 	</main>
 	<%- include ('../partials/sidebar.ejs') %>
 </body>
