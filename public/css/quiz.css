@@ -4,10 +4,6 @@
     padding-top: calc(100vh - 75vh);
     max-width: 80em;
 }
-#quiz-result main {
-    padding-top: calc(100vh - 90vh);
-    max-width: 70em;
-}
 
 #quiz section img {
     width: 100%;
@@ -97,53 +93,87 @@
     display: none;
 }
 
-#quiz-result main   {    padding-top: calc(100vh - 95vh);}
+#quiz-result main {
+    padding: unset;
+    position: relative;
+    margin: unset;
+    max-width: unset;
+    width: calc(100% - 400px);
+}
+#quiz-result main .result {
+   padding: 6em 2em;
+    max-width: 100%;
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+}
 #quiz-result main h1 {
-    color:#000;
+    color:#fff;
+}
+
+#quiz-result section.result > h2 {
+    text-align: center;
+    color:#fff;
+}
+
+#quiz-result section.result .score-circle {
+    width: 16em;
+    height: 16em;
+    margin: 3em auto;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-color: #003745;
+}
+#quiz-result section.result .score-circle p {
+    font-size: 2em;
+    line-height: 7.7em;
+    font-weight: bold;
+}
+#quiz-result .tips{
+    padding-top: 4em;
+}
+#quiz-result .tips h2{
+    text-align:center;
+    padding-bottom: 3em;
 }
 #quiz-result .panel ul {
     list-style: circle;
 }
-#quiz-result .result li .panel li {
+#quiz-result .tips li .panel li {
     padding: 0;
     margin-bottom: 0;
 }
 
-#quiz-result .result li {
+#quiz-result .tips > ul > li {
     padding: 1em;
     margin-bottom: 2em;
-
-}
-
-#quiz-result .correct {
-    background-color: #C1D8B5;
+    box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
     color: #000;
 }
 
-#quiz-result .incorrect {
-    background-color:#EDB9B8;
-    color: #000;
+#quiz-result .tips a{
+    color:#FB5258;
 }
-
-#quiz .selected {
-    background-color: #00607b;
-}
-
-#quiz .correct {
-    background-color: #C1D8B5;
-}
-
-#quiz .incorrect {
-    background-color:#EDB9B8;
-}
-
-#quiz-result .result li button {
+#quiz-result .tips li button {
     background-color: inherit;
     font-size: 1.1em;
     font-weight: bold;
     color: #000;
     padding: 1em 0.5em;
     cursor: pointer;
+}
+
+#quiz-result .tips li button strong{
+    display: flex;
+}
+#quiz-result .tips li button strong:before {
+    content: "";
+    display: inline-block;
+    margin: 0 16px 0 0;
+    height: 20px;
+    width: 7px;
+    border-radius: 10px;
+    background: #ff445b;
 }
 .accordion {
     background-color: inherit;
@@ -183,4 +213,7 @@ svg.feather.feather-chevron-right {
 }
 #quiz div > section:last-child p {
     height: 3em;
+}
+#quiz div > section:last-child p a {
+    cursor: pointer;
 }
