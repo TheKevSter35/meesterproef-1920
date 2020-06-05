@@ -93,59 +93,9 @@
 
     </main>
 
-    <div class="sidebar">
-        <div id="profile">
-                <img src="../source/pictures/person.svg" alt=" avatar">
-                <h2><%= user.name %></h2>
-                <p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
-        </div>
-        <div class="statistieken">
-            <h3>Statistieken</h3>
-            <ul>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-            </ul>
-            
-        </div>
-        <div class=" ranklijst">
-            <h3>Ranklijst</h3>
-            <ul>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class=" settings">
-            <p>
-                <a href="/">Log-out</a>
-            </p>
-        </div>
-    </div>
+  
+       
+    <%- include ('../partials/sidebar.ejs') %>
 
 
 
