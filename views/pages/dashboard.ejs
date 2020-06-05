@@ -3,13 +3,8 @@
 <%- include ('../partials/head.ejs') %>
 
 <body>
-	<aside>
-		<img src="../source/pictures/person.svg" alt="avatar">
-		<h2><%= user.name %></h2>
-		<p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
-		<%- include ('../partials/usernav.ejs') %>
-	</aside>
 	<main class="dashboard">
 	</main>
+	<%- include ('../partials/sidebar.ejs') %>
 </body>
 </html>
