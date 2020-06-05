@@ -1,6 +1,6 @@
 exports.get = function (req, res) {
-	if (req.session === undefined) {
-		res.redirect('/session-end')
+	if (!req.session.userID) {
+		return res.redirect('/')
 	}
 	const user = {
 		name: req.session.name,

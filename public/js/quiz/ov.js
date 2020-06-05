@@ -1,41 +1,37 @@
 
-
-
-
-
-const answer1 = document.getElementById("answer2-question1")
-answer1.addEventListener("click", selectAnswer1 )
+const answer1 = document.getElementById('answer2-question1')
+answer1.addEventListener('click', selectAnswer1 )
 
 function selectAnswer1 (){
 
-    const elem = document.querySelector(".answer1")
-    elem.parentNode.removeChild(elem);
-    document.querySelector(".answer2").style.backgroundColor = "#C1D8B5"
-    document.querySelector("#question1 section ").innerHTML = "  <h2> checkin: 10:03 Centraal Station </h2> <p> saldo: 150 euro</p> "
-    setTimeout(function(){ 
-        window.location.replace("/overview")
-    // document.getElementById("question1").style.opacity = "0"
-    // document.getElementById("question1").style.height = "0"
-    // 
-}, 4500);
+	const elem = document.querySelector('.answer1')
+	elem.parentNode.removeChild(elem)
+	document.querySelector('.answer2').style.backgroundColor = '#C1D8B5'
+	document.querySelector('#question1 section ').innerHTML = '  <h2> checkin: 10:03 Centraal Station </h2> <p> saldo: 150 euro</p> '
+	setTimeout(function(){ 
+		window.location.replace('/overview')
+		// document.getElementById("question1").style.opacity = "0"
+		// document.getElementById("question1").style.height = "0"
+		// 
+	}, 4500)
  
     
 }
 
-const answer2 = document.getElementById("answer1-question1")
-answer2.addEventListener("click", selectAnswer2 )
+const answer2 = document.getElementById('answer1-question1')
+answer2.addEventListener('click', selectAnswer2 )
 
 function selectAnswer2 (){
-    const elem = document.querySelector(".answer2")
-    elem.parentNode.removeChild(elem);
-    document.querySelector(".answer1").style.backgroundColor = "#C1D8B5"
-    document.querySelector("#question1 section").innerHTML = " <h2> checkin: 10:03 Centraal Station </h2> <p> Henk meijer</p> <p> 11-2-1980</p> <p> man</p> <p> henk@email.nl </p> <p> saldo: 150 euro</p> "
-    setTimeout(function(){ 
-        window.location.replace("/overview")
-    // document.getElementById("question1").style.opacity = "0"
-    // document.getElementById("question1").style.height = "0"
-    // 
-}, 4500);
+	const elem = document.querySelector('.answer2')
+	elem.parentNode.removeChild(elem)
+	document.querySelector('.answer1').style.backgroundColor = '#C1D8B5'
+	document.querySelector('#question1 section').innerHTML = ' <h2> checkin: 10:03 Centraal Station </h2> <p> Henk meijer</p> <p> 11-2-1980</p> <p> man</p> <p> henk@email.nl </p> <p> saldo: 150 euro</p> '
+	setTimeout(function(){ 
+		window.location.replace('/overview')
+		// document.getElementById("question1").style.opacity = "0"
+		// document.getElementById("question1").style.height = "0"
+		// 
+	}, 4500)
     
 }
 
