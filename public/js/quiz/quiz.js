@@ -212,9 +212,12 @@ function scrollToForm6() {
 		document.querySelector('.question6-answer1').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question7').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion6 = document.getElementById('text-question6')
+		textQuestion6.classList.add('hidden')
+		const CorrectTextQuestion6 = document.querySelector('.info-text-question6')
+		CorrectTextQuestion6.classList.remove('hidden')
+		const next = document.querySelector('.next-question6')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -227,9 +230,12 @@ function WrongscrollToForm6() {
 		document.querySelector('.question6-answer2').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question7').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion6 = document.getElementById('text-question6')
+		textQuestion6.classList.add('hidden')
+		const CorrectTextQuestion6 = document.querySelector('.info-text-question6')
+		CorrectTextQuestion6.classList.remove('hidden')
+		const next = document.querySelector('.next-question6')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -246,9 +252,12 @@ function scrollToForm7() {
 		document.querySelector('.question7-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question8').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion7 = document.getElementById('text-question7')
+		textQuestion7.classList.add('hidden')
+		const CorrectTextQuestion7 = document.querySelector('.info-text-question7')
+		CorrectTextQuestion7.classList.remove('hidden')
+		const next = document.querySelector('.next-question7')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -261,9 +270,12 @@ function WrongscrollToForm7() {
 		document.querySelector('.question7-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question8').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion7 = document.getElementById('text-question7')
+		textQuestion7.classList.add('hidden')
+		const CorrectTextQuestion7 = document.querySelector('.info-text-question7')
+		CorrectTextQuestion7.classList.remove('hidden')
+		const next = document.querySelector('.next-question7')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -280,9 +292,12 @@ function scrollToForm8() {
 		document.querySelector('.question8-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question9').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion8 = document.getElementById('text-question8')
+		textQuestion8.classList.add('hidden')
+		const CorrectTextQuestion8 = document.querySelector('.info-text-question8')
+		CorrectTextQuestion8.classList.remove('hidden')
+		const next = document.querySelector('.next-question8')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -295,9 +310,12 @@ function WrongscrollToForm8() {
 		document.querySelector('.question8-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question9').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion8 = document.getElementById('text-question8')
+		textQuestion8.classList.add('hidden')
+		const CorrectTextQuestion8 = document.querySelector('.info-text-question8')
+		CorrectTextQuestion8.classList.remove('hidden')
+		const next = document.querySelector('.next-question8')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -314,9 +332,12 @@ function scrollToForm9() {
 		document.querySelector('.question9-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question10').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion9 = document.getElementById('text-question9')
+		textQuestion9.classList.add('hidden')
+		const CorrectTextQuestion9 = document.querySelector('.info-text-question9')
+		CorrectTextQuestion9.classList.remove('hidden')
+		const next = document.querySelector('.next-question9')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -329,9 +350,12 @@ function WrongscrollToForm9() {
 		document.querySelector('.question9-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question10').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion9 = document.getElementById('text-question9')
+		textQuestion9.classList.add('hidden')
+		const CorrectTextQuestion9 = document.querySelector('.info-text-question9')
+		CorrectTextQuestion9.classList.remove('hidden')
+		const next = document.querySelector('.next-question9')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -349,7 +373,12 @@ function scrollToForm10() {
 		document.querySelector('.question10-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#submit').click()
+		const textQuestion10 = document.getElementById('text-question10')
+		textQuestion10.classList.add('hidden')
+		const CorrectTextQuestion10 = document.querySelector('.info-text-question10')
+		CorrectTextQuestion10.classList.remove('hidden')
+		const next = document.querySelector('.next-question10')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -362,6 +391,16 @@ function WrongscrollToForm10() {
 		document.querySelector('.question10-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#submit').click()
+		const textQuestion10 = document.getElementById('text-question10')
+		textQuestion10.classList.add('hidden')
+		const CorrectTextQuestion10 = document.querySelector('.info-text-question10')
+		CorrectTextQuestion10.classList.remove('hidden')
+		const next = document.querySelector('.next-question10')
+		next.classList.remove('hidden')
 	}, 2000)
+}
+const submit = document.querySelector('.next-question10')
+submit.addEventListener('click', submitForm)
+function submitForm() {
+	document.querySelector('#submit').click()
 }

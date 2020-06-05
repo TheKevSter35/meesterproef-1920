@@ -7,7 +7,7 @@ header.user {
     z-index: 2;
     top: 0;
     left: 0;
-    background: url(../img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
     border-bottom: .15em solid #4a2a58;
     width: 100%;
     margin: 0;

@@ -20,10 +20,15 @@ module.exports = function (app) {
 			earnedPoints: score,
 			totalPoints: totalScore
 		}
+		const user = {
+			name: req.session.name,
+			score: req.session.score,
+			usedTools: req.session.usedtools
+		}
 		req.session.score = score
 		res.render('pages/quiz/quiz-result', {
 			score: results,
-			queries: req.query
+			user: user
 		})
 	})
 }
