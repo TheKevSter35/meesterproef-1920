@@ -1,0 +1,15 @@
+<nav>
+	<ul>
+		<%if (user === "gast") { %>
+		<li><a href="/profiel">Jouw informatie</a></li>
+		<% } else { %>
+		<li><a href="/profiel">Profiel</a></li>
+		<% } %>
+		<li><a href="/overzicht">Toolbox</a></li>
+		<%if (user === "gast") { %>
+		<li><a href="/">Naar startscherm</a></li>
+		<% } else { %>
+		<li><a href="/">Uitloggen</a></li>
+		<% } %>
+	</ul>
+</nav>

@@ -4,5 +4,6 @@ module.exports = function (req, res) {
 	req.session.userID = uuidv4()
 	req.session.name = 'gast'
 	req.session.score = 0
+	req.session.usedtools = []
 	return res.redirect('/overzicht')
 }
