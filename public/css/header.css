@@ -30,16 +30,13 @@ nav:first-of-type > img {
 
 nav:first-of-type ul {
     display: flex;
-	align-items: center;
-	justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #000;
 }
 
 nav:first-of-type li {
     margin: 0 8px;
     margin: 0 0.5em;
-}
-
-nav:first-of-type a {
-	/* color:#B20BD6; */
-	color: white;
 }
