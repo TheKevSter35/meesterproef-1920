@@ -2,7 +2,7 @@
  #quiz-detail main    {    padding-top: calc(100vh - 90vh);}
 #quiz main {
     padding-top: calc(100vh - 75vh);
-    max-width: 95em;
+    max-width: 80em;
 }
 #quiz-result main {
     padding-top: calc(100vh - 90vh);
@@ -28,10 +28,16 @@
 }
 #quiz form h2 {
     color: inherit;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     font-size: 1.4em;
     padding-top: 1em;
     text-align: left;
+    min-height: 8.8em;
+    padding: 1em;
+}
+#quiz form h2:nth-of-type(2) {
+
+    background-color: white;
 }
 #quiz #question {
     DISPLAY: flex;
@@ -166,4 +172,15 @@
   .panel hr {
     background-color: #000;
     border-color: #000;
+}
+
+svg.feather.feather-chevron-right {
+    background-color: #FF445B;
+    width: 2em;
+    height: 2em;
+    border-radius: 100%;
+    padding: 0.2em;
+}
+#quiz div > section:last-child p {
+    height: 3em;
 }

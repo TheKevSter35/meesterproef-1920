@@ -15,29 +15,36 @@
 
                 </section>
                 <section>
-                    <h2>Je opened je e-mail. en je krijgt een mail van je bank dat je accounts is
+                    <h2 id="text-question1">Je opened je e-mail. en je krijgt een mail van je bank dat je accounts is
                         gedeactiveerd en wordt gevraagd om in te loggen om het weer te
                         activeren.
                     </h2>
-
+                    <h2 class="info-text-question1 hidden">De bank vraagt nooit om in te loggen op Mijn Bank (Internetbankieren) via een
+                        sms of e-mail.
+                    </h2>
                     <label for="question1-answer1" class="question1-answer1">
                         <input type="radio" id="question1-answer1" name="question1" data-score="0" value="0"
                             <% if (queries.question1 == "0") { %> <% } %>>
                         Dit is wel belangrijk de bank stuurt dit niet zomaar.
                     </label>
+                    
                     <label for="question1-answer2" class="question1-answer2">
                         <input type="radio" id="question1-answer2" name="question1" data-score="1" value="1"
                             <% if (queries.question1 == "1") { %> <% } %>>
                         Misschien toch contact opnemen met mijn bank en vragen waarom mijn pas is gedeactiveerd.</label>
+                        <p><a href="#question2" class="next-question1 hidden" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></p>
                 </section>
             </div>
             <div id="question2">
                 <section>
                     <img src="../source/pictures/quiz/bank-home.png" alt="">
                 </section>
-                <section>
-                    <h2>is dit een betrouwbare website?
-                    </h2>             
+                <section>  
+                    <h2 id="text-question2">is dit een betrouwbare website?
+                    </h2>
+                    <h2 class="info-text-question2 hidden">Het lijkt op de pagina van je bank. maar het adres klopt niet (mijne.bank.nl is geen pagina van de bank). Internetcriminelen maken een kopie van de pagina zodat mensen het idee krijgen dat ze op de
+                        juiste pagina zitten.
+                    </h2>        
                     <label for="question2-answer1" class="question2-answer1">
                         <input type="radio" id="question2-answer1" name="question2" data-score="0" value="0"
                             <% if (queries.question2 == "0") { %> <% } %>>
@@ -47,6 +54,7 @@
                             <% if (queries.question2 == "1") { %> <% } %>>
 
                         Nee </label>
+                        <p><a href="#question3" class="next-question2 hidden" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></p>
                 </section>
             </div>
             <div id="question3">
@@ -56,8 +64,12 @@
 
                 </section>
                 <section>
-                    <h2>Het wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
+
+                    <h2 id="text-question3">Het wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
                     </h2>
+                    <h2 class="info-text-question3 hidden">Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt en dat dit
+                        wachtwoord moeilijk te raden is: gebruik tekens, cijfers en (HOOFD)letters.
+                    </h2>   
                     <label for="question3-answer1" class="question3-answer1">
                         <input type="radio" id="question3-answer1" name="question3" data-score="0"
                             value="0"
@@ -68,6 +80,7 @@
                             <% if (queries.question3 == " 1") { %> <% } %>>
                         Ik maak wel een nieuwe wachtwoord
                     </label>
+                    <p><a href="#question4" class="next-question3 hidden" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></p>
                 </section>
             </div>
             <div id="question4">
@@ -77,8 +90,11 @@
 
                 </section>
                 <section>
-                    <h2>Mijn wachtwoorden in een boekje opschrijven is veilig
+                    <h2 id="text-question4">Het wachtwoord van je werk account is verlopen. Er wordt gevraagd om een nieuwe te maken.
                     </h2>
+                    <h2 class="info-text-question4 hidden">Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt en dat dit
+                        wachtwoord moeilijk te raden is: gebruik tekens, cijfers en (HOOFD)letters.
+                    </h2>   
                     <label for="question4-answer1" class="question4-answer1">
                         <input type="radio" id="question4-answer1" name="question4" data-score="0" value="0"
                             <% if (queries.question4 == "0") { %> <% } %>>
@@ -87,17 +103,19 @@
                         <input type="radio" id="question4-answer2" name="question4" data-score="1" value="1"
                             <% if (queries.question4 == "1") { %> <% } %>>
                         Dat klopt</label>
+                        <p><a href="#question5" class="next-question4 hidden" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></a></p>
                 </section>
             </div>
             <div id="question5">
                 <section>
                     <img src="../source/pictures/quiz/update.png" alt="">
-
-
                 </section>
                 <section>
-                    <h2>Je pc heeft een update melding wat ga je doen?
+                    <h2 id="text-question4">Je pc heeft een update melding wat ga je doen?
                     </h2>
+                    <h2 class="info-text-question4 hidden">Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt en dat dit
+                        wachtwoord moeilijk te raden is: gebruik tekens, cijfers en (HOOFD)letters.
+                    </h2>   
                     <label for="question5-answer1" class="question5-answer1">
                         <input type="radio" id="question5-answer1" name="question5" data-score="1" value="1"
                             <% if (queries.question5 == "1") { %> <% } %>>

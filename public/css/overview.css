@@ -18,22 +18,6 @@
     text-align: left;
 }
 
-sidebar {
-    background-color: #f6f6f6;
-    color: #000;
-    position: fixed;
-    z-index: 3;
-    overflow-y: scroll;
-    top: 0;
-    right: 0;
-    width: calc(100% - 15em);
-    background: #f6f6f6;
-    max-width: 400px;
-    height: 100%;
-    max-width: 400px;
-    height: 100%;
-    padding: 2em;
-}
 
 .overview-info {
     position: relative;
@@ -117,29 +101,6 @@ sidebar {
 .plugins-list ul li h2 {
     color: #000;
 }
-#profile img {
-    width: 6em;
-    padding: 1em;
-    background-color: #FB5258;
-    border-radius: 100%;
-}
-
-#profile {
-    z-index: 999;
-    color: #000;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 5em;
-}
-
-#profile h2 {
-    color: #000;
-}
-
-.statistieken, .ranklijst {
-    text-align: center;
-}
-
 
 #webtoolsmap {
     height: 37.5em;

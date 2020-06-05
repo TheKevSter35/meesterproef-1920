@@ -11,7 +11,7 @@ module.exports = function (app) {
 		const answers = req.body
 		let totalScore = score = 0
 		Object.entries(answers).map((answer) => {
-			if (answer[1] === "1") {
+			if (answer[1] === '1') {
 				score += 10
 			}
 			totalScore += 10

@@ -7,12 +7,20 @@ function scrollToForm() {
 	setTimeout(function () {
 		document.querySelector('.question1-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
-
 	setTimeout(function () {
-		document.querySelector('#question2').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion1 = document.getElementById('text-question1')
+		textQuestion1.classList.add('hidden')
+		const CorrectTextQuestion1 = document.querySelector('.info-text-question1')
+		CorrectTextQuestion1.classList.remove('hidden')
+		const next = document.querySelector('.next-question1')
+		next.classList.remove('hidden')
 	}, 2000)
+
+	// setTimeout(function () {
+	// 	document.querySelector('#question2').scrollIntoView({
+	// 		behavior: 'smooth'
+	// 	})
+	// }, 2000)
 }
 
 const wrongQuestion1 = document.getElementById('question1-answer1')
@@ -25,9 +33,12 @@ function WrongscrollToForm() {
 		document.querySelector('.question1-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question2').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion1 = document.getElementById('text-question1')
+		textQuestion1.classList.add('hidden')
+		const CorrectTextQuestion1 = document.querySelector('.info-text-question1')
+		CorrectTextQuestion1.classList.remove('hidden')
+		const next = document.querySelector('.next-question1')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -44,9 +55,12 @@ function scrollToForm2() {
 		document.querySelector('.question2-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question3').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion2 = document.getElementById('text-question2')
+		textQuestion2.classList.add('hidden')
+		const CorrectTextQuestion2 = document.querySelector('.info-text-question2')
+		CorrectTextQuestion2.classList.remove('hidden')
+		const next = document.querySelector('.next-question2')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -59,9 +73,12 @@ function WrongscrollToForm2() {
 		document.querySelector('.question2-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question3').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion2 = document.getElementById('text-question2')
+		textQuestion2.classList.add('hidden')
+		const CorrectTextQuestion2 = document.querySelector('.info-text-question2')
+		CorrectTextQuestion2.classList.remove('hidden')
+		const next = document.querySelector('.next-question2')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -78,9 +95,12 @@ function scrollToForm3() {
 		document.querySelector('.question3-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question4').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion3 = document.getElementById('text-question3')
+		textQuestion3.classList.add('hidden')
+		const CorrectTextQuestion3 = document.querySelector('.info-text-question3')
+		CorrectTextQuestion3.classList.remove('hidden')
+		const next = document.querySelector('.next-question3')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -93,9 +113,12 @@ function WrongscrollToForm3() {
 		document.querySelector('.question3-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question4').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion3 = document.getElementById('text-question3')
+		textQuestion3.classList.add('hidden')
+		const CorrectTextQuestion3 = document.querySelector('.info-text-question3')
+		CorrectTextQuestion3.classList.remove('hidden')
+		const next = document.querySelector('.next-question3')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -111,9 +134,12 @@ function scrollToForm4() {
 		document.querySelector('.question4-answer2').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question5').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion4 = document.getElementById('text-question4')
+		textQuestion4.classList.add('hidden')
+		const CorrectTextQuestion4 = document.querySelector('.info-text-question4')
+		CorrectTextQuestion4.classList.remove('hidden')
+		const next = document.querySelector('.next-question4')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -126,9 +152,12 @@ function WrongscrollToForm4() {
 		document.querySelector('.question4-answer1').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question5').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion4 = document.getElementById('text-question4')
+		textQuestion4.classList.add('hidden')
+		const CorrectTextQuestion4 = document.querySelector('.info-text-question4')
+		CorrectTextQuestion4.classList.remove('hidden')
+		const next = document.querySelector('.next-question4')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -144,9 +173,12 @@ function scrollToForm5() {
 		document.querySelector('.question5-answer1').style.backgroundColor = '#C1D8B5'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question6').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion5 = document.getElementById('text-question5')
+		textQuestion5.classList.add('hidden')
+		const CorrectTextQuestion5 = document.querySelector('.info-text-question5')
+		CorrectTextQuestion5.classList.remove('hidden')
+		const next = document.querySelector('.next-question5')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 
@@ -159,9 +191,12 @@ function WrongscrollToForm5() {
 		document.querySelector('.question5-answer2').style.backgroundColor = '#FC5258'
 	}, 1500)
 	setTimeout(function () {
-		document.querySelector('#question6').scrollIntoView({
-			behavior: 'smooth'
-		})
+		const textQuestion5 = document.getElementById('text-question5')
+		textQuestion5.classList.add('hidden')
+		const CorrectTextQuestion5 = document.querySelector('.info-text-question5')
+		CorrectTextQuestion5.classList.remove('hidden')
+		const next = document.querySelector('.next-question5')
+		next.classList.remove('hidden')
 	}, 2000)
 }
 

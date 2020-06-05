@@ -531,23 +531,6 @@ nav:first-of-type a {
   text-align: left;
 }
 
-sidebar {
-  background-color: #f6f6f6;
-  color: #000;
-  position: fixed;
-  z-index: 3;
-  overflow-y: scroll;
-  top: 0;
-  right: 0;
-  width: calc(100% - 15em);
-  background: #f6f6f6;
-  max-width: 400px;
-  height: 100%;
-  max-width: 400px;
-  height: 100%;
-  padding: 2em;
-}
-
 .overview-info {
   position: relative;
   z-index: 2;
@@ -632,30 +615,6 @@ sidebar {
   color: #000;
 }
 
-#profile img {
-  width: 6em;
-  padding: 1em;
-  background-color: #fb5258;
-  border-radius: 100%;
-}
-
-#profile {
-  z-index: 999;
-  color: #000;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 5em;
-}
-
-#profile h2 {
-  color: #000;
-}
-
-.ranklijst,
-.statistieken {
-  text-align: center;
-}
-
 #webtoolsmap {
   height: 37.5em;
 }
@@ -732,7 +691,7 @@ sidebar {
 
 #quiz main {
   padding-top: calc(100vh - 75vh);
-  max-width: 95em;
+  max-width: 80em;
 }
 
 #quiz-result main {
@@ -761,10 +720,16 @@ sidebar {
 
 #quiz form h2 {
   color: inherit;
-  padding-bottom: 2em;
+  margin-bottom: 2em;
   font-size: 1.4em;
   padding-top: 1em;
   text-align: left;
+  min-height: 8.8em;
+  padding: 1em;
+}
+
+#quiz form h2:nth-of-type(2) {
+  background-color: #fff;
 }
 
 #quiz #question {
@@ -906,6 +871,58 @@ sidebar {
 .panel hr {
   background-color: #000;
   border-color: #000;
+}
+
+svg.feather.feather-chevron-right {
+  background-color: #ff445b;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  padding: .2em;
+}
+
+#quiz div>section:last-child p {
+  height: 3em;
+}
+.sidebar {
+  background-color: #f6f6f6;
+  color: #000;
+  position: fixed;
+  z-index: 3;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  width: calc(100% - 15em);
+  background: #f6f6f6;
+  max-width: 400px;
+  height: 100%;
+  max-width: 400px;
+  height: 100%;
+  padding: 2em;
+}
+
+#profile img {
+  width: 6em;
+  padding: 1em;
+  background-color: #fb5258;
+  border-radius: 100%;
+}
+
+#profile {
+  z-index: 999;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5em;
+}
+
+#profile h2 {
+  color: #000;
+}
+
+.ranklijst,
+.statistieken {
+  text-align: center;
 }
 #start>header {
   max-width: 40em;
