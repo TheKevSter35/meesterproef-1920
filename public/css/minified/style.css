@@ -694,6 +694,14 @@ nav:first-of-type li:hover {
   padding: 5em;
   height: 39em;
 }
+
+.plugins-list {
+  padding-top: 1em!important;
+}
+
+#toggleMenu {
+  padding-bottom: 1em!important;
+}
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
 }
