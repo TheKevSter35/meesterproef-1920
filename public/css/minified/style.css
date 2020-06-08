@@ -580,6 +580,10 @@ nav.detail-nav a {
   font-weight: 700;
 }
 
+.plugins-list {
+  display: none;
+}
+
 .plugins-list>h2 {
   margin-bottom: 1em;
   padding: 1em .2em;
@@ -660,17 +664,17 @@ nav.detail-nav a {
 
 .btnFilters {
   border: none;
-  color: #fff;
-  background-color: #151513;
+  color: #151513;
+  background-color: #ccc;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
 }
 
 #overzichtfilters>button:hover,
-.active {
-  color: #151513;
-  background-color: #fff;
+.activeState {
+  color: #fff;
+  background-color: #151513;
 }
 
 #overzichtfilters {
