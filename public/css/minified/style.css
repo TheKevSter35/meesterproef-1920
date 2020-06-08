@@ -1,5 +1,11 @@
 #detail main {
-  margin-top: calc(100vh - 80vh);
+  padding-top: calc(100vh - 75vh);
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
+  margin-left: unset;
+  margin-right: unset;
 }
 
 #detail main ul {
@@ -516,6 +522,17 @@ nav:first-of-type li img {
 
 nav:first-of-type li:hover {
   background-color: #e4e4e4;
+}
+
+nav.detail-nav a {
+  padding: 1em 1em;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fff;
+  margin: 0 1em;
+  border-radius: 1em;
+  color: #ff5661;
+  font-weight: 700;
 }
 #overview {
   display: flex;
