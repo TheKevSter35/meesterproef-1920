@@ -12,7 +12,8 @@
     height: 100%;
     max-width: 400px;
     height: 100%;
-    padding: 2em;
+    padding: 0em;
+    overflow: hidden;
 }
 
 .profile img {
@@ -28,6 +29,7 @@
     width: 100%;
     text-align: center;
     padding-bottom: 5em;
+    padding: 2em;
 }
 
 .profile h2 {
@@ -36,4 +38,14 @@
 
 .statistieken, .ranklijst {
     text-align: center;
+}
+.sidebar iframe {
+    width: 334px;
+    position: absolute;
+    left: 0;
+    bottom: 2em;
+    height: 15em;
+    border: 1px solid;
+    right: 0;
+    margin: 0 auto;
 }

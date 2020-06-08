@@ -19,9 +19,9 @@ header h1 {
 }
 
 nav:first-of-type {
-	display: flex;
-    color: white;
-	margin: 1em 0.75em;
+    display: flex;
+    color: #fff;
+    margin: 1em 0;
 }
 
 nav:first-of-type > img {
@@ -37,6 +37,25 @@ nav:first-of-type ul {
 }
 
 nav:first-of-type li {
-    margin: 0 8px;
-    margin: 0 0.5em;
+    align-items: center;
+    ALIGN-CONTENT: center;
+    width: 100%;
+    position: relative;
+}
+
+nav:first-of-type li a {
+    display: flex;
+    padding: 16px 40px;
+    align-items: center;
+    text-decoration: none;
+    color: #002b37;
+}
+
+nav:first-of-type li img {
+    max-width: 2em;
+    margin: 0 16px 0px 0;
+}
+
+nav:first-of-type li:hover {
+    background-color: #E4E4E4;
 }
