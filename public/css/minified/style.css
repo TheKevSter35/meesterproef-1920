@@ -479,7 +479,7 @@ header h1 {
 nav:first-of-type {
   display: flex;
   color: #fff;
-  margin: 1em .75em;
+  margin: 1em 0;
 }
 
 nav:first-of-type>img {
@@ -495,8 +495,27 @@ nav:first-of-type ul {
 }
 
 nav:first-of-type li {
-  margin: 0 8px;
-  margin: 0 .5em;
+  align-items: center;
+  ALIGN-CONTENT: center;
+  width: 100%;
+  position: relative;
+}
+
+nav:first-of-type li a {
+  display: flex;
+  padding: 16px 40px;
+  align-items: center;
+  text-decoration: none;
+  color: #002b37;
+}
+
+nav:first-of-type li img {
+  max-width: 2em;
+  margin: 0 16px 0 0;
+}
+
+nav:first-of-type li:hover {
+  background-color: #e4e4e4;
 }
 #overview {
   display: flex;
@@ -926,7 +945,8 @@ svg.feather.feather-chevron-right {
   height: 100%;
   max-width: 400px;
   height: 100%;
-  padding: 2em;
+  padding: 0;
+  overflow: hidden;
 }
 
 .profile img {
@@ -942,6 +962,7 @@ svg.feather.feather-chevron-right {
   width: 100%;
   text-align: center;
   padding-bottom: 5em;
+  padding: 2em;
 }
 
 .profile h2 {
@@ -951,6 +972,17 @@ svg.feather.feather-chevron-right {
 .ranklijst,
 .statistieken {
   text-align: center;
+}
+
+.sidebar iframe {
+  width: 334px;
+  position: absolute;
+  left: 0;
+  bottom: 2em;
+  height: 15em;
+  border: 1px solid;
+  right: 0;
+  margin: 0 auto;
 }
 #start>header {
   max-width: 40em;

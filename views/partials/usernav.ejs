@@ -1,16 +1,31 @@
 <nav>
 	<ul>
-		<li><a href="/dashboard">Overzicht</a></li>
+		<li>
+			<a href="/overzicht"> <img src="../source/icons/house.svg"  alt="">Hulpmiddelen</a>
+		</li>
+		<li>
+			<a href="/dashboard"><img src="../source/icons/dashboard.svg"  alt="">Dashboard</a>
+		</li>
 		<%if (user.name === "gast") { %>
-		<li><a href="/profiel">Jouw informatie</a></li>
+		<li>
+			<a href="/profiel"><img src="../source/icons/user.svg"  alt="">Jouw informatie</a>
+		</li>
 		<% } else { %>
-		<li><a href="/profiel">Profiel</a></li>
+		<li>
+			<a href="/profiel"><img src="../source/icons/user.svg"  alt="">Jouw informatie</a>
+		</li>
 		<% } %>
-		<li><a href="/overzicht">Hulpmiddelen</a></li>
+		<!-- <li>
+			<a href="/overzicht">Hulpmiddelen</a>
+		</li> -->
 		<%if (user.name === "gast") { %>
-		<li><a href="/">Stoppen</a></li>
+		<li>
+			<a href="/"><img src="../source/icons/logout.svg"  alt="">Stoppen</a>
+		</li>
 		<% } else { %>
-		<li><a href="/">Uitloggen</a></li>
+		<li>
+			<a href="/"><img src="../source/icons/logout.svg"  alt="">Uitloggen</a>
+		</li>
 		<% } %>
 	</ul>
 </nav>
