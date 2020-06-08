@@ -9,8 +9,8 @@
     <main id="toolkits">
         <div class="overview-info">
            
-        <h1>Welkom <%= user.name %></h1>
-            <p>Met Digi-wijzer kan jij je digitale vaardigheden verbeteren. </p>
+        <h1><strong>Welkom</strong>  <%= user.name %></h1>
+            <p>Met Digi-wijzer kun jij je digitale vaardigheden verbeteren. </p>
         </div>
 
         <div id="toggleMenu">
@@ -22,6 +22,7 @@
             <h2>Phishing</h2>
             <ul class="plugins">
 
+                
                 <li>
 
                     <img src="../source/pictures/quiz.svg" alt="store">
@@ -31,51 +32,65 @@
                 </li>
                 <li>
 
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Phishing Quiz</h2>
-                    <!-- <p>40/100p</p> -->
-                    <a href="/quiz-detail">Meer info</a>
-                </li>
-                <li>
-
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Phishing Quiz</h2>
+                    <img src="../source/pictures/hacker.svg" alt="store">
+                    <h2>Phishing</h2>
                     <!-- <p>40/100p</p> -->
                     <a href="/quiz-detail">Meer info</a>
                 </li>
 
 
             </ul>
-            <h2>Data Gebruik</h2>
+         
+           
+            <h2>Wat weten de bedrijven over jou?</h2>
             <ul class="plugins">
 
                 <li>
 
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Data Gebruik</h2>
-                    <a href="/quiz-detail">Meer info</a>
+                    <img src="../source/pictures/store.svg" alt="store">
+                    <h2>Super</h2>
+                    <a href="/#">Meer info</a>
                 </li>
                 <li>
 
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Data Gebruik</h2>
-                    <a href="/quiz-detail">Meer info</a>
-                </li>
-
-                <li>
-
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Data Gebruik</h2>
-                    <a href="/quiz-detail">Meer info</a>
+                    <img src="../source/pictures/oba.jpg" alt="store">
+                    <h2>OBA</h2>
+                    <a href="/#">Meer info</a>
                 </li>
 
                 <li>
 
-                    <img src="../source/pictures/quiz.svg" alt="store">
-                    <h2>Data Gebruik</h2>
-                    <a href="/quiz-detail">Meer info</a>
+                    <img src="../source/pictures/bus.svg" alt="store">
+                    <h2>OV</h2>
+                    <a href="/#">Meer info</a>
                 </li>
 
+
+
+
+            </ul>
+            <h2>Workshops</h2>
+            <ul class="plugins">
+
+                <li>
+
+                    <img src="../source/pictures/gmail.svg" alt="store">
+                    <h2>E-mail</h2>
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/windows.svg" alt="store">
+                    <h2>Windows</h2>
+                    <a href="/#">Meer info</a>
+                </li>
+
+                <li>
+
+                    <img src="../source/pictures/apple.svg" alt="store">
+                    <h2>Macbook</h2>
+                    <a href="/#">Meer info</a>
+                </li>
 
             </ul>
         </div>
@@ -90,61 +105,7 @@
         <%- include ('../partials/devFooter.ejs') %>
 
     </main>
-
-    <div class="sidebar">
-        <div id="profile">
-                <img src="../source/pictures/person.svg" alt=" avatar">
-                <h2><%= user.name %></h2>
-                <p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
-        </div>
-        <div class="statistieken">
-            <h3>Statistieken</h3>
-            <ul>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-            </ul>
-            
-        </div>
-        <div class=" ranklijst">
-            <h3>Ranklijst</h3>
-            <ul>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Gebruiker: 120P
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class=" settings">
-            <p>
-                <a href="/">Log-out</a>
-            </p>
-        </div>
-    </div>
-
+    <%- include ('../partials/sidebar.ejs') %>
 
 
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"

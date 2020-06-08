@@ -553,6 +553,12 @@ nav.detail-nav a {
 }
 
 #overview h1 {
+  color: #002b37;
+  text-align: left;
+  font-size: 3em;
+}
+
+#overview h1>strong {
   color: #fff;
   text-align: left;
 }
@@ -570,6 +576,8 @@ nav.detail-nav a {
 
 .overview-info p {
   font-size: 1.3em;
+  color: #002b37;
+  font-weight: 700;
 }
 
 .plugins-list>h2 {
@@ -608,7 +616,7 @@ nav.detail-nav a {
   color: #fff;
   display: flex;
   flex-direction: column;
-  width: 17.2em;
+  width: 14.8em;
   position: relative;
   text-align: center;
   border: 2px solid transparent;
@@ -618,11 +626,12 @@ nav.detail-nav a {
   padding: 1em;
   margin-right: 1em;
   border-radius: 1em;
+  height: auto;
   box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
 }
 
 .plugins-list ul li img {
-  width: 9em;
+  width: 8em;
   margin: auto;
   padding: 1em;
 }
