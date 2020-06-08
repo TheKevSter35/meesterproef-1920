@@ -1,6 +1,13 @@
 module.exports = function (app) {
+	
 	app.get('/quiz-detail', (req, res) => {
-		res.render('pages/quiz/quiz-detail')
+		const user = {
+			name: req.session.name,
+			score: req.session.score
+		}
+		res.render('pages/quiz/quiz-detail',{
+			user: user
+		})
 	})
 	app.get('/quiz-game', (req, res) => {
 		res.render('pages/quiz/quiz-game', {
