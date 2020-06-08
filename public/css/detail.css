@@ -1,5 +1,11 @@
 #detail main {
-    margin-top: calc(100vh - 80vh);
+    padding-top: calc(100vh - 75vh);
+    position: relative;
+    margin: unset;
+    max-width: unset;
+    width: calc(100% - 400px);
+    margin-left: unset;
+    margin-right: unset;
 }
 #detail main ul {
     display: grid;

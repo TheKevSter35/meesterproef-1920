@@ -59,3 +59,15 @@ nav:first-of-type li img {
 nav:first-of-type li:hover {
     background-color: #E4E4E4;
 }
+
+
+nav.detail-nav a {
+    padding: 1em 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FFFFFF;
+    margin: 0 1em;
+    border-radius: 1em;
+    color: #FF5661;
+    font-weight: bold;
+}
