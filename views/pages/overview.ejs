@@ -7,12 +7,10 @@
 
 
     <main id="toolkits">
-        <!-- <%- include ('../partials/nav.ejs') %> -->
         <div class="overview-info">
-            <h1>Digi Wijzer</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis excepturi cum earum voluptatum
-                libero sint possimus modi, quo suscipit unde in dignissimos odio laborum laudantium fugiat aliquid.
-                Eaque, laudantium debitis!</p>
+           
+        <h1>Welkom <%= user.name %></h1>
+            <p>Met Digi-wijzer kan jij je digitale vaardigheden verbeteren. </p>
         </div>
 
         <div id="toggleMenu">
@@ -87,15 +85,65 @@
         <!-- 
 		<div id="mapid"></div> -->
 
-        <iframe class="localfocusvisual" frameborder="0" style="width:100%;overflow:hidden" src="https://localfocuswidgets.net/5edd7b16487f6"></iframe>
+        <iframe class="localfocusvisual" frameborder="0" style="width:100%;overflow:hidden" src="https://localfocuswidgets.net/5ed93fb38f29b"></iframe>
 
         <%- include ('../partials/devFooter.ejs') %>
 
     </main>
 
-  
-       
-    <%- include ('../partials/sidebar.ejs') %>
+    <div class="sidebar">
+        <div id="profile">
+                <img src="../source/pictures/person.svg" alt=" avatar">
+                <h2><%= user.name %></h2>
+                <p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
+        </div>
+        <div class="statistieken">
+            <h3>Statistieken</h3>
+            <ul>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+            </ul>
+            
+        </div>
+        <div class=" ranklijst">
+            <h3>Ranklijst</h3>
+            <ul>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Gebruiker: 120P
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class=" settings">
+            <p>
+                <a href="/">Log-out</a>
+            </p>
+        </div>
+    </div>
 
 
 
