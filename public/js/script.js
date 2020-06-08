@@ -9,13 +9,13 @@ let mapView = document.querySelector('.localfocusvisual')
 // Set this als default
 window.onload = function () {
 	// btnLijstWeergave.classList.add('active');
-	mapView.style.display = 'none'
+	listView.style.display = 'none'
 }
 
 btnLijstWeergave.addEventListener('click', function (e) {
 	// Toggle buttons
-	btnKaartweergave.classList.remove('active')
-	btnLijstWeergave.classList.add('active')
+	btnKaartweergave.classList.remove('activeState')
+	btnLijstWeergave.classList.add('activeState')
 
 	listView.style.display = 'block'
 	mapView.style.display = 'none'
@@ -24,8 +24,8 @@ btnLijstWeergave.addEventListener('click', function (e) {
 btnKaartweergave.addEventListener('click', function (e) {
 
 	// Toggle buttons
-	btnLijstWeergave.classList.remove('active')
-	btnKaartweergave.classList.add('active')
+	btnLijstWeergave.classList.remove('activeState')
+	btnKaartweergave.classList.add('activeState')
 
 	// Toggle content
 	mapView.style.display = 'block'
