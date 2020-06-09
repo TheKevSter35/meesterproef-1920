@@ -716,52 +716,24 @@ iframe {
   min-height: 37.5em;
 }
 
-.settings {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-bottom: 2em;
-}
-
-.settings p {
-  padding: 1em;
-  position: relative;
-  margin: 3em;
-}
-
-.settings a {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background-color: #002b37;
-  padding: 1.5em;
-  margin: 1em;
-  line-height: 0;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 2em;
-  transition: .3s ease-in-out 0s;
-}
-
-.settings a:hover {
-  background-color: #fb5258;
-}
-
 .localfocusvisual {
-  padding: 5em;
-  height: 59em;
+  padding: unset;
+  min-height: calc(100vh - 39vh);
+  margin-bottom: 0;
 }
 
 .plugins-list {
   padding-top: 1em!important;
 }
 
-#toggleMenu {
-  padding-bottom: 1em!important;
+#overview main #toggleMenu {
+  padding: 2em 5.5em;
+}
+
+.plugins-list hr {
+  height: .4em;
+  background-color: #002b37;
+  margin: 4em 0;
 }
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
@@ -1035,6 +1007,8 @@ svg.feather.feather-chevron-right {
   height: 100%;
   padding: 0;
   overflow: hidden;
+  -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
+  box-shadow: 0 0 32px rgba(53,47,122,.5);
 }
 
 .profile img {
@@ -1068,14 +1042,9 @@ svg.feather.feather-chevron-right {
   left: 0;
   bottom: 2em;
   height: 15em;
-  border: 1px solid;
   right: 0;
   margin: 0 auto;
-}
-
-.sidebar .panel {
-  padding: 0;
-  width: 100%;
+  box-shadow: rgba(0,0,0,.45) 2px 4px 22px;
 }
 
 .sidebar .accordion {

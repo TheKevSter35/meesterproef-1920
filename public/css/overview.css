@@ -146,49 +146,22 @@
     min-height: 37.5em;
 }
 
-.settings {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    padding-bottom: 2em;
-}
-.settings p {
-    padding: 1em;
-    position: relative;
-    margin: 3em;
-}
-.settings a {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    background-color: #002B37;
-    padding: 1.5em;
-    margin: 1em;
-    line-height: 0px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 2em;
-    transition: 0.3s ease-in-out 0s;
-}
-.settings a:hover {
-   
-    background-color: #FB5258;
-
-}
 
 .localfocusvisual {
-    padding: 5em;
-    height: 59em;
+    padding: unset;
+    min-height: calc(100vh - 39vh);
+    margin-bottom: 0;
 }
 /****************************/
 
 .plugins-list {
     padding-top: 1em !important;
 }
-#toggleMenu {
-    padding-bottom: 1em !important;
+#overview main #toggleMenu {
+    padding: 2em 5.5em;
+}
+.plugins-list hr {
+    height: 0.4em;
+    background-color: #002B37;
+    margin: 4em 0;
 }

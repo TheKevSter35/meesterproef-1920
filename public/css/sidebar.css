@@ -14,6 +14,10 @@
     height: 100%;
     padding: 0em;
     overflow: hidden;
+
+        -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
+        box-shadow: 0 0 32px rgba(53,47,122,.5);
+
 }
 
 .profile img {
@@ -45,9 +49,10 @@
     left: 0;
     bottom: 2em;
     height: 15em;
-    border: 1px solid;
     right: 0;
     margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.45) 2px 4px 22px;
+}
 }
 .sidebar .panel {
     padding: 0;
