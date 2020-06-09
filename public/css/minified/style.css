@@ -1006,7 +1006,6 @@ svg.feather.feather-chevron-right {
   max-width: 400px;
   height: 100%;
   padding: 0;
-  overflow: hidden;
   -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
   box-shadow: 0 0 32px rgba(53,47,122,.5);
 }
@@ -1036,15 +1035,28 @@ svg.feather.feather-chevron-right {
   text-align: center;
 }
 
-.sidebar iframe {
-  width: 334px;
-  position: absolute;
-  left: 0;
-  bottom: 2em;
-  height: 15em;
-  right: 0;
+.sidebar .chat {
+  position: relative;
   margin: 0 auto;
+  width: 100%;
+  padding: 2em;
+}
+
+.sidebar iframe {
+  width: 100%;
+  margin: auto;
   box-shadow: rgba(0,0,0,.45) 2px 4px 22px;
+  height: 20em;
+}
+
+.sidebar .panel {
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar .chat h2 {
+  padding-bottom: 1.5em;
+  display: flex;
 }
 
 .sidebar .accordion {
@@ -1052,6 +1064,7 @@ svg.feather.feather-chevron-right {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 7px 18px;
 }
 
 .sidebar .accordion>strong {
@@ -1062,6 +1075,10 @@ svg.feather.feather-chevron-right {
 .sidebar .accordion>strong img {
   width: 2.6em;
   height: 2.3em;
+}
+
+.sidebar .missions {
+  padding: 0 0 2em;
 }
 
 .sidebar .missions li a {
@@ -1086,6 +1103,7 @@ svg.feather.feather-chevron-right {
   display: flex;
 }
 
+.sidebar .chat h2:before,
 .sidebar .missions h2:before {
   content: "";
   display: inline-block;
