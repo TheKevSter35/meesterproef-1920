@@ -1,0 +1,67 @@
+main[id$="board"], main[id$="board"] section {
+	margin: 0;
+	padding: 0;
+	max-width: 70em;
+	max-width: 74.25vw;
+}
+
+main[id$="board"] h2 {
+	margin-bottom: 0.75em;
+}
+
+main[id$="board"] h2:after {
+	content: "";
+	display: block;
+	max-width: 10em;
+	height: 0.2em;
+	margin: 0.5em 0 1.25em 0;
+	background-color: #ff445b;
+	border-radius: 1em;
+}
+
+main[id$="board"] h3 {
+	text-align: left;
+}
+
+main[id$="board"] > section {
+	padding: 0;
+	margin: 4em 0 0 3em;
+}
+
+main[id$="board"] div.info {
+	background-color: #fad160;
+	color: #000549;
+	padding: 1.25em;
+	max-width: 24em;
+	display: flex;
+	flex-direction: row;
+}
+
+main[id$="board"] button {
+	background-color: #7a84dc;
+	padding: 0.05em 0.5em 0.5em 0.5em;
+	margin-left: .75em;
+	height: 1.5em;
+}
+
+main[id$="board"] button svg {
+	width: .5em;
+}
+
+main[id$="board"] ul {
+	display: flex;
+	flex-direction: row;
+}
+
+main[id$="board"] ul div {
+	max-width: 10em;
+	max-height: 10em;
+}
+
+main[id$="board"] ul div a span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2em;
+	background-color: white;
+}
