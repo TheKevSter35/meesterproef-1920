@@ -1095,6 +1095,10 @@ svg.feather.feather-chevron-right {
   border-radius: 10px;
   background: #ff445b;
 }
+
+.sidebar .panel {
+  width: 100%;
+}
 #start>header {
   max-width: 40em;
   margin: .5em auto 0 auto;

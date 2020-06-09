@@ -102,3 +102,6 @@
     border-radius: 10px;
     background: #ff445b;
 }
+.sidebar .panel {
+    width: 100%;
+}
