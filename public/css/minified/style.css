@@ -417,18 +417,16 @@ button {
   background-color: #151513;
   padding: 1em 2em;
   font-size: 1em;
-}
-
-img {
-  width: 100%;
-}
-
-button {
+  font-family: Avenir,Helvetica,Roboto,Arial,sans-serif;
   font-weight: 700;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+img {
+  width: 100%;
 }
 
 .center {
