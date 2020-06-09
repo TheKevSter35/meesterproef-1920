@@ -1,3 +1,71 @@
+main[id$=board],
+main[id$=board] section {
+  margin: 0;
+  padding: 0;
+  max-width: 70em;
+  max-width: 74.25vw;
+}
+
+main[id$=board] h2 {
+  margin-bottom: .75em;
+}
+
+main[id$=board] h2:after {
+  content: "";
+  display: block;
+  max-width: 10em;
+  height: .2em;
+  margin: .5em 0 1.25em 0;
+  background-color: #ff445b;
+  border-radius: 1em;
+}
+
+main[id$=board] h3 {
+  text-align: left;
+}
+
+main[id$=board]>section {
+  padding: 0;
+  margin: 4em 0 0 3em;
+}
+
+main[id$=board] div.info {
+  background-color: #fad160;
+  color: #000549;
+  padding: 1.25em;
+  max-width: 24em;
+  display: flex;
+  flex-direction: row;
+}
+
+main[id$=board] button {
+  background-color: #7a84dc;
+  padding: .05em .5em .5em .5em;
+  margin-left: .75em;
+  height: 1.5em;
+}
+
+main[id$=board] button svg {
+  width: .5em;
+}
+
+main[id$=board] ul {
+  display: flex;
+  flex-direction: row;
+}
+
+main[id$=board] ul div {
+  max-width: 10em;
+  max-height: 10em;
+}
+
+main[id$=board] ul div a span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2em;
+  background-color: #fff;
+}
 #detail main {
   padding-top: calc(100vh - 75vh);
   position: relative;
@@ -467,19 +535,28 @@ header {
 }
 
 header.user {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  border-bottom: .15em solid #4a2a58;
-  width: 100%;
+  padding: 3em;
   margin: 0;
 }
 
-header h1 {
+header.user h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+header.user h1>span {
+  color: #fff;
   font-weight: 900;
-  margin: 0;
+}
+
+header.user p {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #002b37;
+  width: 30em;
+  padding: 0;
+  margin-bottom: 1.5em;
 }
 
 nav:first-of-type {
