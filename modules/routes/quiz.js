@@ -10,8 +10,14 @@ module.exports = function (app) {
 		})
 	})
 	app.get('/quiz-game', (req, res) => {
+		const user = {
+			name: req.session.name,
+			score: req.session.score
+		}
 		res.render('pages/quiz/quiz-game', {
-			queries: req.query
+			queries: req.query,
+			user: user
+
 		})
 	})
 	app.post('/quiz-result', (req, res) => {

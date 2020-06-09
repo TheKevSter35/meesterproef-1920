@@ -11,6 +11,8 @@
 #detail main ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #detail main ul li {
@@ -485,7 +487,6 @@ header h1 {
 nav:first-of-type {
   display: flex;
   color: #fff;
-  margin: 1em 0;
 }
 
 nav:first-of-type>img {
@@ -768,7 +769,10 @@ iframe {
 
 #quiz main {
   padding-top: calc(100vh - 75vh);
-  max-width: 80em;
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
 }
 
 #quiz section img {
@@ -813,7 +817,8 @@ iframe {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #quiz form div {
@@ -874,6 +879,7 @@ iframe {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  background-size: cover;
 }
 
 #quiz-result main h1 {
@@ -899,6 +905,20 @@ iframe {
 #quiz-result section.result .score-circle p {
   font-size: 2em;
   line-height: 7.7em;
+  font-weight: 700;
+}
+
+#quiz-result section.result>p {
+  text-align: center;
+  padding: 4em 1em 0;
+}
+
+#quiz-result section.result>p a {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: #ff445b;
   font-weight: 700;
 }
 
@@ -1051,6 +1071,60 @@ svg.feather.feather-chevron-right {
   border: 1px solid;
   right: 0;
   margin: 0 auto;
+}
+
+.sidebar .panel {
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar .accordion {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.sidebar .accordion>strong {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .accordion>strong img {
+  width: 2.6em;
+  height: 2.3em;
+}
+
+.sidebar .missions li a {
+  display: flex;
+  padding: 16px 40px;
+  align-items: center;
+  text-decoration: none;
+  color: #002b37;
+}
+
+.sidebar .missions li a:hover {
+  background-color: #e4e4e4;
+}
+
+.sidebar .missions li img {
+  max-width: 2em;
+  margin: 0 16px 0 0;
+}
+
+.sidebar .missions h2 {
+  padding: 1em 1em .3em;
+  display: flex;
+}
+
+.sidebar .missions h2:before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  height: 32px;
+  width: 7px;
+  border-radius: 10px;
+  background: #ff445b;
 }
 #start>header {
   max-width: 40em;
