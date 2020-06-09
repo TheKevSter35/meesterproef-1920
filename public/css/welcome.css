@@ -1,28 +1,34 @@
 #start > header {
 	max-width: 40em;
-	margin: 4em auto 0 auto;
+	margin: 0.5em auto 0 auto;
 }
 
 #start > header div {
 	margin: 0 auto;
-	max-width: 22em;
+	max-width: 32em;
 }
 
 #start > header h1 {
 	color: #000549;
 	max-width: 8em;
-	margin: 0 auto 0 2em;
+	/*margin: 0 auto 0 2em;*/
+	font-size: 3.5em;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 0.5em;
 }
 
 #start header h1 ~ p {
-	margin: 1.25em 0 0 1.25em;
+	/*margin: 1.25em 0 0 1.25em;*/
+	margin: 0;
 	max-width: 30em;
-	font-weight: 500;
-	font-style: oblique;
+	font-weight: lighter;
+	/*font-style: oblique;*/
 	color: #000549;
 	line-height: 2em;
-	text-decoration: underline 0.2em #fe9f9f;
-	text-underline-offset: 0.4em;
+	/*text-decoration: underline 0.2em #fe9f9f;*/
+	/*text-underline-offset: 0.4em;*/
+	text-align: center;
 }
 
 #start h1 ~ svg {
@@ -37,7 +43,7 @@
 	max-width: 60em;
 	padding: initial;
 	margin-top: 8em;
-	margin-top: calc(5vh * 5);
+	margin-top: calc(5vh * 3);
 }
 
 #start main.choose > p {
@@ -65,3 +71,34 @@
 	left: -999em;
 	top: -999em;
 } */
+
+#voordelen {
+	display: flex;
+}
+
+#voordelen > span {
+	text-align: center;
+}
+#voordelen > span:nth-child(2) {
+	margin-left: 5em;
+}
+
+#voordelen p {
+	color: #7d7d7d;
+	text-transform: capitalize;
+}
+
+/*.kopje {*/
+/*	text-transform: uppercase;*/
+/*	color: #000;*/
+/*	font-weight: bold;*/
+/*	font-size: 0.9em;*/
+/*}*/
+
+#voordelen > span p.kopje {
+	text-transform: uppercase;
+	color: #000;
+	font-weight: bold;
+	font-size: 0.9em;
+	margin-bottom: 1.5em;
+}

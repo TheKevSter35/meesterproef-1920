@@ -6,7 +6,7 @@
 
 
 <body id="quiz">
-    <%- include ('../../partials/nav.ejs') %>
+    <!-- <%- include ('../../partials/nav.ejs') %> -->
     <main>
         <form action="/quiz-result" method="POST">
             <div id="question1">
@@ -100,12 +100,10 @@
 
                 </section>
                 <section>
-                    <h2 id="text-question4">Het wachtwoord van je werk account is verlopen. Er wordt gevraagd om een
-                        nieuwe te maken.
+                    <h2 id="text-question4">Mijn wachtwoorden in een boekje opschrijven is veilig
                     </h2>
-                    <h2 class="info-text-question4 hidden">Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt en
-                        dat dit
-                        wachtwoord moeilijk te raden is: gebruik tekens, cijfers en (HOOFD)letters.
+                    <h2 class="info-text-question4 hidden">
+                        Een internetcrimineel kan daar niet bijkomen sinds het niet digitaal is bewaard. zo kan je ook je wachtwoorden onthouden.
                     </h2>
                     <label for="question4-answer1" class="question4-answer1">
                         <input type="radio" id="question4-answer1" name="question4" data-score="0" value="0">
@@ -176,11 +174,9 @@
 
                 </section>
                 <section>
-                    <h2 id="text-question7">Met een slotje in de adresbalk ben ik altijd veilig
+                    <h2 id="text-question7">Met een slotje in de adresbalk ben je altijd veilig
                     </h2>
-                    <h2 class="info-text-question7 hidden">Dit wachtwoord is moeilijk te raden door het gebruik van
-                        tekens, cijfers
-                        ,(HOOFD)letters en is minimaal 12 tekens lang
+                    <h2 class="info-text-question7 hidden">ok criminelen kunnen een beveiligde verbinding maken, en nog steeds een ‘foute’ website hebben. Het groene slotje betekent dus niet dat je altijd veilig bent.
                     </h2>
 
                     <label for="question7-answer1" class="question7-answer1">
@@ -283,7 +279,7 @@
     </main>
 
 
-
+    <%- include ('../../partials/sidebar.ejs') %>
 
     <script src="../js/quiz/quiz.js"></script>
 
