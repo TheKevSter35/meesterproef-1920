@@ -10,6 +10,8 @@
 #detail main ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
 }
 #detail main ul li {
     padding: 1em 2em;
@@ -20,6 +22,7 @@
     color: #000;
 
 }
+
 #detail main ul li a {
     padding: 1em;
     background-color: #FB5258;

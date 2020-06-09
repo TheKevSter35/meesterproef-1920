@@ -1,21 +1,10 @@
-<div class="sidebar">
-	<%- include ('../partials/usernav.ejs') %>
-
+<div class="sidebar quiz-sidebar">
 	<div class="profile">
 		<img src="../source/pictures/person.svg" alt="avatar">
 		<h2><%= user.name %></h2>
 		<p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
 	</div>
-	<div class="missions">
-		<h2>Missions</h2>
-		<ul>
-			<li><a href="/quiz-detail"><img src="../source/icons/location.svg"  alt="">Jouw informatie</a></li>
-			<li><a href="/profiel"><img src="../source/icons/location.svg"  alt="">Jouw informatie</a></li>
-			<li><a href="/profiel"><img src="../source/icons/location.svg"  alt="">Jouw informatie</a></li>
-			
-		</ul>
-	</div>
-
+	<%- include ('../partials/usernav.ejs') %>
 	<!-- https://widget.flow.ai/w/NjA1YzI0YTAtNjNhMi00M2U0LWI3NDYtYmMwMjA1NmE5NjAxfGU1YTA4ZjA4LWVmZmQtNGNhZS1iMGU5LTZiZDg3N2M2Y2VmZg==/flow-webclient-1.1.2.min.js -->
 	<iframe src="https://wijzer.amsterdam/chat.html?fullscreen=true&origin=meesterproef" frameborder="0"></iframe>
 </div>
