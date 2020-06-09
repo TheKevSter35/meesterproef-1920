@@ -3,19 +3,28 @@ header {
 }
 
 header.user {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
     background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
-    border-bottom: .15em solid #4a2a58;
-    width: 100%;
-    margin: 0;
+	padding: 3em;
+	margin: 0;
 }
 
-header h1 {
+header.user h1 {
+	font-size: 3em;
+	font-weight: 700;
+}
+
+header.user h1 > span {
+	color: white;
 	font-weight: 900;
-	margin: 0;
+}
+
+header.user p {
+	font-size: 1.3em;
+	font-weight: 700;
+	color: #002b37;
+	width: 30em;
+	padding: 0;
+	margin-bottom: 1.5em;
 }
 
 nav:first-of-type {
