@@ -2,6 +2,7 @@ const router = require('express').Router()
 
 // controllers
 const welcome = require('./controllers/start')
+const introductie = require('./controllers/intro')
 const login = require('./controllers/inlog')
 const overview = require('./controllers/overview')
 const addPlugin = require('./controllers/addplugin')
@@ -10,6 +11,7 @@ const guest = require('./controllers/guest')
 const signup = require('./controllers/signup')
 
 router.get('/', welcome)
+	.get('/intro', introductie)
 	.get('/gast', guest)
 	.get('/login', login.get)
 	.get('/overzicht', overview.get)

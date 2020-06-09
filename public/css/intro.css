@@ -1,0 +1,30 @@
+#Layer_1 {
+    width: 2em;
+    margin-left: 0.5em;
+}
+
+.overslaanKnop {
+    font-weight: 300;
+    border-radius: 0.5em;
+	background-color: #7a84dc;
+	border-bottom: solid 0.25em #9cb3dd;
+	margin-bottom: 4em;
+}
+
+#introPage {
+    margin-top: 1em;
+}
+
+#start > header > div > h1#introPageHeader {
+    max-width: 20em;
+}
+
+iframe {
+    margin-bottom: 5em;
+}
+
+#volgendeBlok {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5em;
+}

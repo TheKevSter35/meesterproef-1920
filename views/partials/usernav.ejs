@@ -1,5 +1,9 @@
 <nav>
 	<ul>
+			<button class="accordion"><strong>
+				<img src="../source/icons/menu.svg"  alt="">Menu
+			</strong></button>
+		<div class="panel">
 		<li>
 			<a href="/overzicht"> <img src="../source/icons/house.svg"  alt="">Hulpmiddelen</a>
 		</li>
@@ -27,5 +31,22 @@
 			<a href="/"><img src="../source/icons/logout.svg"  alt="">Uitloggen</a>
 		</li>
 		<% } %>
+	</div>
 	</ul>
 </nav>
+<script>
+	const acc = document.getElementsByClassName("accordion");
+	let i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+			const panel = this.nextElementSibling;
+			if (panel.style.height === "auto") {
+				panel.style.height = "0";
+			} else {
+				panel.style.height = "auto";
+			}
+		});
+	}
+</script>

@@ -78,6 +78,8 @@ main[id$=board] ul div a span {
 #detail main ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #detail main ul li {
@@ -561,7 +563,6 @@ header.user p {
 nav:first-of-type {
   display: flex;
   color: #fff;
-  margin: 1em 0;
 }
 
 nav:first-of-type>img {
@@ -609,6 +610,36 @@ nav.detail-nav a {
   border-radius: 1em;
   color: #ff5661;
   font-weight: 700;
+}
+#Layer_1 {
+  width: 2em;
+  margin-left: .5em;
+}
+
+.overslaanKnop {
+  font-weight: 300;
+  border-radius: .5em;
+  background-color: #7a84dc;
+  border-bottom: solid .25em #9cb3dd;
+  margin-bottom: 4em;
+}
+
+#introPage {
+  margin-top: 1em;
+}
+
+#start>header>div>h1#introPageHeader {
+  max-width: 20em;
+}
+
+iframe {
+  margin-bottom: 5em;
+}
+
+#volgendeBlok {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5em;
 }
 #overview {
   display: flex;
@@ -761,52 +792,24 @@ nav.detail-nav a {
   min-height: 37.5em;
 }
 
-.settings {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-bottom: 2em;
-}
-
-.settings p {
-  padding: 1em;
-  position: relative;
-  margin: 3em;
-}
-
-.settings a {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background-color: #002b37;
-  padding: 1.5em;
-  margin: 1em;
-  line-height: 0;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 2em;
-  transition: .3s ease-in-out 0s;
-}
-
-.settings a:hover {
-  background-color: #fb5258;
-}
-
 .localfocusvisual {
-  padding: 5em;
-  height: 59em;
+  padding: unset;
+  min-height: calc(100vh - 39vh);
+  margin-bottom: 0;
 }
 
 .plugins-list {
   padding-top: 1em!important;
 }
 
-#toggleMenu {
-  padding-bottom: 1em!important;
+#overview main #toggleMenu {
+  padding: 2em 5.5em;
+}
+
+.plugins-list hr {
+  height: .4em;
+  background-color: #002b37;
+  margin: 4em 0;
 }
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
@@ -814,7 +817,10 @@ nav.detail-nav a {
 
 #quiz main {
   padding-top: calc(100vh - 75vh);
-  max-width: 80em;
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
 }
 
 #quiz section img {
@@ -859,7 +865,8 @@ nav.detail-nav a {
   display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #quiz form div {
@@ -920,6 +927,7 @@ nav.detail-nav a {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  background-size: cover;
 }
 
 #quiz-result main h1 {
@@ -945,6 +953,20 @@ nav.detail-nav a {
 #quiz-result section.result .score-circle p {
   font-size: 2em;
   line-height: 7.7em;
+  font-weight: 700;
+}
+
+#quiz-result section.result>p {
+  text-align: center;
+  padding: 4em 1em 0;
+}
+
+#quiz-result section.result>p a {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: #ff445b;
   font-weight: 700;
 }
 
@@ -1060,7 +1082,8 @@ svg.feather.feather-chevron-right {
   max-width: 400px;
   height: 100%;
   padding: 0;
-  overflow: hidden;
+  -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
+  box-shadow: 0 0 32px rgba(53,47,122,.5);
 }
 
 .profile img {
@@ -1088,41 +1111,118 @@ svg.feather.feather-chevron-right {
   text-align: center;
 }
 
-.sidebar iframe {
-  width: 334px;
-  position: absolute;
-  left: 0;
-  bottom: 2em;
-  height: 15em;
-  border: 1px solid;
-  right: 0;
+.sidebar .chat {
+  position: relative;
   margin: 0 auto;
+  width: 100%;
+  padding: 2em;
+}
+
+.sidebar iframe {
+  width: 100%;
+  margin: auto;
+  box-shadow: rgba(0,0,0,.45) 2px 4px 22px;
+  height: 20em;
+}
+
+.sidebar .panel {
+  padding: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1.5px solid #ff445b;
+}
+
+.sidebar .chat h2 {
+  padding-bottom: 1.5em;
+  display: flex;
+}
+
+.sidebar .accordion {
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 7px 18px;
+  background-color: #fff;
+  border-bottom: 1.5px solid #ff445b;
+}
+
+.sidebar .accordion>strong {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .accordion>strong img {
+  width: 2.6em;
+  height: 2.3em;
+}
+
+.sidebar .missions {
+  padding: 0 0 2em;
+}
+
+.sidebar .missions li a {
+  display: flex;
+  padding: 16px 40px;
+  align-items: center;
+  text-decoration: none;
+  color: #002b37;
+}
+
+.sidebar .missions li a:hover {
+  background-color: #e4e4e4;
+}
+
+.sidebar .missions li img {
+  max-width: 2em;
+  margin: 0 16px 0 0;
+}
+
+.sidebar .missions h2 {
+  padding: 1em 1em .3em;
+  display: flex;
+}
+
+.sidebar .chat h2:before,
+.sidebar .missions h2:before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  height: 32px;
+  width: 7px;
+  border-radius: 10px;
+  background: #ff445b;
+}
+
+.sidebar .panel {
+  width: 100%;
 }
 #start>header {
   max-width: 40em;
-  margin: 4em auto 0 auto;
+  margin: .5em auto 0 auto;
 }
 
 #start>header div {
   margin: 0 auto;
-  max-width: 22em;
+  max-width: 32em;
 }
 
 #start>header h1 {
   color: #000549;
   max-width: 8em;
-  margin: 0 auto 0 2em;
+  font-size: 3.5em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: .5em;
 }
 
 #start header h1~p {
-  margin: 1.25em 0 0 1.25em;
+  margin: 0;
   max-width: 30em;
-  font-weight: 500;
-  font-style: oblique;
+  font-weight: lighter;
   color: #000549;
   line-height: 2em;
-  text-decoration: underline .2em #fe9f9f;
-  text-underline-offset: .4em;
+  text-align: center;
 }
 
 #start h1~svg {
@@ -1137,7 +1237,7 @@ svg.feather.feather-chevron-right {
   max-width: 60em;
   padding: initial;
   margin-top: 8em;
-  margin-top: calc(5vh * 5);
+  margin-top: calc(5vh * 3);
 }
 
 #start main.choose>p {
@@ -1159,4 +1259,29 @@ svg.feather.feather-chevron-right {
 #start main.choose>p a:focus button,
 main.choose>p a:hover button {
   background-color: #484f97;
+}
+
+#voordelen {
+  display: flex;
+}
+
+#voordelen>span {
+  text-align: center;
+}
+
+#voordelen>span:nth-child(2) {
+  margin-left: 5em;
+}
+
+#voordelen p {
+  color: #7d7d7d;
+  text-transform: capitalize;
+}
+
+#voordelen>span p.kopje {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  font-size: .9em;
+  margin-bottom: 1.5em;
 }

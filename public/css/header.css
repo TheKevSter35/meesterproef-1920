@@ -30,7 +30,7 @@ header.user p {
 nav:first-of-type {
     display: flex;
     color: #fff;
-    margin: 1em 0;
+    /* margin: 1em 0; */
 }
 
 nav:first-of-type > img {
