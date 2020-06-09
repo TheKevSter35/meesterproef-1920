@@ -61,7 +61,6 @@ main[id$="board"] ul div {
 main[id$="board"] ul div a span {
 	display: block;
 	position: absolute;
-	width: 100%;
 	height: 2em;
 	background-color: white;
 }
