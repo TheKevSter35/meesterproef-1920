@@ -3,35 +3,52 @@
 <%- include ('../partials/head.ejs') %>
 
 <body>
-	<main class="dashboard">
-		<h1>Welkom <%= user.name %></h1>
-		<p>Hier leer je wat voor voetsporen je achterlaat op het internet,<span> en leer wat je moet doen om veilig het internet te gebruiken.</span></p>
+	<header class="user">
+		<h1><span>Welkom</span> <%= user.name %></h1>
+		<p>Hier leer je wat voor voetsporen je achterlaat op het internet, en leer wat je moet doen om veilig het internet te gebruiken.</p>
+	</header>
+		<main id="dashboard">
 		<section>
-			<h2>Plugins (hulpmiddelen)</h2>
+			<h2>Hulpmiddelen</h2>
+			<div class="info">
+				<p>Met hulpmiddelen vergroot je jouw kennis over veilig internet gebruik. Je kunt ze allemaal vinden bij <a href="/overzicht">de Hulpmiddelen</a>.</p>
+				<button type="button" aria-label="Verwijder extra informatie bericht">
+					<svg viewBox="0 0 16 16">
+						<g fill="white">
+							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749" y="-1.7863749"
+								ry="0.75"/>
+							<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
+								transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"/>
+						</g>
+					</svg>
+				</button>
+			</div>
 			<section>
-			<h3>Nieuw</h3>
-			<ul>
-				<li>
-					<div>
-						<a href="/quiz-detail">
-						<img src="../source/pictures/quiz.svg" alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
-						<span>Phishing Quiz</span>
-					</a>
-					</div>
-				</li>
-				<li>
-					<div>
-						<a href="/data-gebruik">
-						<img src="../source/pictures/quiz.svg" alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
-						<span>Data Gebruik</span>
-					</a>
-					</div>
-				</li>
-			</ul>
-		</section>
+				<h3>Nieuw</h3>
+				<ul>
+					<li>
+						<div>
+							<a href="/quiz-detail">
+								<img src="../source/pictures/quiz.svg"
+									alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+								<span>Phishing Quiz</span>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div>
+							<a href="/data-gebruik">
+								<img src="../source/pictures/quiz.svg"
+									alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+								<span>Data Gebruik</span>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</section>
 		<section>
 			<h3>Meest gebruikt</h3>
-			<p>Je hebt nog geen plugin gebruikt. <a href="/overzicht">Ga naar de Digi-wijzer om te beginnen.</a></p>
+			<p>Je hebt nog geen hulpmiddelen gebruikt. <a href="/overzicht">Ga naar de Digi-wijzer om te beginnen.</a></p>
 		</section>
 	</section>
 	</main>

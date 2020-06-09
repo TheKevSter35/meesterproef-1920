@@ -13,7 +13,10 @@
     max-width: 400px;
     height: 100%;
     padding: 0em;
-    overflow: hidden;
+
+        -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
+        box-shadow: 0 0 32px rgba(53,47,122,.5);
+
 }
 
 .profile img {
@@ -39,26 +42,38 @@
 .statistieken, .ranklijst {
     text-align: center;
 }
-.sidebar iframe {
-    width: 334px;
-    position: absolute;
-    left: 0;
-    bottom: 2em;
-    height: 15em;
-    border: 1px solid;
-    right: 0;
+
+.sidebar .chat {
+    position: relative;
     margin: 0 auto;
+    width: 100%;
+    padding: 2em;
 }
+.sidebar iframe {
+    width: 100%;
+    margin: auto;
+    box-shadow: rgba(0,0,0,.45) 2px 4px 22px;
+    height: 20em;
+}
+
 .sidebar .panel {
     padding: 0;
     width: 100%;
+    background-color: #fff;
+    border-bottom: 1.5px solid #ff445b;
 }
-
+.sidebar .chat h2 {
+    padding-bottom: 1.5em;
+    display: flex;
+}
 .sidebar .accordion {
     text-align: right;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding: 7px 18px;
+    background-color: #fff;
+    border-bottom: 1.5px solid #ff445b;
 }
 .sidebar .accordion > strong {
     display: flex;
@@ -68,6 +83,9 @@
 .sidebar .accordion>strong img {
     width: 2.6em;
     height: 2.3em;
+}
+.sidebar .missions {
+    padding: 0em 0 2em;
 }
 .sidebar .missions li a {
     display: flex;
@@ -80,6 +98,7 @@
     background-color: #e4e4e4;
 
 }
+
 .sidebar .missions li img {
     max-width: 2em;
     margin: 0 16px 0 0;
@@ -88,7 +107,7 @@
     padding: 1em 1em 0.3em;
     display: flex;
 }
-.sidebar .missions h2:before {
+.sidebar .missions h2:before, .sidebar .chat h2:before  {
     content: "";
     display: inline-block;
     margin: 0 16px 0 0;
@@ -96,4 +115,7 @@
     width: 7px;
     border-radius: 10px;
     background: #ff445b;
+}
+.sidebar .panel {
+    width: 100%;
 }

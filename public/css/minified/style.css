@@ -1,3 +1,70 @@
+main[id$=board],
+main[id$=board] section {
+  margin: 0;
+  padding: 0;
+  max-width: 70em;
+  max-width: 74.25vw;
+}
+
+main[id$=board] h2 {
+  margin-bottom: .75em;
+}
+
+main[id$=board] h2:after {
+  content: "";
+  display: block;
+  max-width: 10em;
+  height: .2em;
+  margin: .5em 0 1.25em 0;
+  background-color: #ff445b;
+  border-radius: 1em;
+}
+
+main[id$=board] h3 {
+  text-align: left;
+}
+
+main[id$=board]>section {
+  padding: 0;
+  margin: 4em 0 0 3em;
+}
+
+main[id$=board] div.info {
+  background-color: #fad160;
+  color: #000549;
+  padding: 1.25em;
+  max-width: 24em;
+  display: flex;
+  flex-direction: row;
+}
+
+main[id$=board] button {
+  background-color: #7a84dc;
+  padding: .05em .5em .5em .5em;
+  margin-left: .75em;
+  height: 1.5em;
+}
+
+main[id$=board] button svg {
+  width: .5em;
+}
+
+main[id$=board] ul {
+  display: flex;
+  flex-direction: row;
+}
+
+main[id$=board] ul div {
+  max-width: 10em;
+  max-height: 10em;
+}
+
+main[id$=board] ul div a span {
+  display: block;
+  position: absolute;
+  height: 2em;
+  background-color: #fff;
+}
 #detail main {
   padding-top: calc(100vh - 75vh);
   position: relative;
@@ -469,19 +536,28 @@ header {
 }
 
 header.user {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  border-bottom: .15em solid #4a2a58;
-  width: 100%;
+  padding: 3em;
   margin: 0;
 }
 
-header h1 {
+header.user h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+header.user h1>span {
+  color: #fff;
   font-weight: 900;
-  margin: 0;
+}
+
+header.user p {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #002b37;
+  width: 30em;
+  padding: 0;
+  margin-bottom: 1.5em;
 }
 
 nav:first-of-type {
@@ -737,52 +813,24 @@ iframe {
   min-height: 37.5em;
 }
 
-.settings {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding-bottom: 2em;
-}
-
-.settings p {
-  padding: 1em;
-  position: relative;
-  margin: 3em;
-}
-
-.settings a {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  background-color: #002b37;
-  padding: 1.5em;
-  margin: 1em;
-  line-height: 0;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 2em;
-  transition: .3s ease-in-out 0s;
-}
-
-.settings a:hover {
-  background-color: #fb5258;
-}
-
 .localfocusvisual {
-  padding: 5em;
-  height: 59em;
+  padding: unset;
+  min-height: calc(100vh - 39vh);
+  margin-bottom: 0;
 }
 
 .plugins-list {
   padding-top: 1em!important;
 }
 
-#toggleMenu {
-  padding-bottom: 1em!important;
+#overview main #toggleMenu {
+  padding: 2em 5.5em;
+}
+
+.plugins-list hr {
+  height: .4em;
+  background-color: #002b37;
+  margin: 4em 0;
 }
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
@@ -1055,7 +1103,8 @@ svg.feather.feather-chevron-right {
   max-width: 400px;
   height: 100%;
   padding: 0;
-  overflow: hidden;
+  -webkit-box-shadow: 0 0 32px rgba(53,47,122,.5);
+  box-shadow: 0 0 32px rgba(53,47,122,.5);
 }
 
 .profile img {
@@ -1083,20 +1132,30 @@ svg.feather.feather-chevron-right {
   text-align: center;
 }
 
-.sidebar iframe {
-  width: 334px;
-  position: absolute;
-  left: 0;
-  bottom: 2em;
-  height: 15em;
-  border: 1px solid;
-  right: 0;
+.sidebar .chat {
+  position: relative;
   margin: 0 auto;
+  width: 100%;
+  padding: 2em;
+}
+
+.sidebar iframe {
+  width: 100%;
+  margin: auto;
+  box-shadow: rgba(0,0,0,.45) 2px 4px 22px;
+  height: 20em;
 }
 
 .sidebar .panel {
   padding: 0;
   width: 100%;
+  background-color: #fff;
+  border-bottom: 1.5px solid #ff445b;
+}
+
+.sidebar .chat h2 {
+  padding-bottom: 1.5em;
+  display: flex;
 }
 
 .sidebar .accordion {
@@ -1104,6 +1163,9 @@ svg.feather.feather-chevron-right {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  padding: 7px 18px;
+  background-color: #fff;
+  border-bottom: 1.5px solid #ff445b;
 }
 
 .sidebar .accordion>strong {
@@ -1114,6 +1176,10 @@ svg.feather.feather-chevron-right {
 .sidebar .accordion>strong img {
   width: 2.6em;
   height: 2.3em;
+}
+
+.sidebar .missions {
+  padding: 0 0 2em;
 }
 
 .sidebar .missions li a {
@@ -1138,6 +1204,7 @@ svg.feather.feather-chevron-right {
   display: flex;
 }
 
+.sidebar .chat h2:before,
 .sidebar .missions h2:before {
   content: "";
   display: inline-block;
@@ -1146,6 +1213,10 @@ svg.feather.feather-chevron-right {
   width: 7px;
   border-radius: 10px;
   background: #ff445b;
+}
+
+.sidebar .panel {
+  width: 100%;
 }
 #start>header {
   width: 100%;
