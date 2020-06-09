@@ -1243,6 +1243,12 @@ svg.feather.feather-chevron-right {
   margin: 0 auto;
 }
 
+#start main.choose>p span:last-of-type {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+}
+
 #start main.choose>p button {
   border-radius: .5em;
   background-color: #7a84dc;
