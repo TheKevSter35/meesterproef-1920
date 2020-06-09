@@ -44,18 +44,16 @@ button {
 	background-color: #151513;
 	padding: 1em 2em;
 	font-size: 1em;
-}
-
-img {
-    width: 100%;
-}
-
-button {
+	font-family: "Avenir", Helvetica, Roboto, Arial, sans-serif;
 	font-weight: bold;
 }
 
 button:hover {
 	cursor: pointer;
+}
+
+img {
+    width: 100%;
 }
 
 /* vertically align: https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center/35047036 */
