@@ -1081,6 +1081,21 @@ svg.feather.feather-chevron-right {
   max-width: 2em;
   margin: 0 16px 0 0;
 }
+
+.sidebar .missions h2 {
+  padding: 1em 1em .3em;
+  display: flex;
+}
+
+.sidebar .missions h2:before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  height: 32px;
+  width: 7px;
+  border-radius: 10px;
+  background: #ff445b;
+}
 #start>header {
   max-width: 40em;
   margin: 4em auto 0 auto;
