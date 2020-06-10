@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+
+<body id="plugin2">
+
+    <main>
+        <!-- <h1>Huidig score <br>
+        40/100p</h1> -->
+        <ul>
+           
+            <li id="info-img">
+                <p><img src="../../source/pictures/oba-scan.png"" alt=""></p>
+
+            </li>
+            <li id="info">
+                <!-- <h2>
+                    Tijd om in te checken
+                </h2> -->
+                <p><button class="checkin"> Scan je geleende boek </button></p>
+            </li>
+        </ul>
+        <section class="dataset hidden">
+            <h2>Wanneer je boek scant dan wordt je leengeschiedenis geupdate. Jouw gebruikersprofiel wordt ook geupdate.</h2>
+            <ul>
+                <li>
+                    <h2>inboekdatum: 19-7-2015 </h2>
+                </li>
+                <li>
+                   <h2>Titel: Waarom luister je niet?</h2> 
+                </li>
+                <li>
+                    <h2>ISBN: 9789026328251</h2> 
+                 </li>
+                 <li>
+                    <h2>voornaam-auteur: Jean-Pierre van de</h2> 
+                 </li>
+                 <li>
+                    <h2>achternaam-auteur: ven</h2> 
+                 </li>
+                 <li>
+                    <h2>Locatie:Centraal</h2> 
+                 </li>
+                <li>
+                    
+                    <h2>Gebruiker: <%= user.name %></h2>
+                </li>
+              
+                <div class="settings">
+                <p><a href="/overzicht">Terug naar map</a></p>
+
+            </div>
+            </ul>
+        </section>
+    </main>
+    
+    <%- include ('../../partials/sidebar.ejs') %>
+
+
+
+
+    <script src="../js/dataset.js"></script>
+
+</body>
+
+
+</html>

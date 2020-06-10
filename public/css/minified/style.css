@@ -103,6 +103,27 @@ main[id$=board] ul div a span {
   width: auto;
   text-align: center;
 }
+
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.settings p {
+  margin: 1em;
+}
+
+.settings p>a {
+  padding: 1em;
+  background-color: #fb5258;
+  margin: 1em 0;
+  border-radius: 1em;
+  color: #fff!important;
+  text-decoration: none;
+  width: auto;
+  text-align: center;
+}
 @font-face {
   font-family: Avenir;
   src: url("https://raw.githubusercontent.com/potyt/fonts/master/macfonts/Avenir/Avenir-Light.ttf") format("truetype");
@@ -829,6 +850,97 @@ iframe {
   height: .4em;
   background-color: #002b37;
   margin: 4em 0;
+}
+#plugin2 main {
+  padding-top: 0;
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
+  margin-left: unset;
+  margin-right: unset;
+  padding: 0;
+}
+
+#plugin2 main>ul {
+  background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  padding: 6em 1em;
+}
+
+#plugin2 main ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+#plugin2 main #info-img img {
+  width: 15em;
+}
+
+#plugin2 main ul li {
+  padding: 1em 2em;
+  color: #fff;
+  position: relative;
+}
+
+#plugin2 main ul li h2 {
+  color: #fff;
+}
+
+#plugin2 main ul #info p:last-child {
+  padding: 2em;
+}
+
+#plugin2 main ul #info button {
+  padding: 1em;
+  background-color: #fb5258;
+  margin: 1em 0;
+  border-radius: 1em;
+  color: #fff;
+  text-decoration: none;
+  width: auto;
+  text-align: center;
+}
+
+#plugin2 section.dataset {
+  padding: 3em;
+}
+
+#plugin2 section.dataset>h2 {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+#plugin2 section.dataset li {
+  padding: 1em;
+  margin-bottom: 2em;
+  box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
+  color: #000;
+}
+
+#plugin2 section.dataset li {
+  padding: 1em;
+  margin-bottom: 2em;
+  box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
+  color: #000;
+}
+
+#plugin2 section.dataset li h2 {
+  color: #000;
+  text-align: left;
+  padding: .4em 1em .3em;
+  display: flex;
+}
+
+#plugin2 section.dataset li h2:before {
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  height: 32px;
+  width: 7px;
+  border-radius: 10px;
+  background: #ff445b;
 }
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
