@@ -863,6 +863,10 @@ iframe {
   background-color: #002b37;
   margin: 4em 0;
 }
+
+svg.lfpoint.lfmarker g {
+  fill: #ff445b;
+}
 #plugin2 main {
   padding-top: 0;
   position: relative;

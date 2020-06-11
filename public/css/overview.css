@@ -167,3 +167,6 @@
     background-color: #002B37;
     margin: 4em 0;
 }
+svg.lfpoint.lfmarker g {
+    fill: #FF445B;
+}
