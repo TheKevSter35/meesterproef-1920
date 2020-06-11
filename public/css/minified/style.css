@@ -903,6 +903,10 @@ iframe {
 svg.lfpoint.lfmarker g {
   fill: #ff445c;
 }
+
+a.localFocusMarkerLinks {
+  color: #ff445c;
+}
 #plugin2 main {
   padding-top: 0;
   position: relative;
