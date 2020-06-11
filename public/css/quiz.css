@@ -1,3 +1,7 @@
+#quiz,#detail  {
+
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+}
 #quiz-detail main {
 
     padding-top: calc(100vh - 90vh);

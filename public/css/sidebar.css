@@ -20,9 +20,9 @@
 }
 
 .profile img {
-    width: 6em;
+    width: 5em;
     padding: 1em;
-    background-color: #FB5258;
+    border: 2px solid #002b37;
     border-radius: 100%;
 }
 
@@ -35,8 +35,10 @@
     padding: 2em;
 }
 
-.profile h2 {
+.profile h3 {
     color: #000;
+    padding: 0;
+    margin: 0;
 }
 
 .statistieken, .ranklijst {
@@ -60,9 +62,9 @@
     padding: 0;
     width: 100%;
     background-color: #fff;
-    border-bottom: 1.5px solid #ff445b;
+    border-bottom: 1.5px solid #002b37;
 }
-.sidebar .chat h2 {
+.sidebar .chat h3 {
     padding-bottom: 1.5em;
     display: flex;
 }
@@ -73,7 +75,7 @@
     justify-content: flex-start;
     padding: 7px 18px;
     background-color: #fff;
-    border-bottom: 1.5px solid #ff445b;
+    border-bottom: 1.5px solid #002b37;
 }
 .sidebar .accordion > strong {
     display: flex;
@@ -103,11 +105,11 @@
     max-width: 2em;
     margin: 0 16px 0 0;
 }
-.sidebar .missions h2 {
+.sidebar .missions h3 {
     padding: 1em 1em 0.3em;
     display: flex;
 }
-.sidebar .missions h2:before, .sidebar .chat h2:before  {
+/* .sidebar .missions h2:before, .sidebar .chat h2:before  {
     content: "";
     display: inline-block;
     margin: 0 16px 0 0;
@@ -115,7 +117,7 @@
     width: 7px;
     border-radius: 10px;
     background: #ff445b;
-}
+} */
 .sidebar .panel {
     width: 100%;
 }
