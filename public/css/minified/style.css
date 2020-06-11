@@ -76,14 +76,23 @@ main[id$=board] ul div a span {
 }
 
 #detail main ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
   margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  color: #000;
+  border-radius: 2em;
+  height: auto;
+  transform: scale(1);
+  min-width: auto;
+  width: 90%;
+  height: auto;
 }
 
 #detail main ul li {
-  padding: 1em 2em;
+  padding: 3em 2em;
   color: #000;
   position: relative;
 }
@@ -204,7 +213,7 @@ main[id$=board] ul div a span {
 footer {
   background-color: #fff;
   padding: 1em;
-  text-align: center;
+  text-align: left;
 }
 
 footer a {
@@ -212,14 +221,15 @@ footer a {
 }
 
 #footerDevelopers {
-  background: #ff445b;
+  background: url("https://wijzer.amsterdam/dist/img/footer-pattern.ea88741c.svg"),linear-gradient(278deg,#005668,#002b37);
   width: 100%;
-  padding: 1em;
+  padding: 1em 5em;
   color: #fff;
 }
 
 #footerDevelopers a {
-  color: #002b37;
+  color: #fff;
+  text-decoration: none;
 }
 input[type=password],
 input[type=text] {
@@ -834,7 +844,7 @@ iframe {
 
 .localfocusvisual {
   padding: unset;
-  min-height: calc(100vh - 39vh);
+  min-height: calc(100vh - 31vh);
   margin-bottom: 0;
 }
 
@@ -843,7 +853,9 @@ iframe {
 }
 
 #overview main #toggleMenu {
-  padding: 2em 5.5em;
+  position: absolute;
+  right: 0;
+  padding: 1em;
 }
 
 .plugins-list hr {
@@ -942,6 +954,11 @@ iframe {
   border-radius: 10px;
   background: #ff445b;
 }
+#detail,
+#quiz {
+  background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+}
+
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
 }
@@ -1218,9 +1235,9 @@ svg.feather.feather-chevron-right {
 }
 
 .profile img {
-  width: 6em;
+  width: 5em;
   padding: 1em;
-  background-color: #fb5258;
+  border: 2px solid #002b37;
   border-radius: 100%;
 }
 
@@ -1233,8 +1250,10 @@ svg.feather.feather-chevron-right {
   padding: 2em;
 }
 
-.profile h2 {
+.profile h3 {
   color: #000;
+  padding: 0;
+  margin: 0;
 }
 
 .ranklijst,
@@ -1260,10 +1279,10 @@ svg.feather.feather-chevron-right {
   padding: 0;
   width: 100%;
   background-color: #fff;
-  border-bottom: 1.5px solid #ff445b;
+  border-bottom: 1.5px solid #002b37;
 }
 
-.sidebar .chat h2 {
+.sidebar .chat h3 {
   padding-bottom: 1.5em;
   display: flex;
 }
@@ -1275,7 +1294,7 @@ svg.feather.feather-chevron-right {
   justify-content: flex-start;
   padding: 7px 18px;
   background-color: #fff;
-  border-bottom: 1.5px solid #ff445b;
+  border-bottom: 1.5px solid #002b37;
 }
 
 .sidebar .accordion>strong {
@@ -1309,20 +1328,9 @@ svg.feather.feather-chevron-right {
   margin: 0 16px 0 0;
 }
 
-.sidebar .missions h2 {
+.sidebar .missions h3 {
   padding: 1em 1em .3em;
   display: flex;
-}
-
-.sidebar .chat h2:before,
-.sidebar .missions h2:before {
-  content: "";
-  display: inline-block;
-  margin: 0 16px 0 0;
-  height: 32px;
-  width: 7px;
-  border-radius: 10px;
-  background: #ff445b;
 }
 
 .sidebar .panel {

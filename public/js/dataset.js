@@ -3,7 +3,7 @@ const button = document.querySelector('.checkin')
 button.addEventListener('click', showData )
 
 function showData (){
-	var audio = new Audio('https://s21.aconvert.com/convert/p3r68-cdx67/5mub3-mzgw8.wav' )
+	var audio = new Audio('../../source/audio/incheck.wav')
 	audio.play()
 	setTimeout(function () {
 		const data = document.querySelector('.dataset')
