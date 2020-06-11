@@ -1329,6 +1329,7 @@ svg.feather.feather-chevron-right {
 .sidebar .chat h3 {
   padding-bottom: 1.5em;
   display: flex;
+  text-align: left;
 }
 
 .sidebar .accordion {
