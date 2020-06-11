@@ -153,7 +153,6 @@
     margin-bottom: 0;
 }
 /****************************/
-
 .plugins-list {
     padding-top: 1em !important;
 }
@@ -167,6 +166,8 @@
     background-color: #002B37;
     margin: 4em 0;
 }
+
+
 svg.lfpoint.lfmarker g {
-    fill: #FF445B;
+    fill: #FF445c;
 }
