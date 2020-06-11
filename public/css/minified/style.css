@@ -681,6 +681,28 @@ nav.detail-nav a {
   margin-left: .5em;
 }
 
+main~a[href$=gast] {
+  text-align: right;
+  margin: 2em 3em 0 0;
+}
+
+main[id^=intro] {
+  display: flex;
+  flex-direction: row;
+}
+
+main[id^=intro]>section {
+  min-width: 20em;
+  max-width: 30em;
+  margin-right: 5em;
+  padding: initial;
+}
+
+main[id^=intro]>section h2 {
+  font-size: 2.5em;
+  margin-bottom: .75em;
+}
+
 .overslaanKnop {
   font-weight: 300;
   border-radius: .5em;
@@ -696,16 +718,6 @@ nav.detail-nav a {
 #start>header>div>h1#introPageHeader {
   max-width: 20em;
   margin-top: 2em;
-}
-
-iframe {
-  margin-bottom: 5em;
-}
-
-#volgendeBlok {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5em;
 }
 
 .centerIntroPages {
