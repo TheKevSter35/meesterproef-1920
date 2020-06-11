@@ -5,8 +5,17 @@ main[id$="board"], main[id$="board"] section {
 	max-width: 74.25vw;
 }
 
-main[id$="board"] h2 {
-	margin-bottom: 0.75em;
+main[id$="board"] > section {
+	padding: 0;
+	margin: 4em 0 0 3em;
+}
+
+main[id$="board"] > section section {
+	margin: 2.5em 0 5em 0;
+}
+
+main[id$="board"] section:last-of-type {
+	margin-bottom: 5em;
 }
 
 main[id$="board"] h2:after {
@@ -21,11 +30,6 @@ main[id$="board"] h2:after {
 
 main[id$="board"] h3 {
 	text-align: left;
-}
-
-main[id$="board"] > section {
-	padding: 0;
-	margin: 4em 0 0 3em;
 }
 
 main[id$="board"] div.info {
@@ -51,16 +55,48 @@ main[id$="board"] button svg {
 main[id$="board"] ul {
 	display: flex;
 	flex-direction: row;
+	margin-top: 2em;
 }
 
-main[id$="board"] ul div {
-	max-width: 10em;
-	max-height: 10em;
+main[id$="board"] ul li {
+	max-width: 12em;
+	max-height: 12em;
+	border: #ececf7 solid 0.15em;
+	border-radius: 0.75em;
+	margin: 0 1em;
+	box-shadow: 0.25em 0.75em 1.5em rgba(120, 86, 160, 0.4);
+	transition: border .3s ease;
 }
 
-main[id$="board"] ul div a span {
-	display: block;
-	position: absolute;
-	height: 2em;
-	background-color: white;
+main[id$="board"] ul li:hover {
+	border: #8d8eb9 solid 0.15em;
+}
+
+main[id$="board"] ul li:first-child {
+	margin-left: 0;
+}
+
+main[id$="board"] ul a {
+	display: inline-block;
+	text-align: center;
+	max-height: 12em;
+}
+
+main[id$="board"] ul img {
+	width: 6em;
+	height: 6em;
+	margin-top: 1.5em;
+}
+
+main[id$="board"] ul a span {
+	display: inline-block;
+	margin: 0.75em 0 1.5em 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 8em;
+	max-height: 2em;
+	font-size: 1.1em;
+	font-weight: 700;
+	color: #000549;
 }
