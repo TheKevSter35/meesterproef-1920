@@ -108,6 +108,7 @@
 .sidebar .missions h3 {
     padding: 1em 1em 0.3em;
     display: flex;
+    text-align: left;
 }
 /* .sidebar .missions h2:before, .sidebar .chat h2:before  {
     content: "";
