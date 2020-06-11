@@ -67,6 +67,7 @@
 .sidebar .chat h3 {
     padding-bottom: 1.5em;
     display: flex;
+    text-align: left;
 }
 .sidebar .accordion {
     text-align: right;
@@ -108,16 +109,9 @@
 .sidebar .missions h3 {
     padding: 1em 1em 0.3em;
     display: flex;
+    text-align: left;
 }
-/* .sidebar .missions h2:before, .sidebar .chat h2:before  {
-    content: "";
-    display: inline-block;
-    margin: 0 16px 0 0;
-    height: 32px;
-    width: 7px;
-    border-radius: 10px;
-    background: #ff445b;
-} */
+
 .sidebar .panel {
     width: 100%;
 }

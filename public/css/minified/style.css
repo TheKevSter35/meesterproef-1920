@@ -837,12 +837,12 @@ main[id^=intro]>section h2 {
   border-radius: 1em;
   height: auto;
   box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
+  height: 14.8em;
 }
 
 .plugins-list ul li img {
-  width: 8em;
+  width: 6em;
   margin: auto;
-  padding: 1em;
 }
 
 .plugins-list ul li a {
@@ -1341,6 +1341,7 @@ svg.feather.feather-chevron-right {
 .sidebar .chat h3 {
   padding-bottom: 1.5em;
   display: flex;
+  text-align: left;
 }
 
 .sidebar .accordion {
@@ -1387,6 +1388,7 @@ svg.feather.feather-chevron-right {
 .sidebar .missions h3 {
   padding: 1em 1em .3em;
   display: flex;
+  text-align: left;
 }
 
 .sidebar .panel {

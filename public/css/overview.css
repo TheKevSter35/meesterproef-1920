@@ -92,12 +92,13 @@
     border-radius: 1em;
     height: auto;
     box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
+    height: 14.8em;
 }
 
 .plugins-list ul li img {
-    width: 8em;
+    width: 6em;
     margin: auto;
-    padding: 1em;
+
 }
 
 .plugins-list ul li a {
