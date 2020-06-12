@@ -5,5 +5,6 @@ module.exports = function (req, res) {
 	req.session.name = 'jij'
 	req.session.score = 0
 	req.session.usedtools = []
+	req.session.level = 'Verkennen'
 	return res.redirect('/overzicht')
 }

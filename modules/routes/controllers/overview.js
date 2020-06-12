@@ -4,7 +4,8 @@ exports.get = function (req, res) {
 	}
 	const user = {
 		name: req.session.name,
-		score: req.session.score
+		score: req.session.score,
+		level: req.session.level
 	}
 	return res.render('pages/overview', {
 		user: user

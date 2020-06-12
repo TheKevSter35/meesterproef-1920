@@ -3,7 +3,8 @@ module.exports = function (app) {
 	app.get('/ov-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/ov/ov-detail',{
 			user: user
@@ -12,7 +13,8 @@ module.exports = function (app) {
 	app.get('/ov-game', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level,
 		}
 		res.render('pages/ov/ov-game', {
 			queries: req.query,
@@ -35,7 +37,8 @@ module.exports = function (app) {
 		}
 		const user = {
 			name: req.session.name,
-			score: req.session.score,
+			score: req.session.score + score,
+			level: req.session.level,
 			usedTools: req.session.usedtools
 		}
 		req.session.score = score

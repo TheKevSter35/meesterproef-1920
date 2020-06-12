@@ -3,7 +3,8 @@ module.exports = function (app) {
 	app.get('/quiz-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/quiz/quiz-detail',{
 			user: user
@@ -12,7 +13,8 @@ module.exports = function (app) {
 	app.get('/quiz-game', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/quiz/quiz-game', {
 			queries: req.query,
@@ -35,8 +37,9 @@ module.exports = function (app) {
 		}
 		const user = {
 			name: req.session.name,
-			score: req.session.score,
-			usedTools: req.session.usedtools
+			score: req.session.score + results.earnedPoints,
+			usedTools: req.session.usedtools,
+			level: req.session.level
 		}
 		req.session.score = score
 		res.render('pages/quiz/quiz-result', {
