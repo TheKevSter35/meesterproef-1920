@@ -106,7 +106,9 @@
     opacity: 0;
     z-index: -1; */
 }
-#plugin2 form .all-questions input[type="checkbox" i] {
+
+#plugin2 form .all-questions input[type="checkbox" i],
+#plugin2 form .all-questions input[type="radio" i] {
     width: 2em;
     height: 2em;
     border-radius: 2em;
@@ -119,11 +121,12 @@
     -webkit-appearance: none;
 }
 
-#plugin2 form .all-questions input[type=checkbox i]:checked{
+#plugin2 form .all-questions input[type=checkbox i]:checked,#plugin2 form .all-questions input[type="radio" i]:checked{
     background-color: #9289E7;
 
 }
-#plugin2 form .all-questions input[type=checkbox i]:focus {
+#plugin2 form .all-questions input[type=checkbox i]:focus,
+#plugin2 form .all-questions input[type="radio" i]:focus {
 
     outline-offset: 0px;
     outline: none;

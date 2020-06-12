@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+
+<body id="plugin2">
+
+    <main>
+        <form action="/oba-result" method="POST">
+            <div id="question1">
+                <section>
+                    <p><img src="../../source/pictures/oba-scan.png" alt=""></p>
+
+                </section>
+                <section>
+                </h2>
+                    <h2 id=" text-question1">Tijd om je boeken te scannen. Weet jij wat voor data er dan wordt gestuurd.  <i>(Meerdere antwoorden mogelijk)</i> 
+                        </h2>
+                       
+                        <div class="all-questions">
+                            <label for="question1-answer1" class="question1-answer1">
+                                <input type="checkbox" id="question1-answer1" name="question1-answer1" data-score="1" value="1">
+                                Inboekdatum
+                            </label>
+
+                            <label for="question1-answer2" class="question1-answer2">
+                                <input type="checkbox" id="question1-answer2" name="question2" data-score="1" value="1">
+                                Boek-Titel </label>
+                   
+                        <label for="question1-answer3" class="question1-answer3">
+                            <input type="checkbox" id="question1-answer3" name="question3" data-score="1" value="1">
+                            Gebruikernummer</label>
+            <label for="question1-answer4" class="question1-answer4">
+                <input type="checkbox" id="question1-answer4" name="question4" data-score="1" value="1">
+                ISBN</label>
+            </div>
+            <p><button id="submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></button></p>
+            </section>
+            </div>
+
+          
+            </section>
+    </main>
+
+    <%- include ('../../partials/sidebar.ejs') %>
+
+
+
+
+    <script src="../js/dataset.js"></script>
+
+</body>
+
+
+</html>
