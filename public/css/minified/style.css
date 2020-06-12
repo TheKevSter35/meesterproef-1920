@@ -53,15 +53,17 @@ main[id$=board] button svg {
   width: .5em;
 }
 
+main[id$=board] ol,
 main[id$=board] ul {
   display: flex;
   flex-direction: row;
   margin-top: 2em;
 }
 
+main[id$=board] ol li,
 main[id$=board] ul li {
-  max-width: 12em;
-  max-height: 12em;
+  width: 12em;
+  height: 12em;
   border: #ececf7 solid .15em;
   border-radius: .75em;
   margin: 0 1em;
@@ -69,6 +71,7 @@ main[id$=board] ul li {
   transition: border .3s ease;
 }
 
+main[id$=board] ol li:hover,
 main[id$=board] ul li:hover {
   border: #8d8eb9 solid .15em;
 }
@@ -77,18 +80,28 @@ main[id$=board] ul li:first-child {
   margin-left: 0;
 }
 
+main[id$=board] ol a,
 main[id$=board] ul a {
   display: inline-block;
+  display: flex;
   text-align: center;
   max-height: 12em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
+main[id$=board] ol img,
 main[id$=board] ul img {
-  width: 6em;
-  height: 6em;
+  max-width: 6em;
+  max-height: 6em;
   margin-top: 1.5em;
 }
 
+main[id$=board] ol a span,
 main[id$=board] ul a span {
   display: inline-block;
   margin: .75em 0 1.5em 0;
@@ -100,6 +113,20 @@ main[id$=board] ul a span {
   font-size: 1.1em;
   font-weight: 700;
   color: #000549;
+}
+
+main[id$=board] section:nth-of-type(3) section:first-of-type li {
+  width: 16em;
+  height: 10em;
+}
+
+main[id$=board] section:nth-of-type(3) section:first-of-type span {
+  max-width: 12em;
+}
+
+main[id$=board] section:nth-of-type(3) section:first-of-type img {
+  width: 4em;
+  height: 4em;
 }
 #detail main {
   padding-top: calc(100vh - 75vh);
