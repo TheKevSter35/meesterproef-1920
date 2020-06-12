@@ -12,18 +12,27 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende lees de tips en probeer het opnieuw</h2><p>
-            <a href="/quiz-detail">Opnieuw proberen</a></p>
+            <h2> Onvoldoende lees de tips en probeer het opnieuw</h2>
+            <p>
+                <a href="/quiz-detail">Opnieuw proberen</a></p>
             <% } else if(score.earnedPoints == 60 )  { %>
             <h2> Net voldoende</h2>
             <% } else if(score.earnedPoints == 70 )  { %>
             <h2> voldoende</h2>
+            <p>
+                <a href="/overzicht">Terug naar map</a></p>
             <% } else if(score.earnedPoints == 80 )  { %>
             <h2> Goed gedaan ruim voldoende </h2>
+            <p>
+                <a href="/overzicht">Terug naar map</a></p>
             <% } else if(score.earnedPoints == 90 )  { %>
             <h2> Net voldoende</h2>
+            <p>
+                <a href="/overzicht">Terug naar map</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
             <h2> Perfecte Score heel goed gedaan</h2>
+            <p>
+                <a href="/overzicht">Terug naar map</a></p>
 
             <% } %>
         </section>
@@ -53,8 +62,10 @@
                         <ul>
                             <li>Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt </li>
 
-                            <li>Bedenk een wachtwoord die moeilijk te raden incombinatie met tekens, cijfers en (HOOFD)letters</li>
-                            <li>Schrijf je wachtwoorden in een boekje.  internetcrimineel kunnen daar niet bijkomen. Zo kan je toch je wachtwoorden onthouden. </li>
+                            <li>Bedenk een wachtwoord die moeilijk te raden incombinatie met tekens, cijfers en
+                                (HOOFD)letters</li>
+                            <li>Schrijf je wachtwoorden in een boekje. internetcrimineel kunnen daar niet bijkomen. Zo
+                                kan je toch je wachtwoorden onthouden. </li>
 
                         </ul>
                     </div>
@@ -65,39 +76,42 @@
                         </strong></button>
                     <div class="panel">
                         <P>
-                        Updates bevatten vernieuwde beveiliging van je apparaat.Door de update uit te voeren heb je de veiligste software op je apparaat, zodat je minder
+                            Updates bevatten vernieuwde beveiliging van je apparaat.Door de update uit te voeren heb je
+                            de veiligste software op je apparaat, zodat je minder
                             kans loopt om slachtoffer te worden van een virus of een hack. Doe dat daarom zo snel
                             mogelijk!</p>
                     </div>
                 </li>
 
-               
+
 
                 <li>
                     <button class="accordion"><strong>
-                        Phishing link (URL) herkennen
+                            Phishing link (URL) herkennen
                         </strong></button>
                     <div class="panel">
-                        <P>Phishing berichten zijn vaak te herkennen aan een gemanipuleerde link. Meestal lijkt de (verwijzing) link in het phishing bericht helemaal valide. Wanneer de gebruiker met de cursor op de link gaat staan (dus niet klikken) komt de actuele link naar boven. 
-                        <p>
-                            Mocht je nog steeds twijfelen. Probeer <a href="checkjelinkje.nl">checkjelinkje.nl</a>
-                        </p>
+                        <P>Phishing berichten zijn vaak te herkennen aan een gemanipuleerde link. Meestal lijkt de
+                            (verwijzing) link in het phishing bericht helemaal valide. Wanneer de gebruiker met de
+                            cursor op de link gaat staan (dus niet klikken) komt de actuele link naar boven.
+                            <p>
+                                Mocht je nog steeds twijfelen. Probeer <a href="checkjelinkje.nl">checkjelinkje.nl</a>
+                            </p>
                     </div>
                 </li>
                 <li>
                     <button class="accordion"> <strong>
-                        Hoe voorkom je WhatsApp-fraude.
+                            Hoe voorkom je WhatsApp-fraude.
                         </strong></button>
                     <div class="panel">
-                        
-                            <ul>
-                                <li>Vraagt iemand om geld via WhatsApp? Bel die persoon dan op via een nummer uit je
-                                    eigen adresboek. Een oplichter valt meteen door de mand.</li>
-                                <li>Kun je die persoon niet direct telefonisch bereiken: geen geld overmaken. Stel de
-                                    'bekende' een vraag waarop een oplichter écht geen antwoord kan weten. Vraag dus
-                                    niet naar informatie die te raden is of die op social media zou kunnen staan.</li>
-                            </ul>
-                      
+
+                        <ul>
+                            <li>Vraagt iemand om geld via WhatsApp? Bel die persoon dan op via een nummer uit je
+                                eigen adresboek. Een oplichter valt meteen door de mand.</li>
+                            <li>Kun je die persoon niet direct telefonisch bereiken: geen geld overmaken. Stel de
+                                'bekende' een vraag waarop een oplichter écht geen antwoord kan weten. Vraag dus
+                                niet naar informatie die te raden is of die op social media zou kunnen staan.</li>
+                        </ul>
+
                     </div>
                 </li>
 
@@ -109,7 +123,7 @@
         </section>
 
     </main>
-    
+
     <%- include ('../../partials/sidebar.ejs') %>
 
     <script>
