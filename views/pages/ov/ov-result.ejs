@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+<body id="plugin2-result">
+    <main>
+        <section class="result">
+            <H1>Resultaat</H1>
+            <div class="score-circle">
+                <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
+            </div>
+            <% if(score.earnedPoints <= 50)  { %>
+            <h2> Onvoldoende lees de tips en probeer het opnieuw</h2><p>
+            <a href="/ov-game">Opnieuw proberen</a></p>
+            <% } else if(score.earnedPoints == 100 )  { %>
+            <h2> Goed gedaan voldoende</h2>
+
+            <% } %>
+        </section>
+        <section class="tips">
+            <h2>Wanneer je incheck dit wordt gestuurd naar het bedrijf. Niet alleen waar je bent ingechecked maar
+                ook je persoonlijke gegevens </h2>
+            <ul>
+                <li>
+                    <strong>Halte: Centraal Station </strong>
+                </li>
+                <li>
+                    <strong>Naam: <%= user.name %></strong>
+                </li>
+                <li>
+                    <strong>Geboortedatum: 01-01-90</strong>
+                </li>
+                <li>
+                    <strong>Adres: Haarlemmerdijk 5</strong>
+                </li>
+                <li>
+
+                    <strong>Kaartnummer: 3567 2344 2321 0900</strong>
+                </li>
+                <li>
+
+                    <strong>Saldo: &euro;10.53</strong>
+                </li>
+                <li>
+
+                    <strong>Bankrekening: 0002 4356 627 21</strong>
+                </li>
+                <li>
+
+                    <strong>Telefoonnummer: 0612334567</strong>
+                </li>
+                <li>
+
+                    <strong>E-mail: <%= user.name %>@mail.com</strong>
+                </li>
+
+            </ul>
+            <div class="settings">
+                <p><a href="/overzicht">Terug naar map</a></p>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <%- include ('../../partials/sidebar.ejs') %>
+
+    <script>
+        const acc = document.getElementsByClassName("accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.height === "100%") {
+                    panel.style.height = "0";
+                } else {
+                    panel.style.height = "100%";
+                }
+            });
+        }
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/printscript.js"></script> -->
+
+
+
+    </script>
+</body>
+
+
+</html>

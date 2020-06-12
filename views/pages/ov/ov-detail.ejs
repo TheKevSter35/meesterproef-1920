@@ -5,7 +5,7 @@
 <%- include ('../../partials/head.ejs') %>
 
 
-<body id="plugin2">
+<body id="detail">
 
     <main>
         <!-- <h1>Huidig score <br>
@@ -13,65 +13,25 @@
         <ul>
            
             <li id="info-img">
-                <p><img src="../../source/icons/card.svg"" alt=""></p>
+                <p><img src="../../source/pictures/bus.svg"" alt=""></p>
 
             </li>
             <li id="info">
                 <h2>
-                    Tijd om in te checken
+                    OV 
                 </h2>
-                <p><button class="checkin"> Scan je Openbaar vervoer kaart </button></p>
+                <p>Yes je hebt hem net te pakken! Doe de OV test om inzicht te krijgen over de gegevens die jij net met je pas hebt achtergelaten bij de vervoerder.</p>
+                <a href="/ov-game">Start</a>
             </li>
         </ul>
-        <section class="dataset hidden">
-            <h2>Wanneer je incheck dit wordt gestuurd naar het bedrijf. Niet alleen waar je bent ingechecked maar ook je persoonlijke gegevens</h2>
-            <ul>
-                <li>
-                    <h2>Halte: Centraal Station </h2>
-                </li>
-                <li>
-                   <h2>Naam: <%= user.name %></h2> 
-                </li>
-                <li>
-                    <h2>Geboortedatum: 01-01-90</h2> 
-                 </li>
-                 <li>
-                    <h2>Adres: Haarlemmerdijk 5</h2> 
-                 </li>
-                <li>
-                    
-                    <h2>Kaartnummer: 3567 2344 2321 0900</h2>
-                </li>
-                <li>
-                    
-                    <h2>Saldo: &euro;10.53</h2>
-                </li>
-                <li>
-                    
-                    <h2>Bankrekening: 0002 4356 627 21</h2>
-                </li>
-                <li>
-                    
-                    <h2>Telefoonnummer: 0612334567</h2>
-                </li>
-                <li>
-                    
-                    <h2>E-mail: <%= user.name %>@mail.com</h2>
-                </li>
-                <div class="settings">
-                <p><a href="/overzicht">Terug naar map</a></p>
-
-            </div>
-            </ul>
-        </section>
+       
     </main>
-    
     <%- include ('../../partials/sidebar.ejs') %>
 
 
 
+    <!-- <script src="js/script.js"></script> -->
 
-    <script src="../js/dataset.js"></script>
 
 </body>
 

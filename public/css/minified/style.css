@@ -939,96 +939,297 @@ svg.lfpoint.lfmarker g {
 a.localFocusMarkerLinks {
   color: #ff445c;
 }
+#detail,
+#plugin2 {
+  background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+}
+
+#plugin-2-detail main {
+  padding-top: calc(100vh - 90vh);
+}
+
 #plugin2 main {
-  padding-top: 0;
+  padding-top: calc(100vh - 75vh);
   position: relative;
   margin: unset;
   max-width: unset;
   width: calc(100% - 400px);
-  margin-left: unset;
-  margin-right: unset;
-  padding: 0;
 }
 
-#plugin2 main>ul {
-  background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  padding: 6em 1em;
-}
-
-#plugin2 main ul {
-  display: flex;
-  flex-direction: column;
+#plugin2 section img {
   width: 100%;
+}
+
+#plugin2 main>h2 {
   text-align: center;
 }
 
-#plugin2 main #info-img img {
-  width: 15em;
-}
-
-#plugin2 main ul li {
-  padding: 1em 2em;
-  color: #fff;
-  position: relative;
-}
-
-#plugin2 main ul li h2 {
-  color: #fff;
-}
-
-#plugin2 main ul #info p:last-child {
-  padding: 2em;
-}
-
-#plugin2 main ul #info button {
-  padding: 1em;
-  background-color: #fb5258;
-  margin: 1em 0;
-  border-radius: 1em;
-  color: #fff;
-  text-decoration: none;
-  width: auto;
+#plugin2 section {
   text-align: center;
 }
 
-#plugin2 section.dataset {
-  padding: 3em;
-}
-
-#plugin2 section.dataset>h2 {
+#plugin2 form section {
   text-align: center;
-  padding-bottom: 2em;
+  width: 50%;
+  margin: 0 2em;
 }
 
-#plugin2 section.dataset li {
-  padding: 1em;
-  margin-bottom: 2em;
-  box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
-  color: #000;
-}
-
-#plugin2 section.dataset li {
-  padding: 1em;
-  margin-bottom: 2em;
-  box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
-  color: #000;
-}
-
-#plugin2 section.dataset li h2 {
-  color: #000;
+#plugin2 form h2 {
+  color: inherit;
+  font-size: 1.4em;
+  padding-top: 1em;
   text-align: left;
-  padding: .4em 1em .3em;
-  display: flex;
+  min-height: 8.8em;
+  padding: 1em;
+  padding-top: 3em;
 }
 
-#plugin2 section.dataset li h2:before {
+#plugin2 form h2:nth-of-type(2) {
+  background-color: #fff;
+}
+
+#plugin2 #question {
+  DISPLAY: flex;
+  flex-direction: row;
+}
+
+#plugin2 form {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#plugin2 form div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #f6f6f6;
+  color: #000;
+  border-radius: 2em;
+  flex-shrink: 0;
+  height: auto;
+  transform: scale(1);
+  min-width: auto;
+  transform-origin: center center;
+  scroll-snap-align: start;
+  width: 100%;
+  height: auto;
+}
+
+#plugin2 form .all-questions {
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+  align-items: unset;
+}
+
+#plugin2 label {
+  margin-bottom: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+  position: relative;
+  margin: 0;
+  font-size: 1.1em;
+  color: #000;
+  min-height: 4em;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+
+#plugin2 form .all-questions input[type=checkbox i] {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  margin: -.1em 1em;
+  font-weight: 700!important;
+  cursor: pointer;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #000;
+  -webkit-appearance: none;
+}
+
+#plugin2 form .all-questions input[type=checkbox i]:checked {
+  background-color: #9289e7;
+}
+
+#plugin2 form .all-questions input[type=checkbox i]:focus {
+  outline-offset: 0;
+  outline: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#plugin2-result main {
+  padding: unset;
+  position: relative;
+  margin: unset;
+  max-width: unset;
+  width: calc(100% - 400px);
+}
+
+#plugin2-result main .result {
+  padding: 6em 2em;
+  max-width: 100%;
+  background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  background-size: cplugin2er;
+}
+
+#plugin2-result main h1 {
+  color: #fff;
+}
+
+#plugin2-result section.result>h2 {
+  text-align: center;
+  color: #fff;
+}
+
+#plugin2-result section.result .score-circle {
+  width: 16em;
+  height: 16em;
+  margin: 3em auto;
+  border-radius: 100%;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-color: #003745;
+}
+
+#plugin2-result section.result .score-circle p {
+  font-size: 2em;
+  line-height: 7.7em;
+  font-weight: 700;
+}
+
+#plugin2-result section.result>p {
+  text-align: center;
+  padding: 4em 1em 0;
+}
+
+#plugin2-result section.result>p a {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: #ff445b;
+  font-weight: 700;
+}
+
+#plugin2-result .tips {
+  padding-top: 4em;
+}
+
+#plugin2-result .tips h2 {
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+#plugin2-result .panel ul {
+  list-style: circle;
+}
+
+#plugin2-result .tips li .panel li {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#plugin2-result .tips>ul>li {
+  padding: 2em 1em;
+  margin-bottom: 2em;
+  box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
+  color: #000;
+}
+
+#plugin2-result .tips a {
+  color: #fb5258;
+}
+
+#plugin2-result .tips li button {
+  background-color: inherit;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000;
+  padding: 1em .5em;
+  cursor: pointer;
+}
+
+#plugin2-result li strong {
+  display: flex;
+  font-size: 1.5em;
+}
+
+#plugin2 form section i {
+  text-align: left;
+  font-size: .6em;
+}
+
+#plugin2-result li strong:before {
   content: "";
   display: inline-block;
   margin: 0 16px 0 0;
-  height: 32px;
+  height: auto;
   width: 7px;
   border-radius: 10px;
   background: #ff445b;
+}
+
+.accordion {
+  background-color: inherit;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: 0;
+  font-size: 15px;
+  transition: .4s;
+}
+
+.accordion:hplugin2er,
+.active {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: inherit;
+  overflow: hidden;
+  height: 0;
+}
+
+.panel hr {
+  background-color: #000;
+  border-color: #000;
+}
+
+#plugin2 form button svg {
+  background-color: #ff445b;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  padding: .2em;
+}
+
+#plugin2 div>section:last-child p a {
+  cursor: pointer;
+}
+
+#plugin2 form button {
+  width: auto;
+  margin-top: 0;
+  height: auto;
+  transition: border ease-out .4s;
+  background-color: unset;
+  padding: 0;
 }
 #detail,
 #quiz {
