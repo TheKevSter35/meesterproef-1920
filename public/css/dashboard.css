@@ -52,15 +52,15 @@ main[id$="board"] button svg {
 	width: .5em;
 }
 
-main[id$="board"] ul {
+main[id$="board"] ul, main[id$="board"] ol {
 	display: flex;
 	flex-direction: row;
 	margin-top: 2em;
 }
 
-main[id$="board"] ul li {
-	max-width: 12em;
-	max-height: 12em;
+main[id$="board"] ul li, main[id$="board"] ol li {
+	width: 12em;
+	height: 12em;
 	border: #ececf7 solid 0.15em;
 	border-radius: 0.75em;
 	margin: 0 1em;
@@ -68,7 +68,7 @@ main[id$="board"] ul li {
 	transition: border .3s ease;
 }
 
-main[id$="board"] ul li:hover {
+main[id$="board"] ul li:hover, main[id$="board"] ol li:hover  {
 	border: #8d8eb9 solid 0.15em;
 }
 
@@ -76,19 +76,26 @@ main[id$="board"] ul li:first-child {
 	margin-left: 0;
 }
 
-main[id$="board"] ul a {
+main[id$="board"] ul a, main[id$="board"] ol a {
 	display: inline-block;
+	display: flex;
 	text-align: center;
 	max-height: 12em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
 }
 
-main[id$="board"] ul img {
-	width: 6em;
-	height: 6em;
+main[id$="board"] ul img, main[id$="board"] ol img {
+	max-width: 6em;
+	max-height: 6em;
 	margin-top: 1.5em;
 }
 
-main[id$="board"] ul a span {
+main[id$="board"] ul a span, main[id$="board"] ol a span {
 	display: inline-block;
 	margin: 0.75em 0 1.5em 0;
 	overflow: hidden;
@@ -99,4 +106,18 @@ main[id$="board"] ul a span {
 	font-size: 1.1em;
 	font-weight: 700;
 	color: #000549;
+}
+
+main[id$="board"] section:nth-of-type(3) section:first-of-type li {
+	width: 16em;
+	height: 10em;
+}
+
+main[id$="board"] section:nth-of-type(3) section:first-of-type span {
+	max-width: 12em;
+}
+
+main[id$="board"] section:nth-of-type(3) section:first-of-type img {
+	width: 4em;
+	height: 4em;
 }
