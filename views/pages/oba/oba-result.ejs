@@ -12,7 +12,7 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd de tips en probeer het opnieuw</h2><p>
+            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd de tips en probeer het opnieuw</h2><p><a href="/overzicht">Terug naar map</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
             <h2> Goed gedaan!</h2><p>
                 <a href="/overzicht">Terug naar map</a></p>
