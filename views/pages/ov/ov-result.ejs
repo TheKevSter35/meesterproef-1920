@@ -4,7 +4,7 @@
 
 <%- include ('../../partials/head.ejs') %>
 
-<body id="quiz-result">
+<body id="plugin2-result">
     <main>
         <section class="result">
             <H1>Resultaat</H1>
@@ -13,92 +13,47 @@
             </div>
             <% if(score.earnedPoints <= 50)  { %>
             <h2> Onvoldoende lees de tips en probeer het opnieuw</h2><p>
-            <a href="/quiz-detail">Opnieuw proberen</a></p>
-            <% } else if(score.earnedPoints == 60 )  { %>
-            <h2> Net voldoende</h2>
-            <% } else if(score.earnedPoints == 70 )  { %>
-            <h2> voldoende</h2>
-            <% } else if(score.earnedPoints == 80 )  { %>
-            <h2> Goed gedaan ruim voldoende </h2>
-            <% } else if(score.earnedPoints == 90 )  { %>
-            <h2> Net voldoende</h2>
+            <a href="/ov-game">Opnieuw proberen</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
-            <h2> Perfecte Score heel goed gedaan</h2>
+            <h2> Goed gedaan voldoende</h2>
 
             <% } %>
         </section>
         <section class="tips">
-            <h2>Wat kan ik er aan tegen doen</h2>
+            <h2>Wanneer je incheck dit wordt gestuurd naar het bedrijf. Niet alleen waar je bent ingechecked maar
+                ook je persoonlijke gegevens </h2>
             <ul>
                 <li>
-                    <button class="accordion"><strong>
-                            Een mail van je bank
-                        </strong></button>
-                    <div class="panel">
-                        <P>De bank vraagt nooit om in te loggen op Mijn Bank (Internetbankieren) via een
-                            sms of e-mail.</p>
-                        <p> Heb je een phishingbericht ontvangen en niet geopend? Alle banken hebben een speciale mail
-                            waar je de phishingbericht kan sturen.</p>
-                        <p>Voor meer informatie ga naar de webstie van uw bank of naar <a
-                                href="https://www.veiligbankieren.nl/">https://www.veiligbankieren.nl/</a></p>
-                    </div>
-
-
-                </li>
-
-                <li>
-                    <button class="accordion"><strong>Tips voor wachtwoorden
-                        </strong></button>
-                    <div class="panel">
-                        <ul>
-                            <li>Zorg dat je nooit twee keer hetzelfde wachtwoord gebruikt </li>
-
-                            <li>Bedenk een wachtwoord die moeilijk te raden incombinatie met tekens, cijfers en (HOOFD)letters</li>
-                            <li>Schrijf je wachtwoorden in een boekje.  internetcrimineel kunnen daar niet bijkomen. Zo kan je toch je wachtwoorden onthouden. </li>
-
-                        </ul>
-                    </div>
-                </li>
-
-                <li>
-                    <button class="accordion"><strong>Updates voor mijn apparaten
-                        </strong></button>
-                    <div class="panel">
-                        <P>
-                        Updates bevatten vernieuwde beveiliging van je apparaat.Door de update uit te voeren heb je de veiligste software op je apparaat, zodat je minder
-                            kans loopt om slachtoffer te worden van een virus of een hack. Doe dat daarom zo snel
-                            mogelijk!</p>
-                    </div>
-                </li>
-
-               
-
-                <li>
-                    <button class="accordion"><strong>
-                        Phishing link (URL) herkennen
-                        </strong></button>
-                    <div class="panel">
-                        <P>Phishing berichten zijn vaak te herkennen aan een gemanipuleerde link. Meestal lijkt de (verwijzing) link in het phishing bericht helemaal valide. Wanneer de gebruiker met de cursor op de link gaat staan (dus niet klikken) komt de actuele link naar boven. 
-                        <p>
-                            Mocht je nog steeds twijfelen. Probeer <a href="checkjelinkje.nl">checkjelinkje.nl</a>
-                        </p>
-                    </div>
+                    <strong>Halte: Centraal Station </strong>
                 </li>
                 <li>
-                    <button class="accordion"> <strong>
-                        Hoe voorkom je WhatsApp-fraude.
-                        </strong></button>
-                    <div class="panel">
-                        
-                            <ul>
-                                <li>Vraagt iemand om geld via WhatsApp? Bel die persoon dan op via een nummer uit je
-                                    eigen adresboek. Een oplichter valt meteen door de mand.</li>
-                                <li>Kun je die persoon niet direct telefonisch bereiken: geen geld overmaken. Stel de
-                                    'bekende' een vraag waarop een oplichter écht geen antwoord kan weten. Vraag dus
-                                    niet naar informatie die te raden is of die op social media zou kunnen staan.</li>
-                            </ul>
-                      
-                    </div>
+                    <strong>Naam: <%= user.name %></strong>
+                </li>
+                <li>
+                    <strong>Geboortedatum: 01-01-90</strong>
+                </li>
+                <li>
+                    <strong>Adres: Haarlemmerdijk 5</strong>
+                </li>
+                <li>
+
+                    <strong>Kaartnummer: 3567 2344 2321 0900</strong>
+                </li>
+                <li>
+
+                    <strong>Saldo: &euro;10.53</strong>
+                </li>
+                <li>
+
+                    <strong>Bankrekening: 0002 4356 627 21</strong>
+                </li>
+                <li>
+
+                    <strong>Telefoonnummer: 0612334567</strong>
+                </li>
+                <li>
+
+                    <strong>E-mail: <%= user.name %>@mail.com</strong>
                 </li>
 
             </ul>

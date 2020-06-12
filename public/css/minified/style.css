@@ -942,7 +942,6 @@ a.localFocusMarkerLinks {
 
 #plugin2 main>h2 {
   text-align: center;
-  min-height: 2.5em;
 }
 
 #plugin2 section {
@@ -957,12 +956,12 @@ a.localFocusMarkerLinks {
 
 #plugin2 form h2 {
   color: inherit;
-  margin-bottom: 2em;
   font-size: 1.4em;
   padding-top: 1em;
   text-align: left;
   min-height: 8.8em;
   padding: 1em;
+  padding-top: 3em;
 }
 
 #plugin2 form h2:nth-of-type(2) {
@@ -984,7 +983,7 @@ a.localFocusMarkerLinks {
 
 #plugin2 form div {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-color: #f6f6f6;
   color: #000;
@@ -997,29 +996,52 @@ a.localFocusMarkerLinks {
   scroll-snap-align: start;
   width: 100%;
   height: auto;
-  margin-bottom: 2em;
+}
+
+#plugin2 form .all-questions {
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: left;
+  align-items: unset;
 }
 
 #plugin2 label {
-  border-radius: 1em;
-  border: 2px solid #002b37;
-  margin-bottom: 1em;
+  margin-bottom: 0;
   padding: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   cursor: pointer;
   position: relative;
   position: relative;
-  margin: 1em;
-  font-size: 1em;
+  margin: 0;
+  font-size: 1.1em;
   color: #000;
   min-height: 4em;
-  max-width: 15em;
+  width: 100%;
+  font-weight: 700;
   text-align: center;
 }
 
-.all-questions {
-  flex-wrap: wrap;
+#plugin2 form .all-questions input[type=checkbox i] {
+  width: 2em;
+  height: 2em;
+  border-radius: 2em;
+  margin: -.1em 1em;
+  font-weight: 700!important;
+  cursor: pointer;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #000;
+  -webkit-appearance: none;
+}
+
+#plugin2 form .all-questions input[type=checkbox i]:checked {
+  background-color: #9289e7;
+}
+
+#plugin2 form .all-questions input[type=checkbox i]:focus {
+  outline-offset: 0;
+  outline: 0;
 }
 
 .hidden {
@@ -1100,7 +1122,7 @@ a.localFocusMarkerLinks {
 }
 
 #plugin2-result .tips>ul>li {
-  padding: 1em;
+  padding: 2em 1em;
   margin-bottom: 2em;
   box-shadow: 10px 12px 34px 0 rgba(124,118,211,.17);
   color: #000;
@@ -1119,15 +1141,21 @@ a.localFocusMarkerLinks {
   cursor: pointer;
 }
 
-#plugin2-result .tips li button strong {
+#plugin2-result li strong {
   display: flex;
+  font-size: 1.5em;
 }
 
-#plugin2-result .tips li button strong:before {
+#plugin2 form section i {
+  text-align: left;
+  font-size: .6em;
+}
+
+#plugin2-result li strong:before {
   content: "";
   display: inline-block;
   margin: 0 16px 0 0;
-  height: 20px;
+  height: auto;
   width: 7px;
   border-radius: 10px;
   background: #ff445b;
@@ -1163,7 +1191,7 @@ a.localFocusMarkerLinks {
   border-color: #000;
 }
 
-svg.feather.feather-chevron-right {
+#plugin2 form button svg {
   background-color: #ff445b;
   width: 2em;
   height: 2em;
@@ -1171,12 +1199,17 @@ svg.feather.feather-chevron-right {
   padding: .2em;
 }
 
-#plugin2 div>section:last-child p {
-  height: 3em;
-}
-
 #plugin2 div>section:last-child p a {
   cursor: pointer;
+}
+
+#plugin2 form button {
+  width: auto;
+  margin-top: 0;
+  height: auto;
+  transition: border ease-out .4s;
+  background-color: unset;
+  padding: 0;
 }
 #detail,
 #quiz {
