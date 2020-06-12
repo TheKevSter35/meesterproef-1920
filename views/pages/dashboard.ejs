@@ -5,75 +5,137 @@
 <body>
 	<header class="user">
 		<h1><span>Welkom</span> <%= user.name %></h1>
-		<p>Hier leer je wat voor voetsporen je achterlaat op het internet, en leer wat je moet doen om veilig het internet te gebruiken.</p>
+		<p>Hier zie je het overzicht met jouw kennis niveau, het huidige verhaal die je speelt, en de nieuwe verhalen en hulpmiddelen die zijn gemaakt.</p>
 	</header>
-		<main id="dashboard">
-			<section>
-				<h2>Kennis niveau</h2>
-				<div class="info">
-					<p>Elke keer dat je een hulpmiddel gebruikt verdien je punten. Dat wordt bijgehouden in dit overzicht. Je kunt zien hoeveel punten je hebt verdiend, hoe ver je bent tot het volgende niveau, en hoe je het doet vergeleken met andere gebruikers.</p>
-					<button type="button" aria-label="Verwijder extra informatie bericht">
-						<svg viewBox="0 0 16 16">
-							<g fill="white">
-								<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749" y="-1.7863749"
-									ry="0.75"/>
-								<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
-									transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"/>
-							</g>
-						</svg>
-					</button>
-				</div>
-				<section>
-					<h3>Niveau</h3>
-					<div>
-					<svg></svg>
-					<p>Totaal: <span><%= user.score %> punten</span></p>
-					</div>
-					<svg></svg>
-				</section>
-				<section>
-					<h3>Punten tot volgende niveau</h3>
-					<p>Nog <span>500 punten</span> tot <span>niveau 1</span></p>
-					<svg></svg>
-				</section>
-				<section>
-					<h3>Aantal punten verdiend de afgelopen 7 dagen</h3>
-					<svg></svg>
-				</section>
-				<section>
-					<h3>Klassement</h3>
-					<ol>
-						<li>7000 punten <span>Bob</span></li>
-						<li>6700 punten <span>Lianne</span></li>
-						<li>6500 punten <span>Han</span></li>
-						<li>6500 punten <span>Xander</span></li>
-						<li>6280 punten <span>Vera</span></li>
-						<li>6100 punten <span>Ciara</span></li>
-						<li>5950 punten <span>Aina</span></li>
-						<li>5600 punten <span>Yelle</span></li>
-						<li>5500 punten <span>Gerda</span></li>
-						<li>4990 punten <span>Ian</span></li>
-					</ol>
-					<span>45. <span><%= user.score %> punten</span></span>
-				</section>
-			</section>
+	<main id="dashboard">
 		<section>
-			<h2>Hulpmiddelen</h2>
+			<h2>Kennisniveau</h2>
 			<div class="info">
-				<p>Met hulpmiddelen vergroot je jouw kennis over veilig internet gebruik. Je kunt ze allemaal vinden bij <a href="/overzicht">de Hulpmiddelen</a>.</p>
+				<p>Elke keer dat je een hulpmiddel gebruikt verdien je punten. Dat wordt bijgehouden in dit overzicht.
+					Je kunt zien hoeveel punten je hebt verdiend, hoe ver je bent tot het volgende niveau, en hoe je het
+					doet vergeleken met andere gebruikers.</p>
 				<button type="button" aria-label="Verwijder extra informatie bericht">
 					<svg viewBox="0 0 16 16">
 						<g fill="white">
-							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749" y="-1.7863749"
-								ry="0.75"/>
+							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749"
+								y="-1.7863749" ry="0.75" />
 							<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
-								transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"/>
+								transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
 						</g>
 					</svg>
 				</button>
 			</div>
 			<section>
-				<h3>Nieuw</h3>
+				<h3>Jouw niveau</h3>
+				<div>
+					<svg></svg>
+					<p>Totaal: <span><%= user.score %> punten</span></p>
+				</div>
+				<svg></svg>
+			</section>
+			<section>
+				<h3>Punten tot het volgende niveau</h3>
+				<p>Nog <span>500 punten</span> tot <span>niveau 1</span></p>
+				<svg></svg>
+			</section>
+			<section>
+				<h3>Aantal punten verdiend de afgelopen 7 dagen</h3>
+				<svg></svg>
+			</section>
+			<section>
+				<h3>Klassement</h3>
+				<ol>
+					<li>7000 punten <span>Bob</span></li>
+					<li>6700 punten <span>Lianne</span></li>
+					<li>6500 punten <span>Han</span></li>
+					<li>6500 punten <span>Xander</span></li>
+					<li>6280 punten <span>Vera</span></li>
+					<li>6100 punten <span>Ciara</span></li>
+					<li>5950 punten <span>Aina</span></li>
+					<li>5600 punten <span>Yelle</span></li>
+					<li>5500 punten <span>Gerda</span></li>
+					<li>4990 punten <span>Ian</span></li>
+				</ol>
+				<span>45. <span><%= user.score %> punten</span></span>
+			</section>
+		</section>
+
+		<section>
+			<h2>Het verhaal die je nu volgt</h2>
+			<div class="info">
+				<p>Met de Digi-Wijzer volg je verhalen van verschillende personen. Hier zie je welk verhaal je nu volgt en waar je bent gebleven.</p>
+				<button type="button" aria-label="Verwijder extra informatie bericht">
+					<svg viewBox="0 0 16 16">
+						<g fill="white">
+							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749"
+								y="-1.7863749" ry="0.75" />
+							<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
+								transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+						</g>
+					</svg>
+				</button>
+			</div>
+				<ol>
+					<li>
+						<a href="">
+							<img src="../source/pictures/house.png"
+								alt="Een geïllustreerd huisje">
+							<span>Thuis</span>
+						</a>
+					</li>
+					<li>
+						<a href="/ov-detail">
+							<img src="../source/pictures/bus.svg"
+								alt="Een geïllustreerde bus">
+							<span>De OV test</span>
+						</a>
+					</li>
+					<li>
+						<a href="/quiz-detail">
+							<img src="../source/pictures/phishing_quiz.png"
+								alt="Een geïllustreerde spelcontroller">
+							<span>Phishing quiz</span>
+						</a>
+					</li>
+				</ol>
+		</section>
+		<section>
+			<h2>Nieuw</h2>
+			<section>
+				<h3>Verhalen</h3>
+				<ul>
+					<li>
+						<a href="/het-verhaal-van-suzanne">
+							<img src="../source/pictures/bibliotheek.png"
+								alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+							<span>Het verhaal van Suzanne</span>
+						</a>
+					</li>
+					<li>
+						<a href="/met-ahmed-naar-het-theater">
+							<img src="../source/pictures/bibliotheek.png"
+								alt="Een geïllustreerde tablet met daarin een quiz geïllustreerd">
+							<span>Met Ahmed naar het theater</span>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Hulpmiddelen</h3>
+				<div class="info">
+					<p>Met hulpmiddelen vergroot je jouw kennis over veilig internet gebruik. Je kunt ze allemaal vinden in de lijst bij
+						<a href="/overzicht">de Hulpmiddelen</a>.</p>
+					<button type="button" aria-label="Verwijder extra informatie bericht">
+						<svg viewBox="0 0 16 16">
+							<g fill="white">
+								<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749"
+									y="-1.7863749" ry="0.75" />
+								<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
+									transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
+							</g>
+						</svg>
+					</button>
+				</div>
 				<ul>
 					<li>
 						<a href="/quiz-detail">
@@ -91,13 +153,10 @@
 					</li>
 				</ul>
 			</section>
-		<section>
-			<h3>Meest gebruikt</h3>
-			<p>Je hebt nog geen hulpmiddelen gebruikt. <a href="/overzicht">Ga naar de Digi-wijzer om te beginnen.</a></p>
 		</section>
-	</section>
 	</main>
 	<%- include ('../partials/sidebar.ejs') %>
 	<script type="text/javascript" src="js/removeMessage.js"></script>
 </body>
+
 </html>
