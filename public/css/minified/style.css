@@ -1069,7 +1069,8 @@ a.localFocusMarkerLinks {
   text-align: center;
 }
 
-#plugin2 form .all-questions input[type=checkbox i] {
+#plugin2 form .all-questions input[type=checkbox i],
+#plugin2 form .all-questions input[type=radio i] {
   width: 2em;
   height: 2em;
   border-radius: 2em;
@@ -1082,11 +1083,13 @@ a.localFocusMarkerLinks {
   -webkit-appearance: none;
 }
 
-#plugin2 form .all-questions input[type=checkbox i]:checked {
+#plugin2 form .all-questions input[type=checkbox i]:checked,
+#plugin2 form .all-questions input[type=radio i]:checked {
   background-color: #9289e7;
 }
 
-#plugin2 form .all-questions input[type=checkbox i]:focus {
+#plugin2 form .all-questions input[type=checkbox i]:focus,
+#plugin2 form .all-questions input[type=radio i]:focus {
   outline-offset: 0;
   outline: 0;
 }
