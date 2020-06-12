@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+<body id="plugin2-result">
+    <main>
+        <section class="result">
+            <H1>Resultaat</H1>
+            <div class="score-circle">
+                <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
+            </div>
+            <% if(score.earnedPoints <= 50)  { %>
+            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd de tips en probeer het opnieuw</h2><p>
+            <% } else if(score.earnedPoints == 100 )  { %>
+            <h2> Goed gedaan!</h2>
+
+            <% } %>
+        </section>
+        <section class="tips">
+            <h2>Wanneer je boek scant dan wordt je leengeschiedenis geupdate. Jouw gebruikersprofiel wordt ook geupdate. </h2>
+            <ul>
+                <li>
+                    <strong>inboekdatum: 19-7-2015 </strong>
+                </li>
+                <li>
+                   <strong>Titel: Waarom luister je niet?</strong> 
+                </li>
+                <li>
+                    <strong>ISBN: 9789026328251</strong> 
+                 </li>
+                 <li>
+                    <strong>Voornaam-auteur: Jean-Pierre van de</strong> 
+                 </li>
+                 <li>
+                    <strong>Achternaam-auteur: ven</strong> 
+                 </li>
+                 <li>
+                    <strong>Locatie:Centraal</strong> 
+                 </li>
+                <li>
+                    
+                    <strong>Gebruiker: <%= user.name %></strong>
+                </li>
+            <div class="settings">
+                <p><a href="/overzicht">Terug naar map</a></p>
+
+            </div>
+        </section>
+
+    </main>
+    
+    <%- include ('../../partials/sidebar.ejs') %>
+
+    <script>
+        const acc = document.getElementsByClassName("accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.height === "100%") {
+                    panel.style.height = "0";
+                } else {
+                    panel.style.height = "100%";
+                }
+            });
+        }
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/printscript.js"></script> -->
+
+
+
+    </script>
+</body>
+
+
+</html>

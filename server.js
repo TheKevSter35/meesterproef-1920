@@ -35,5 +35,6 @@ app.use(express.static(path.join(__dirname + 'public')))
 require('./modules/routes/quiz')(app)
 require('./modules/routes/ov')(app)
 require('./modules/routes/oba')(app)
+require('./modules/routes/data')(app)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

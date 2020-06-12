@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include ('../../partials/head.ejs') %>
+
+
+<body id="plugin2">
+
+    <main>
+        <form action="/data-result" method="POST">
+            <div id="question1">
+                <section>
+                    <p><img src="../../source/icons/good.svg" alt=""></p>
+
+                </section>
+                <section>
+                </h2>
+                    <h2 id=" text-question1">Je bent lekker bezig. Mogen wij alle data bewaren die je tot nu toe ben tegen gekomen?
+                        </h2>
+                       
+                        <div class="all-questions">
+                            <label for="question1-answer1" class="question1-answer1">
+                                <input type="radio" id="question1-answer1" name="question1" data-score="0" value="0">
+                                Ja hoor
+                            </label>
+
+                            <label for="question1-answer2" class="question1-answer2">
+                                <input type="radio" id="question1-answer2" name="question1" data-score="1" value="1">
+                                Liever niet </label>
+                   
+            <p><button id="submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></button></p>
+            </section>
+            </div>
+
+          
+            </section>
+    </main>
+
+    <%- include ('../../partials/sidebar.ejs') %>
+
+
+
+
+    <script src="../js/dataset.js"></script>
+
+</body>
+
+
+</html>
