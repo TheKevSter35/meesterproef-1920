@@ -231,6 +231,7 @@
     text-align: left;
     font-size: 0.6em;
 }
+
 #plugin2-result  li strong:before {
     content: "";
     display: inline-block;
