@@ -27,6 +27,10 @@ header.user p {
 	margin-bottom: 1.5em;
 }
 
+header.title h1 {
+	text-align: center;
+}
+
 nav:first-of-type {
     display: flex;
     color: #fff;
