@@ -689,6 +689,7 @@ main~a[href$=gast] {
 main[id^=intro] {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 main[id^=intro]>section {
@@ -698,9 +699,23 @@ main[id^=intro]>section {
   padding: initial;
 }
 
+main[id^=intro]>section div {
+  max-height: 20em;
+  overflow-y: scroll;
+}
+
 main[id^=intro]>section h2 {
   font-size: 2.5em;
   margin-bottom: .75em;
+}
+
+main[id^=intro]>section p {
+  padding: initial;
+  margin: 2em 4em 2em 0;
+}
+
+main[id^=intro]>section p:first-child {
+  margin-top: 0;
 }
 
 .overslaanKnop {
