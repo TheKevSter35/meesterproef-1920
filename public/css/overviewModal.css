@@ -1,0 +1,57 @@
+#overview main > div#overviewModal {
+    padding-right: 30em;
+}
+
+#overviewModal {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#overviewModal > div {
+    width: 100%;
+    /*height: 100%;*/
+    background-color: #fff;
+}
+
+.overviewModalContent {
+    padding: 1.5em 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overviewModalContent > h2 {
+    margin-bottom: 1em;
+}
+
+.overviewModalContent > p#introTextModal {
+    margin-bottom: 2em;
+}
+
+.overviewModalContent > div > img {
+    margin-bottom: 1.5em;
+}
+
+.overviewModalContent > p {
+    color: #5855b0;
+    margin-bottom: 1em;
+}
+.overviewModalContent > div {
+    /*min-height: 17.3125em;*/
+}
+
+.overviewModalContent > button {
+    /*margin-top: 1.5em;*/
+    border-radius: .5em;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+}
+
+.hideModalelement {
+    display: none;
+}
