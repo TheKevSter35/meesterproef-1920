@@ -786,6 +786,11 @@ main[id^=intro]>section p:first-child {
 #start>header.designHead>div>h1 {
   margin-bottom: .3em;
 }
+
+main.choose>p:nth-child(1)>a:nth-child(3):focus {
+  background-color: #fb5258;
+  color: red;
+}
 #overview {
   display: flex;
   color: #fff;
