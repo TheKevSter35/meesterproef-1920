@@ -1,5 +1,5 @@
 module.exports = function (app) {
-	const { review } = require('../score')
+	const { review, checkLevel } = require('../score')
 	app.get('/data-game', (req, res) => {
 		const user = {
 			name: req.session.name,
@@ -16,6 +16,7 @@ module.exports = function (app) {
 		const answers = req.body
 		const results = review(answers, 100)
 		req.session.score += results.earnedPoints
+		req.session.level = checkLevel(req.session.score)
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
