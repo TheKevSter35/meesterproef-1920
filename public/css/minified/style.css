@@ -53,14 +53,35 @@ main[id$=board] button svg {
   width: .5em;
 }
 
-main[id$=board] ol,
+main[id$=board] ol:nth-child(n+3),
 main[id$=board] ul {
   display: flex;
   flex-direction: row;
   margin-top: 2em;
 }
 
-main[id$=board] ol li,
+main[id$=board] section:nth-of-type(2) ol {
+  max-width: 60em;
+  padding: 2em 0 2em 0;
+  overflow-x: scroll;
+}
+
+main[id$=board] section:nth-of-type(2) ol li {
+  min-width: 12em;
+  min-height: 12em;
+  max-width: 12em;
+  max-height: 12em;
+  margin: 0 2em;
+}
+
+main[id$=board] section:nth-of-type(2) ol li:last-of-type:after {
+  content: "";
+  display: block;
+  width: 14em;
+  height: .01em;
+}
+
+main[id$=board] ol:nth-child(n+3) li,
 main[id$=board] ul li {
   width: 12em;
   height: 12em;
@@ -71,7 +92,7 @@ main[id$=board] ul li {
   transition: border .3s ease;
 }
 
-main[id$=board] ol li:hover,
+main[id$=board] ol:nth-child(n+3) li:hover,
 main[id$=board] ul li:hover {
   border: #8d8eb9 solid .15em;
 }
