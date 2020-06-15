@@ -1,9 +1,10 @@
 module.exports = function (app) {
-	
+	const { review } = require('../score')
 	app.get('/oba-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/oba/oba-detail',{
 			user: user
@@ -12,7 +13,8 @@ module.exports = function (app) {
 	app.get('/oba-game', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/oba/oba-game', {
 			queries: req.query,
@@ -22,23 +24,13 @@ module.exports = function (app) {
 	})
 	app.post('/oba-result', (req, res) => {
 		const answers = req.body
-		let totalScore = score = 0
-		Object.entries(answers).map((answer) => {
-			if (answer[1] === '1') {
-				score += 25
-			}
-			totalScore = 100
-		})
-		const results = {
-			earnedPoints: score,
-			totalPoints: totalScore
-		}
+		const results = review(answers, 25, 4)
+		req.session.score += results.earnedPoints
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
-			usedTools: req.session.usedtools
+			level: req.session.level
 		}
-		req.session.score = score
 		res.render('pages/oba/oba-result', {
 			score: results,
 			user: user

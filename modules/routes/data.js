@@ -1,9 +1,10 @@
 module.exports = function (app) {
-	
+	const { review } = require('../score')
 	app.get('/data-game', (req, res) => {
 		const user = {
 			name: req.session.name,
-			score: req.session.score
+			score: req.session.score,
+			level: req.session.level
 		}
 		res.render('pages/data/data-game', {
 			queries: req.query,
@@ -13,23 +14,13 @@ module.exports = function (app) {
 	})
 	app.post('/data-result', (req, res) => {
 		const answers = req.body
-		let totalScore = score = 0
-		Object.entries(answers).map((answer) => {
-			if (answer[1] === '1') {
-				score += 100
-			}
-			totalScore = 100
-		})
-		const results = {
-			earnedPoints: score,
-			totalPoints: totalScore
-		}
+		const results = review(answers, 100)
+		req.session.score += results.earnedPoints
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
-			usedTools: req.session.usedtools
+			level: req.session.level,
 		}
-		req.session.score = score
 		res.render('pages/data/data-result', {
 			score: results,
 			user: user

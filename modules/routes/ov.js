@@ -1,5 +1,5 @@
 module.exports = function (app) {
-	
+	const { review } = require('../score')
 	app.get('/ov-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
@@ -24,24 +24,13 @@ module.exports = function (app) {
 	})
 	app.post('/ov-result', (req, res) => {
 		const answers = req.body
-		let totalScore = score = 0
-		Object.entries(answers).map((answer) => {
-			if (answer[1] === '1') {
-				score += 25
-			}
-			totalScore = 100
-		})
-		const results = {
-			earnedPoints: score,
-			totalPoints: totalScore
-		}
+		const results = review(answers, 25)
+		req.session.score += results.earnedPoints
 		const user = {
 			name: req.session.name,
-			score: req.session.score + score,
-			level: req.session.level,
-			usedTools: req.session.usedtools
+			score: req.session.score,
+			level: req.session.level
 		}
-		req.session.score = score
 		res.render('pages/ov/ov-result', {
 			score: results,
 			user: user
