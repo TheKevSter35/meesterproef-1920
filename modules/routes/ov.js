@@ -24,7 +24,7 @@ module.exports = function (app) {
 	})
 	app.post('/ov-result', (req, res) => {
 		const answers = req.body
-		const results = review(answers, 25)
+		const results = review(answers, 25, 4)
 		req.session.score += results.earnedPoints
 		const user = {
 			name: req.session.name,
