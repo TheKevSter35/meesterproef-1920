@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<%- include ('../partials/head.ejs') %>
+
+<body id="overview">
+
+
+    <main id="toolkits">
+        <div class="overview-info">
+           
+        <h1>Tijd om je <strong>digitale vaardigheden  </strong>  te verbeteren</h1>
+            <p>Behulp van verschillende hulpmiddelen leren wij jou hoe de digitale wereld werkt.    </p>
+        </div>
+
+        <div id="toggleMenu">
+            <button class="btnFilters activeState" id="btnKaartweergave">Kaart</button>
+            <button class="btnFilters" id="btnLijstWeergave">Lijst</button>
+        </div>
+
+        <div class="plugins-list">
+            <h2>voortgang</h2>
+            <ul class="plugins">
+                <li>
+                    <img src="../source/pictures/bus.svg" alt="store">
+                    <h2>1 .OV</h2>
+                    <a href="/ov-detail">Meer info</a>
+                </li>
+
+                
+                <li>
+
+                    <img src="../source/pictures/hacker.svg" alt="store">
+                    <h2>2. Phishing Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/oba.jpg" alt="store">
+                    <h2>3. OBA</h2>
+                    <a href="/oba-detail">Meer info</a>
+                </li>
+
+            <li>
+                    <img src="../source/pictures/checklist.svg" alt="store">
+                    <h2>4. Enquete</h2>
+                    <a href="/data-game">Meer info</a>
+                </li>
+
+
+            </ul>
+            <hr>
+            <h2>quiz</h2>
+            <ul class="plugins">
+
+                
+                <li>
+
+                    <img src="../source/pictures/hacker.svg" alt="store">
+                    <h2>Phishing Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="/quiz-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/cookie.svg" alt="store">
+                    <h2>Cookies Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">Meer info</a>
+                </li>
+
+                <li>
+
+                    <img src="../source/pictures/computer.svg" alt="pc">
+                    <h2>Computerkennis Quiz</h2>
+                    <!-- <p>40/100p</p> -->
+                    <a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">Meer info</a>
+                </li>
+
+
+
+            </ul>
+         
+           
+            <h2>wat weten de bedrijven over jou?</h2>
+            <ul class="plugins">
+                <li>
+                    <img src="../source/pictures/bus.svg" alt="store">
+                    <h2>OV</h2>
+                    <a href="/ov-detail">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/oba.jpg" alt="store">
+                    <h2>OBA</h2>
+                    <a href="/oba-detail">Meer info</a>
+                </li>
+                <li>
+                    <img src="../source/pictures/store.svg" alt="store">
+                    <h2>Super</h2>
+                    <a href="https://www.oba.nl/ehbo.html">Meer info</a>
+                </li>
+             
+                <li>
+                    <img src="../source/pictures/gym.svg" alt="gym">
+                    <h2>Gym</h2>
+                    <a href="https://www.oba.nl/ehbo.html">Meer info</a>
+                </li>
+                </ul>
+                <h2>Aan de slag met:</h2>
+            <ul class="overige">
+                <li>
+                    <img src="../source/pictures/digid.png" alt="store">
+                    <h2>DigiD</h2>
+                    <a href="/https://digid.uabc.nl/nl/">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/windows.svg" alt="windows">
+                    <h2>Windows</h2>
+                    <a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">Meer info</a>
+                </li>
+                <li>
+                    <img src="../source/pictures/gmail.svg" alt="store">
+                    <h2>Mail</h2>
+                    <a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">Meer info</a>
+                </li>
+                <li>
+
+                    <img src="../source/pictures/apple.svg" alt="store">
+                    <h2>MacOS</h2>
+                    <a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">Meer info</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <iframe class="localfocusvisual" frameborder="0" style="width:100%;overflow:hidden" src="https://localfocuswidgets.net/5ee69505b3312"></iframe>
+
+        <%- include ('../partials/devFooter.ejs') %>
+
+        <%- include ('../partials/overviewModal.ejs') %>
+
+    </main>
+    <%- include ('../partials/sidebar.ejs') %>
+
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <script src="js/script.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/overviewModal.js"></script>
+
+</body>
+
+</html>

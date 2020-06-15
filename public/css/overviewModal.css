@@ -45,13 +45,25 @@
     /*min-height: 17.3125em;*/
 }
 
-.overviewModalContent > button {
+.overviewModalContent > button, a#btnModal3 {
     /*margin-top: 1.5em;*/
     border-radius: .5em;
     background-color: #fb5258;
     border-bottom: solid .25em #a8191e;
 }
 
+a#btnModal3 {
+    border: none;
+    color: #fff;
+    padding: 1em 2em;
+    font-size: 1em;
+    font-family: Avenir,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 700;
+    border-radius: .5em;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    text-decoration: none;
+}
 .hideModalelement {
     display: none;
 }
