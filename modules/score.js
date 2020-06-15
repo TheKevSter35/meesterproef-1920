@@ -20,4 +20,18 @@ function reviewAnswers (answers, pointsOnCorrectAnswer, allAnswers) {
 	}
 }
 
+function checkLevel (score) {
+	switch (true) {
+	case (score < 500):
+		return 'Verkennen'
+	case (score >= 500 && score < 1500):
+		return 'Leren'
+	case (score >= 1500 && score < 3000):
+		return 'Onderzoeken'
+	case (score >= 3000 && score < 5000):
+		return 'Begrijpen'
+	}
+}
+
 exports.review = reviewAnswers
+exports.checkLevel = checkLevel
