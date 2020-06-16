@@ -1,5 +1,5 @@
 module.exports = function (app) {
-	const { review, checkLevel } = require('../modules/score')
+	const { review, checkLevel, levelName } = require('../modules/score')
 	app.get('/ov-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
@@ -26,7 +26,7 @@ module.exports = function (app) {
 		const answers = req.body
 		const results = review(answers, 25, 4)
 		req.session.score += results.earnedPoints
-		req.session.level = checkLevel(req.session.score)
+		req.session.level = levelName(checkLevel(req.session.score))
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
