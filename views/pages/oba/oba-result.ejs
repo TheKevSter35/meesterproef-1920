@@ -12,7 +12,8 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd en probeer het opnieuw</h2>
+            <h2> Onvoldoende</h2>
+            <a href="/oba-detail">Opnieuw proberen</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
             <h2> Goed gedaan!</h2>
 
