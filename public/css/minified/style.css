@@ -1911,6 +1911,7 @@ html {
   color: #fff;
   position: relative;
   width: 100%;
+  justify-content: space-between;
 }
 
 #usp>h2 {

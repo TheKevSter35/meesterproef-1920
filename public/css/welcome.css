@@ -135,7 +135,8 @@ html {
 	padding: 1em;
     color: #fff;
 	position: relative;
-	    width: 100%;
+        width: 100%;
+        justify-content: space-between;
 }
 #usp>h2 {
     padding: 1em 1em 2em;
