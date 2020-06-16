@@ -12,36 +12,39 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende lees de tips en probeer het opnieuw</h2>
+            <h2> Onvoldoende. Vraag in de chat als je er niet uitkomt. </h2>
             <p>
                 <a href="/quiz-detail">Opnieuw proberen</a></p>
+          
             <% } else if(score.earnedPoints == 60 )  { %>
             <h2> Net voldoende</h2>
+        
             <% } else if(score.earnedPoints == 70 )  { %>
-            <h2> voldoende</h2>
-            <p>
-                <a href="/overzicht">Terug naar map</a></p>
+            <h2> Voldoende</h2>
+              
             <% } else if(score.earnedPoints == 80 )  { %>
             <h2> Goed gedaan ruim voldoende </h2>
-            <p>
-                <a href="/overzicht">Terug naar map</a></p>
+   
+              
             <% } else if(score.earnedPoints == 90 )  { %>
             <h2> Net voldoende</h2>
-            <p>
-                <a href="/overzicht">Terug naar map</a></p>
+  
+              
             <% } else if(score.earnedPoints == 100 )  { %>
             <h2> Perfecte Score heel goed gedaan</h2>
-            <p>
-                <a href="/overzicht">Terug naar map</a></p>
+       
+              
 
             <% } %>
+            <p>
+                <a href="#tips">Kijk wat je er kan doen</a></p>
         </section>
-        <section class="tips">
-            <h2>Wat kan ik er aan tegen doen</h2>
+        <section id="tips"class="tips">
+            <h2>klik op de vragen om achter te komen wat je kan doen. </h2>
             <ul>
                 <li>
                     <button class="accordion"><strong>
-                            Een mail van je bank
+                            Een mail van mijn bank gekregen?
                         </strong></button>
                     <div class="panel">
                         <P>De bank vraagt nooit om in te loggen op Mijn Bank (Internetbankieren) via een
@@ -56,7 +59,7 @@
                 </li>
 
                 <li>
-                    <button class="accordion"><strong>Tips voor wachtwoorden
+                    <button class="accordion"><strong>Tips voor wachtwoorden?
                         </strong></button>
                     <div class="panel">
                         <ul>
@@ -72,7 +75,7 @@
                 </li>
 
                 <li>
-                    <button class="accordion"><strong>Updates voor mijn apparaten
+                    <button class="accordion"><strong>Ik krijg een update voor mijn apparaat wat nu?
                         </strong></button>
                     <div class="panel">
                         <P>
@@ -87,7 +90,7 @@
 
                 <li>
                     <button class="accordion"><strong>
-                            Phishing link (URL) herkennen
+                          Hoe herken ik een Phishing adres?
                         </strong></button>
                     <div class="panel">
                         <P>Phishing berichten zijn vaak te herkennen aan een gemanipuleerde link. Meestal lijkt de
@@ -100,7 +103,7 @@
                 </li>
                 <li>
                     <button class="accordion"> <strong>
-                            Hoe voorkom je WhatsApp-fraude.
+                            Hoe voorkom je WhatsApp-fraude?
                         </strong></button>
                     <div class="panel">
 

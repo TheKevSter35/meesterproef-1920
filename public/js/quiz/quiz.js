@@ -1,11 +1,16 @@
-//Question 1
+
+//Fallback___________________________________
+document.querySelector('form').style.display = 'flex'
+//Question 1___________________________________
 const correctQuestion1 = document.getElementById('question1-answer2')
 correctQuestion1.addEventListener('click', scrollToForm)
 
 function scrollToForm() {
 	document.querySelector('.question1-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question1-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question1-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question1-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion1 = document.getElementById('text-question1')
@@ -16,11 +21,6 @@ function scrollToForm() {
 		next.classList.remove('hidden')
 	}, 2000)
 
-	// setTimeout(function () {
-	// 	document.querySelector('#question2').scrollIntoView({
-	// 		behavior: 'smooth'
-	// 	})
-	// }, 2000)
 }
 
 const wrongQuestion1 = document.getElementById('question1-answer1')
@@ -29,8 +29,10 @@ wrongQuestion1.addEventListener('click', WrongscrollToForm)
 function WrongscrollToForm() {
 
 	document.querySelector('.question1-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question1-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question1-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question1-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion1 = document.getElementById('text-question1')
@@ -51,8 +53,10 @@ correctQuestion2.addEventListener('click', scrollToForm2)
 
 function scrollToForm2() {
 	document.querySelector('.question2-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question2-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question2-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question2-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion2 = document.getElementById('text-question2')
@@ -69,8 +73,10 @@ wrongQuestion2.addEventListener('click', WrongscrollToForm2)
 
 function WrongscrollToForm2() {
 	document.querySelector('.question2-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question2-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question2-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question2-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion2 = document.getElementById('text-question2')
@@ -91,8 +97,10 @@ correctQuestion3.addEventListener('click', scrollToForm3)
 
 function scrollToForm3() {
 	document.querySelector('.question3-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question3-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question3-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question3-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion3 = document.getElementById('text-question3')
@@ -109,8 +117,10 @@ wrongQuestion3.addEventListener('click', WrongscrollToForm3)
 
 function WrongscrollToForm3() {
 	document.querySelector('.question3-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question3-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question3-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question3-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion3 = document.getElementById('text-question3')
@@ -130,8 +140,10 @@ correctQuestion4.addEventListener('click', scrollToForm4)
 
 function scrollToForm4() {
 	document.querySelector('.question4-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question4-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question4-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question4-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion4 = document.getElementById('text-question4')
@@ -148,8 +160,10 @@ wrongQuestion4.addEventListener('click', WrongscrollToForm4)
 
 function WrongscrollToForm4() {
 	document.querySelector('.question4-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question4-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question4-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question4-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion4 = document.getElementById('text-question4')
@@ -169,8 +183,10 @@ correctQuestion5.addEventListener('click', scrollToForm5)
 
 function scrollToForm5() {
 	document.querySelector('.question5-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question5-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question5-answer1').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question5-answer1').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion5 = document.getElementById('text-question5')
@@ -187,8 +203,10 @@ wrongQuestion5.addEventListener('click', WrongscrollToForm5)
 
 function WrongscrollToForm5() {
 	document.querySelector('.question5-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question5-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question5-answer2').style.backgroundColor = '#FC5258'
+		document.querySelector('.question5-answer2').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion5 = document.getElementById('text-question5')
@@ -208,8 +226,10 @@ correctQuestion6.addEventListener('click', scrollToForm6)
 
 function scrollToForm6() {
 	document.querySelector('.question6-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question6-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question6-answer1').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question6-answer1').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion6 = document.getElementById('text-question6')
@@ -226,8 +246,10 @@ wrongQuestion6.addEventListener('click', WrongscrollToForm6)
 
 function WrongscrollToForm6() {
 	document.querySelector('.question6-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question6-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question6-answer2').style.backgroundColor = '#FC5258'
+		document.querySelector('.question6-answer2').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion6 = document.getElementById('text-question6')
@@ -248,8 +270,10 @@ correctQuestion7.addEventListener('click', scrollToForm7)
 
 function scrollToForm7() {
 	document.querySelector('.question7-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question7-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question7-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question7-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion7 = document.getElementById('text-question7')
@@ -266,8 +290,10 @@ wrongQuestion7.addEventListener('click', WrongscrollToForm7)
 
 function WrongscrollToForm7() {
 	document.querySelector('.question7-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question7-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question7-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question7-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion7 = document.getElementById('text-question7')
@@ -288,8 +314,10 @@ correctQuestion8.addEventListener('click', scrollToForm8)
 
 function scrollToForm8() {
 	document.querySelector('.question8-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question8-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question8-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question8-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion8 = document.getElementById('text-question8')
@@ -306,8 +334,10 @@ wrongQuestion8.addEventListener('click', WrongscrollToForm8)
 
 function WrongscrollToForm8() {
 	document.querySelector('.question8-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question8-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question8-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question8-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion8 = document.getElementById('text-question8')
@@ -328,8 +358,10 @@ correctQuestion9.addEventListener('click', scrollToForm9)
 
 function scrollToForm9() {
 	document.querySelector('.question9-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question9-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question9-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question9-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion9 = document.getElementById('text-question9')
@@ -346,8 +378,10 @@ wrongQuestion9.addEventListener('click', WrongscrollToForm9)
 
 function WrongscrollToForm9() {
 	document.querySelector('.question9-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question9-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question9-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question9-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion9 = document.getElementById('text-question9')
@@ -369,8 +403,10 @@ correctQuestion10.addEventListener('click', scrollToForm10)
 
 function scrollToForm10() {
 	document.querySelector('.question10-answer2').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question10-answer1')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question10-answer2').style.backgroundColor = '#C1D8B5'
+		document.querySelector('.question10-answer2').style.backgroundColor = '#6abb40'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion10 = document.getElementById('text-question10')
@@ -387,8 +423,10 @@ wrongQuestion10.addEventListener('click', WrongscrollToForm10)
 
 function WrongscrollToForm10() {
 	document.querySelector('.question10-answer1').style.backgroundColor = '#00607b'
+	const hiddenButton = document.querySelector('.question10-answer2')
+	hiddenButton.classList.add('label-hidden')
 	setTimeout(function () {
-		document.querySelector('.question10-answer1').style.backgroundColor = '#FC5258'
+		document.querySelector('.question10-answer1').style.backgroundColor = '#ff2f36'
 	}, 1500)
 	setTimeout(function () {
 		const textQuestion10 = document.getElementById('text-question10')

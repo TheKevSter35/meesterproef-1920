@@ -3,33 +3,74 @@
 <%- include ('../partials/head.ejs') %>
 
 <body id="start" class="centerIntroPages">
-
-	<header class="designHead">
-		<div>
-			<h1>Welkom bij de Digi Wijzer</h1>
-			<p>Hier leer hoe je veilig het internet kan gebruiken.</p>
-		</div>
-	</header>
+	<nav>
+		<ul>
+			<li><img src="../../source/pictures/logo.png" alt=""></li>
+			<li>
+				<a href="/login">login</a>
+			</li>
+		</ul>
+	</nav>
 
 	<main class="choose">
-		<p><a href="/login"><button>Gebruik een profiel</button></a><span>of</span><a href="/intro"><button>ga verder als gast</button></a></p>
+		<section>
 
-		<div id="voordelen">
+			<ul>
+				<li id="info">
+					<p>Leer het web kennen</p>
+					<h1>
+						met digi-wijzer leer je hoe de digitale wereld werkt. </h1>
+					<p>
+						<a href="/intro">Probeer het nu</a>
+						<a href="#usp">Meer informatie</a>
+						
+					</p>
+				</li>
 
-			<span>
-				<p class="kopje">mogelijkheden</p>
-				<p>gebruik alle hulpmiddelen</p>
-				<p>bewaar je score</p>
-				<p>vergelijk met andere gebruikers</p>
-			</span>
+				<li id="info-img">
+					<p><img src="../../source/pictures/platform1.png" alt=""></p>
 
-			<span>
-				<p class="kopje">mogelijkeden</p>
-				<p>gebruik alle hulpmiddelen</p>
-			</span>
+				</li>
+			</ul>
 
-		</div>
+		</section>
+		<section id="usp">
+
+			<h2>wat is digi-wijzer</h2>
+			<p>	<iframe width="100%" height="650px" src="https://www.youtube.com/embed/Ly460GwEjNo?controls=0" frameborder="0" allow="acceleroDoorer; encrypted-media; picture-in-picture" allowfullscreen></iframe></p>
+			<ul>
+				<li>
+					<img src="../source/pictures/phishing_quiz.png"  alt="map icon">
+					<h2>speel en leer</h2>
+					<p>Keuze uit verschillende spellen die je leert over Datagebruik, nepmails (Phishing)</p>
+				</li>
+				<li>
+					<img src="../source/icons/map.svg"  alt="map icon">
+					<h2>verkennen</h2>
+					<p>Verken Amsterdam en zie wat voor data bedrijven hebben verzamelen </p>
+				</li>
+				<li>
+					<img src="../source/icons/cup.svg"  alt="map icon">
+					<h2>verhoog je vaardigheden </h2>
+					<p>verdien punten door je digitale vaardigheden te verbeteren.</p>
+				</li>
+
+			</ul>
+
+		</section>
+		<section id="dev">
+
+			<h2>jouw eigen game toevoegen?</h2>
+			<p>Help digi-wijzer uit te breiden met nieuwe leerzame spelen.  </p>
+			<p>
+				<a href="#">Bekijk de voorwaarde</a>
+			</p>
+
+<%- include ('../partials/devFooter.ejs') %>
+
+		</section>
 
 	</main>
 </body>
+
 </html>

@@ -7,7 +7,6 @@ main ~ a[href$="gast"] {
 main[id^="intro"] {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	margin-top: 3em;
 }
 
@@ -16,6 +15,7 @@ main[id^="intro"] > section {
 	max-width: 30em;
 	margin-right: 5em;
 	padding: initial;
+	HEIGHT: AUTO;
 }
 
 main[id^="intro"] > section div {
