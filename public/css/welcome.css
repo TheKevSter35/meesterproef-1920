@@ -127,9 +127,9 @@ html {
 #start main section:nth-of-type(2) {
     padding: 4em 0;
 }
-#start section {
+/* #start section {
 	height: 100vh;
-}
+} */
 
 #usp main ul {
 	padding: 1em;
