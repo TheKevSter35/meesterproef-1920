@@ -7,15 +7,19 @@ main[id$="board"], main[id$="board"] section {
 
 main[id$="board"] > section {
 	padding: 0;
-	margin: 4em 0 0 3em;
+	margin: 6em 0 0 4em;
 }
 
-main[id$="board"] > section section {
-	margin: 2.5em 0 5em 0;
+main[id$="board"] > section:first-of-type {
+	margin-top: 4em;
 }
 
 main[id$="board"] section:last-of-type {
 	margin-bottom: 5em;
+}
+
+main[id$="board"] section:last-of-type section:nth-last-child(n+2) {
+	margin-bottom: 4em;
 }
 
 main[id$="board"] h2:after {
@@ -37,15 +41,15 @@ main[id$="board"] div.info {
 	color: #000549;
 	padding: 1.25em;
 	max-width: 30em;
-	display: flex;
-	flex-direction: row;
 }
 
 main[id$="board"] button {
 	background-color: #7a84dc;
 	padding: 0.05em 0.5em 0.5em 0.5em;
 	margin-left: .75em;
+	margin-bottom: 1.5em;
 	height: 1.5em;
+	float: right;
 }
 
 main[id$="board"] button svg {
@@ -60,7 +64,7 @@ main[id$="board"] ul, main[id$="board"] ol {
 
 main[id$="board"] section:nth-of-type(2) ol {
 	max-width: 60em;
-	padding: 2em 0 2em 0;
+	padding: 3em 0;
 	overflow-x: scroll;
 }
 
@@ -147,11 +151,74 @@ main[id$="board"] > section section:last-of-type ol {
 	display: initial;
 }
 
-main[id$="board"] > section section:last-of-type li {
+main[id$="board"] > section:first-of-type section:last-of-type li {
 	width: initial;
 	height: initial;
 	border: initial;
 	border-radius: initial;
 	margin: initial;
 	box-shadow: initial;
+}
+
+/* datavisualisations */
+main[id$="board"] > section:first-of-type div:not(.info) {
+	margin: 1.5em 0;
+}
+
+main[id$="board"] > section:first-of-type section {
+	margin: initial;
+	background-color: #7a84dc;
+	color: white;
+	padding-left: 2em;
+}
+
+main[id$="board"] > section:first-of-type h3, main[id$="board"] > section:first-of-type h4 {
+	font-weight: 900;
+	color: white;
+	font-size: 1.5em;
+}
+
+main[id$="board"] > section:first-of-type div:not(.info) {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 1.5em;
+}
+
+main[id$="board"] > section:first-of-type section:first-of-type {
+	grid-area: 1 / 1;
+}
+
+main[id$="board"] > section section:first-of-type svg:first-of-type {
+	width: 10em;
+}
+
+main[id$="board"] > section section:first-of-type svg:first-of-type path:last-of-type {
+	fill: #000549;
+}
+
+main[id$="board"] > section section:first-of-type svg:first-of-type path:first-of-type {
+	fill: #c8fbf3;
+}
+
+main[id$="board"] > section:first-of-type section:nth-of-type(2) {
+	grid-area: 1 / 2 span;
+}
+
+main[id$="board"] > section:first-of-type section:nth-of-type(3) {
+	grid-area: 2 / 3 span;
+}
+
+main[id$="board"] > section:first-of-type section:last-of-type {
+	grid-area: 2 span / 4;
+}
+
+main[id$="board"] > section section:first-of-type {
+	max-width: 30em;
+}
+
+main[id$="board"] > section section:first-of-type div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
