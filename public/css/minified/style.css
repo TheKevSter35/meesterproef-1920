@@ -745,6 +745,7 @@ main[id^=intro]>section {
   max-width: 30em;
   margin-right: 5em;
   padding: initial;
+  HEIGHT: AUTO;
 }
 
 main[id^=intro]>section div {
@@ -1872,7 +1873,7 @@ html {
   padding: 4em 0;
 }
 
-section {
+#start section {
   height: 100vh;
 }
 
