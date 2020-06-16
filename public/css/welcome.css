@@ -137,9 +137,10 @@ html {
 	position: relative;
 	    width: 100%;
 }
-#usp > h2 {
-    padding: 1em 1em 3em;
+#usp>h2 {
+    padding: 1em 1em 2em;
     text-align: center;
+    font-size: 2em;
 }
 #usp ul li h2 {
 	text-align: left;
@@ -172,9 +173,10 @@ section#dev footer#footerDevelopers {
 	right:0;
 	background: #ff445b;
 }
-section#dev > h2 {
-	color:#fff;
-	font-size: 2e
+section#dev>h2 {
+    color: #fff;
+    font-size: 2em;
+    padding-bottom: 0.6em;
 }
 section#dev > p:nth-of-type(2) {
     padding: 3em;
