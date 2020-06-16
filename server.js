@@ -1,5 +1,5 @@
 const express = require('express')
-const router = require('./modules/routes/router')
+const router = require('./routes/router')
 const path = require('path')
 const compression = require('compression')
 const session = require('express-session')
@@ -32,9 +32,9 @@ app.use(router) // Routes
 app.use(express.static(path.join(__dirname + 'public')))
 
 //Quiz
-require('./modules/routes/quiz')(app)
-require('./modules/routes/ov')(app)
-require('./modules/routes/oba')(app)
-require('./modules/routes/data')(app)
+require('./routes/quiz')(app)
+require('./routes/ov')(app)
+require('./routes/oba')(app)
+require('./routes/data')(app)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
