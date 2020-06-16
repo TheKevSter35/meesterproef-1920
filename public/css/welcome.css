@@ -1,113 +1,197 @@
-#start > header {
-	width: 100%;
-	margin: 0.5em auto 0 auto;
-	background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg, #5855b0, #a79cfb);
+html {
+	scroll-behavior: smooth;
+}
+#start>nav {
+    position: absolute;
+    z-index: 9;
+    width: 80%;
+    padding: 2em;
+    margin: 0 10%;
+}
+#start>nav ul li:hover{
+	background-color: transparent;
+}
+#start>nav ul li img {
+    max-width: 22em;
+}
+#start>nav ul a {
+    color: #fff;
+    font-weight: bold;
+	font-size: 1.4em;
+
+}
+#start>nav ul {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+}
+#start>nav ul li {
+    align-items: left;
+    ALIGN-CONTENT: left;
+    width: auto;
+    position: relative;
+    padding: 0 2em;
+    color: #fff;
+}
+#start main>section:nth-of-type(1) {
+    width: 100%;
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    min-height: 100vh;
+	max-width: unset;
+	padding-top: calc(100vh - 70vh);
+
 }
 
-#start > header div {
-	margin: 0 auto;
-	max-width: 32em;
+
+#start main {
+    padding: initial;
+	max-width: 100% !important;
+	margin:unset;
+	margin-top:unset;
+	color:#fff;
+	
 }
 
-#start > header h1 {
-	color: #000549;
-	max-width: 8em;
-	/*margin: 0 auto 0 2em;*/
-	font-size: 3.5em;
-	font-weight: 700;
+#start main ul {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    color: #000;
+    border-radius: 2em;
+    height: auto;
+    min-width: auto;
+    max-width: 90em;
+    height: auto;
+}
+
+#start main ul #info {
+	padding: 1em;
+    color: #fff;
+	position: relative;
+	    width: 50%;
+}
+
+#start main ul li p:first-child {
+    font-size: 1.7em;
+}
+#start main ul li:last-child p {
+    margin: 0 auto;
+    text-align: center;
+}
+#start main ul li img {
+    margin: 0 auto;
+}
+#start main ul li h1 {
+	color: #fff;
+	text-align: left;
+	font-size: 3.125rem;
+
+}
+#start main ul #info p:last-child {
+    display: flex;
+    justify-content: start;
+}
+
+#start main ul li a {
+	padding: 1em;
+	background-color: #fff;
+    border-bottom: solid .25em rgb(223, 223, 223);
+	min-width: 12em;
+    margin-right: 0;
+    border-radius: 1em;
+    color: #fb5258;
+    text-decoration: none;
+    width: auto;
 	text-align: center;
-	margin-bottom: 0.5em;
-}
-
-#start header h1 ~ p {
-	/*margin: 1.25em 0 0 1.25em;*/
-	margin: 0;
-	max-width: 30em;
-	font-weight: lighter;
-	/*font-style: oblique;*/
-	color: #000549;
-	line-height: 2em;
-	/*text-decoration: underline 0.2em #fe9f9f;*/
-	/*text-underline-offset: 0.4em;*/
-	text-align: center;
-}
-
-#start h1 ~ svg {
-	fill: #feebc0;
-	position: absolute;
-	margin-top: -9.25em;
-	max-width: 22em;
-	z-index: -2;
-}
-
-#start main.choose {
-	max-width: 60em;
-	padding: initial;
-	margin-top: 8em;
-	margin-top: calc(5vh * 3);
-}
-
-#start main.choose > p {
-	text-align: center;
-	margin: 0 auto;
-}
-
-#start main.choose > p span:last-of-type {
-	position: absolute;
-	top: -999em;
-	left: -999em;
-}
-
-#start main.choose > p button {
-	border-radius: 0.5em;
-	background-color: #fb5258;
-	border-bottom: solid 0.25em #a8191e;
-	margin-bottom: 4em;
-}
-
-#start main.choose > p button:last-of-type::first-letter {
-	text-transform: capitalize;
-}
-
-#start main.choose > p a:focus button, main.choose > p a:hover button {
-	background-color: #484f97;
-}
-
-/* #start main.choose > p span {
-	position: absolute;
-	left: -999em;
-	top: -999em;
-} */
-
-#voordelen {
-	display: flex;
-	margin-bottom: 5em;
-}
-
-#voordelen > span {
-	text-align: center;
-}
-#voordelen > span:nth-child(2) {
-	margin-left: 5em;
-}
-
-#voordelen p {
-	color: #7d7d7d;
-	text-transform: capitalize;
-}
-
-/*.kopje {*/
-/*	text-transform: uppercase;*/
-/*	color: #000;*/
-/*	font-weight: bold;*/
-/*	font-size: 0.9em;*/
-/*}*/
-
-#voordelen > span p.kopje {
-	text-transform: uppercase;
-	color: #000;
 	font-weight: bold;
-	font-size: 0.9em;
-	margin-bottom: 1.5em;
+	transition: 0.3s ease-in-out 0s;
+	font-size: 1.2em;
+}
+#start main ul li a:hover {
+	filter: grayscale(0.5);
+
+
+}
+#start main ul li a:first-child {
+    padding: 1em;
+	background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
+    border-radius: 1em;
+    color: #fff;
+    text-decoration: none;
+    width: auto;
+    text-align: center;
 }
 
+#start main section:nth-of-type(2) {
+    padding: 4em 0;
+}
+section {
+	height: 100vh;
+}
+
+#usp main ul {
+	padding: 1em;
+    color: #fff;
+	position: relative;
+	    width: 100%;
+}
+#usp > h2 {
+    padding: 1em 1em 3em;
+    text-align: center;
+}
+#usp ul li h2 {
+	text-align: left;
+	padding:1em 0;
+}
+#usp ul li img {
+	width: 3em;
+	height: 2.5em;
+}
+#start #usp ul {
+    margin-top: 3em;
+}
+#start #usp ul li {
+    width: 33%;
+}
+#start #usp ul li p {
+	text-align: left;
+}
+section#dev {
+    background: url(https://wijzer.amsterdam/dist/img/footer-pattern.ea88741c.svg),linear-gradient(278deg,#005668,#002b37);
+    height: 50vh;
+    text-align: center;
+    max-width: 100%;
+    padding: 9em;
+}
+section#dev footer#footerDevelopers {
+    position: absolute;
+	bottom: 0;
+	left:0;
+	right:0;
+	background: #ff445b;
+}
+section#dev > h2 {
+	color:#fff;
+	font-size: 2e
+}
+section#dev > p:nth-of-type(2) {
+    padding: 3em;
+}
+section#dev > p a {
+    padding: 1em;
+	background-color: #fff;
+    border-bottom: solid .25em rgb(223, 223, 223);
+	min-width: 12em;
+    margin-right: 0;
+    border-radius: 1em;
+    color: #fb5258;
+    text-decoration: none;
+    width: auto;
+	text-align: center;
+	font-weight: bold;
+	transition: 0.3s ease-in-out 0s;
+	font-size: 1.2em;
+	margin: 0;
+}
