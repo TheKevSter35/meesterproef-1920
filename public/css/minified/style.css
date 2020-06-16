@@ -1943,17 +1943,19 @@ html {
 
 section#dev {
   background: url("https://wijzer.amsterdam/dist/img/footer-pattern.ea88741c.svg"),linear-gradient(278deg,#005668,#002b37);
-  height: 50vh;
   text-align: center;
   max-width: 100%;
-  padding: 9em;
+  padding: 10em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-section#dev footer#footerDevelopers {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+#start #footerDevelopers {
+  background: url("https://wijzer.amsterdam/dist/img/footer-pattern.ea88741c.svg"),linear-gradient(278deg,#005668,#002b37);
+  width: 100%;
+  padding: 1em 5em;
+  color: #fff;
   background: #ff445b;
 }
 
