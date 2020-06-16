@@ -53,7 +53,7 @@ main[id$=board] button svg {
   width: .5em;
 }
 
-main[id$=board] ol:nth-child(n+3),
+main[id$=board] ol,
 main[id$=board] ul {
   display: flex;
   flex-direction: row;
@@ -81,7 +81,7 @@ main[id$=board] section:nth-of-type(2) ol li:last-of-type:after {
   height: .01em;
 }
 
-main[id$=board] ol:nth-child(n+3) li,
+main[id$=board] ol li,
 main[id$=board] ul li {
   width: 12em;
   height: 12em;
@@ -92,7 +92,7 @@ main[id$=board] ul li {
   transition: border .3s ease;
 }
 
-main[id$=board] ol:nth-child(n+3) li:hover,
+main[id$=board] ol li:hover,
 main[id$=board] ul li:hover {
   border: #8d8eb9 solid .15em;
 }
@@ -148,6 +148,19 @@ main[id$=board] section:nth-of-type(3) section:first-of-type span {
 main[id$=board] section:nth-of-type(3) section:first-of-type img {
   width: 4em;
   height: 4em;
+}
+
+main[id$=board]>section section:last-of-type ol {
+  display: initial;
+}
+
+main[id$=board]>section section:last-of-type li {
+  width: initial;
+  height: initial;
+  border: initial;
+  border-radius: initial;
+  margin: initial;
+  box-shadow: initial;
 }
 #detail main {
   padding-top: calc(100vh - 75vh);
