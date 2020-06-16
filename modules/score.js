@@ -36,16 +36,16 @@ function checkLevel (score) {
 function progressToNextLevel (score, level) {
 	let pointsToNextLevel = 0
 	switch (level) {
-	case 1:
+	case 2:
 		pointsToNextLevel = 500 - score
 		break
-	case 2:
+	case 3:
 		pointsToNextLevel = 1500 - score
 		break
-	case 3:
+	case 4:
 		pointsToNextLevel = 3000 - score
 		break
-	case 4:
+	case 5:
 		pointsToNextLevel = 5000 - score
 		break
 	}
