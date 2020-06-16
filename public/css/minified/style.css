@@ -1193,7 +1193,7 @@ a#btnModal3 {
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
   height: 100vh;
-  padding-top: calc(100vh - 60%);
+  padding-top: calc(100vh - 85vh);
   background-size: cover;
 }
 
@@ -1481,7 +1481,7 @@ a#btnModal3 {
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
   height: 100vh;
-  padding-top: calc(100vh - 60%);
+  padding-top: calc(100vh - 85vh);
   background-size: cover;
 }
 
