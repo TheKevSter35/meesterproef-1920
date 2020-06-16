@@ -176,7 +176,7 @@ main[id$=board] section:nth-of-type(3) section:first-of-type img {
 }
 
 #detail main ul li {
-  padding: 3em 2em;
+  padding: 2em 2em;
   color: #000;
   position: relative;
 }
@@ -1066,6 +1066,7 @@ a#btnModal3 {
 
 #plugin2 section img {
   width: 100%;
+  transform: scale(.7);
 }
 
 #plugin2 main>h2 {
@@ -1191,7 +1192,9 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  background-size: cplugin2er;
+  height: 100vh;
+  padding-top: calc(100vh - 60%);
+  background-size: cover;
 }
 
 #plugin2-result main h1 {
@@ -1351,6 +1354,10 @@ a#btnModal3 {
   padding-top: calc(100vh - 90vh);
 }
 
+#detail main ul li img {
+  transform: scale(.6);
+}
+
 #quiz main {
   padding-top: calc(100vh - 75vh);
   position: relative;
@@ -1473,6 +1480,8 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
+  height: 100vh;
+  padding-top: calc(100vh - 60%);
   background-size: cover;
 }
 

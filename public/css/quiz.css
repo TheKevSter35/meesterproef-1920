@@ -6,7 +6,9 @@
 
     padding-top: calc(100vh - 90vh);
 }
-
+#detail main ul li img {
+    transform: scale(0.6);
+}
 #quiz main {
     padding-top: calc(100vh - 75vh);
     position: relative;
@@ -127,7 +129,9 @@
 #quiz-result main .result {
     padding: 6em 2em;
     max-width: 100%;
-    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg), linear-gradient(-30deg, #5855b0, #a79cfb);
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    height: 100vh;
+    padding-top: calc(100vh - 60%);
     background-size: cover;
 }
 

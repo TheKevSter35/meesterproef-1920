@@ -12,14 +12,15 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd de tips en probeer het opnieuw</h2><p><a href="/overzicht">Terug naar map</a></p>
+            <h2> Onvoldoende Kijk wat voor data er wordt gestuurd en probeer het opnieuw</h2>
             <% } else if(score.earnedPoints == 100 )  { %>
-            <h2> Goed gedaan!</h2><p>
-                <a href="/overzicht">Terug naar map</a></p>
+            <h2> Goed gedaan!</h2>
 
             <% } %>
+            <p>
+                <a href="#tips">Zie wat er wordt gestuurd</a></p>
         </section>
-        <section class="tips">
+        <section id="tips"class="tips">
             <h2>Wanneer je boek scant dan wordt je leengeschiedenis geupdate. Jouw gebruikersprofiel wordt ook geupdate. </h2>
             <ul>
                 <li>
