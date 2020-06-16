@@ -6,7 +6,9 @@
 
     padding-top: calc(100vh - 90vh);
 }
-
+#detail main ul li img {
+    transform: scale(0.6);
+}
 #quiz main {
     padding-top: calc(100vh - 75vh);
     position: relative;
@@ -37,13 +39,18 @@
 #quiz form h2 {
     color: inherit;
     margin-bottom: 2em;
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding-top: 1em;
     text-align: left;
     min-height: 8.8em;
     padding: 1em;
 }
-
+#quiz form h2:nth-of-type(2) strong {
+    font-weight: bold;
+    font-size: 1.2em;
+    display: block;
+    font-style: italic;
+}
 #quiz form h2:nth-of-type(2) {
 
     background-color: white;
@@ -55,7 +62,6 @@
 }
 
 #quiz form {
-    display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
     width: 90%;
@@ -108,7 +114,9 @@
 .hidden {
     display: none;
 }
-
+.label-hidden{
+    z-index: -999;
+}
 #quiz-result main {
     padding: unset;
     position: relative;
@@ -121,7 +129,9 @@
 #quiz-result main .result {
     padding: 6em 2em;
     max-width: 100%;
-    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg), linear-gradient(-30deg, #5855b0, #a79cfb);
+    background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
+    height: 100vh;
+    padding-top: calc(100vh - 85vh);
     background-size: cover;
 }
 
@@ -246,17 +256,25 @@
 }
 
 svg.feather.feather-chevron-right {
-    background-color: #FF445B;
-    width: 2em;
-    height: 2em;
+    background-color: #ff445b;
+    width: 1.6em;
+    height: 1.6em;
     border-radius: 100%;
-    padding: 0.2em;
+    padding: .2em;
+    position: relative;
+    top: 0.5em;
+    left: 0.4em;
 }
 
 #quiz div>section:last-child p {
     height: 3em;
+    text-align: right;
 }
 
 #quiz div>section:last-child p a {
     cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
 }

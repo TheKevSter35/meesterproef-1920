@@ -8,15 +8,6 @@ input::placeholder {
 	font-style: italic;
 }
 
-form label {
-	display: flex;
-	flex-direction: column;
-	max-width: 14em;
-	font-size: 1.5em;
-	color: white;
-	text-transform: capitalize;
-	margin: auto;
-}
 
 form label:first-of-type {
 	margin-bottom: 0.75em;
@@ -61,7 +52,6 @@ form label {
 	flex-direction: column;
 	max-width: 14em;
 	font-size: 1.5em;
-	text-transform: capitalize;
 	color: black;
 	margin: auto;
 }
