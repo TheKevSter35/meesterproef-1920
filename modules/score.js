@@ -23,15 +23,44 @@ function reviewAnswers (answers, pointsOnCorrectAnswer, allAnswers) {
 function checkLevel (score) {
 	switch (true) {
 	case (score < 500):
-		return 'Verkennen'
+		return 1
 	case (score >= 500 && score < 1500):
-		return 'Leren'
+		return 2
 	case (score >= 1500 && score < 3000):
-		return 'Onderzoeken'
+		return 3
 	case (score >= 3000 && score < 5000):
-		return 'Begrijpen'
+		return 4
 	}
+}
+
+function progressToNextLevel (score, level) {
+	let pointsToNextLevel = 0
+	switch (level) {
+	case 1:
+		pointsToNextLevel = 500 - score
+		break
+	case 2:
+		pointsToNextLevel = 1500 - score
+		break
+	case 3:
+		pointsToNextLevel = 3000 - score
+		break
+	case 4:
+		pointsToNextLevel = 5000 - score
+		break
+	}
+	return {
+		pointsToNextLevel: pointsToNextLevel,
+		nexLevel: level + 1
+	}
+}
+
+function getLevelName (level) {
+	const levelNames = ['Verkennen', 'Leren', 'Onderzoeken', 'Begrijpen']
+	return levelNames[level - 1]
 }
 
 exports.review = reviewAnswers
 exports.checkLevel = checkLevel
+exports.levelName = getLevelName
+exports.toNextLevel = progressToNextLevel
