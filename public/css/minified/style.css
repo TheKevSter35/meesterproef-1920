@@ -326,16 +326,6 @@ input::placeholder {
   font-style: italic;
 }
 
-form label {
-  display: flex;
-  flex-direction: column;
-  max-width: 14em;
-  font-size: 1.5em;
-  color: #fff;
-  text-transform: capitalize;
-  margin: auto;
-}
-
 form label:first-of-type {
   margin-bottom: .75em;
 }
@@ -381,7 +371,6 @@ form label {
   flex-direction: column;
   max-width: 14em;
   font-size: 1.5em;
-  text-transform: capitalize;
   color: #000;
   margin: auto;
 }
@@ -1392,11 +1381,18 @@ a#btnModal3 {
 #quiz form h2 {
   color: inherit;
   margin-bottom: 2em;
-  font-size: 1.4em;
+  font-size: 1.2em;
   padding-top: 1em;
   text-align: left;
   min-height: 8.8em;
   padding: 1em;
+}
+
+#quiz form h2:nth-of-type(2) strong {
+  font-weight: 700;
+  font-size: 1.2em;
+  display: block;
+  font-style: italic;
 }
 
 #quiz form h2:nth-of-type(2) {
@@ -1409,7 +1405,6 @@ a#btnModal3 {
 }
 
 #quiz form {
-  display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
   width: 90%;
@@ -1460,6 +1455,10 @@ a#btnModal3 {
 
 .hidden {
   display: none;
+}
+
+.label-hidden {
+  z-index: -999;
 }
 
 #quiz-result main {
@@ -1601,18 +1600,26 @@ a#btnModal3 {
 
 svg.feather.feather-chevron-right {
   background-color: #ff445b;
-  width: 2em;
-  height: 2em;
+  width: 1.6em;
+  height: 1.6em;
   border-radius: 100%;
   padding: .2em;
+  position: relative;
+  top: .5em;
+  left: .4em;
 }
 
 #quiz div>section:last-child p {
   height: 3em;
+  text-align: right;
 }
 
 #quiz div>section:last-child p a {
   cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 .sidebar {
   background-color: #f6f6f6;
