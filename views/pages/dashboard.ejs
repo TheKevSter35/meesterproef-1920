@@ -10,60 +10,71 @@
 	<main id="dashboard">
 		<section>
 			<h2>Kennisniveau</h2>
+			<%if (user.help === true) { %>
 			<div class="info">
-				<p>Elke keer dat je een hulpmiddel gebruikt verdien je punten. Dat wordt bijgehouden in dit overzicht.
-					Je kunt zien hoeveel punten je hebt verdiend, hoe ver je bent tot het volgende niveau, en hoe je het
-					doet vergeleken met andere gebruikers.</p>
 				<button type="button" aria-label="Verwijder extra informatie bericht">
 					<svg viewBox="0 0 16 16">
 						<g fill="white">
-							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749"
-								y="-1.7863749" ry="0.75" />
+							<rect transform="rotate(45)" width="19.054665" height="3.5727499" x="1.7863749" y="-1.7863749"
+								ry="0.75" />
 							<rect y="9.5273323" x="-9.5273323" ry="0.75" height="3.5727499" width="19.054665"
 								transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)" />
 						</g>
 					</svg>
 				</button>
+				<p>Elke keer dat je een hulpmiddel gebruikt verdien je punten. Dat wordt bijgehouden in dit overzicht.</p>
+				<p>Je kunt zien hoeveel punten je hebt verdiend, hoe ver je bent tot het volgende niveau, en hoe je het doet vergeleken met andere gebruikers.</p>
 			</div>
-			<section>
-				<h3>Jouw niveau</h3>
-				<div>
+			<% } %>
+			<div>
+				<section>
+					<h3>Jouw niveau</h3>
+					<div>
+						<svg data-level="<%= currentLevel %>" viewBox="0 0 100 100">
+							<g>
+								<path fill="#fec7a7"
+									d="M 0,49.999991 A 50.000044,50.000034 0 0 0 50.000008,100 50.000044,50.000034 0 0 0 100,49.999991 50.000044,50.000034 0 0 0 50.000008,0 50.000044,50.000034 0 0 0 0,49.999991 Z m 18.656904,0 A 31.343014,31.343008 0 0 1 50.000008,18.656911 31.343014,31.343008 0 0 1 81.343084,49.999991 31.343014,31.343008 0 0 1 50.000008,81.342476 31.343014,31.343008 0 0 1 18.656904,49.999991 Z" />
+								<path fill="#fe6969"
+									d="M 49.996928,0 V 18.656908 A 31.350326,31.343012 0 0 1 81.338735,50.000002 31.350326,31.343012 0 0 1 49.988332,81.343092 31.350326,31.343012 0 0 1 18.675388,51.50358 H 0 A 50.011709,50.000042 0 0 0 49.988332,100 50.011709,50.000042 0 0 0 100,50.000002 50.011709,50.000042 0 0 0 49.996928,0 Z" />
+							</g>
+						</svg>
+						<p>Totaal: <span><%= user.score %> punten</span></p>
+					</div>
 					<svg></svg>
-					<p>Totaal: <span><%= user.score %> punten</span></p>
-				</div>
-				<svg></svg>
-			</section>
-			<section>
-				<h3>Punten tot het volgende niveau</h3>
-				<p>Nog <span>500 punten</span> tot <span>niveau 1</span></p>
-				<svg></svg>
-			</section>
-			<section>
-				<h3>Aantal punten verdiend de afgelopen 7 dagen</h3>
-				<svg></svg>
-			</section>
-			<section>
-				<h3>Klassement</h3>
-				<ol>
-					<li>7000 punten <span>Bob</span></li>
-					<li>6700 punten <span>Lianne</span></li>
-					<li>6500 punten <span>Han</span></li>
-					<li>6500 punten <span>Xander</span></li>
-					<li>6280 punten <span>Vera</span></li>
-					<li>6100 punten <span>Ciara</span></li>
-					<li>5950 punten <span>Aina</span></li>
-					<li>5600 punten <span>Yelle</span></li>
-					<li>5500 punten <span>Gerda</span></li>
-					<li>4990 punten <span>Ian</span></li>
-				</ol>
-				<span>45. <span><%= user.score %> punten</span></span>
-			</section>
+				</section>
+				<section>
+					<h3>Punten tot het volgende niveau</h3>
+					<p>Nog <span><%= level.pointsToNextLevel %> punten</span> tot <span>niveau <%= level.nextLevel %></span>
+					</p>
+					<svg></svg>
+				</section>
+				<section>
+					<h3>Aantal punten verdiend de afgelopen 7 dagen</h3>
+					<svg></svg>
+				</section>
+				<section>
+					<h3>Klassement</h3>
+					<ol>
+						<li>7000 punten <span>Bob</span></li>
+						<li>6700 punten <span>Lianne</span></li>
+						<li>6500 punten <span>Han</span></li>
+						<li>6500 punten <span>Xander</span></li>
+						<li>6280 punten <span>Vera</span></li>
+						<li>6100 punten <span>Ciara</span></li>
+						<li>5950 punten <span>Aina</span></li>
+						<li>5600 punten <span>Yelle</span></li>
+						<li>5500 punten <span>Gerda</span></li>
+						<li>4990 punten <span>Ian</span></li>
+					</ol>
+					<span>45. <span><%= user.score %> punten</span></span>
+				</section>
+			</div>
 		</section>
 
 		<section>
 			<h2>Het verhaal die je nu volgt</h2>
+			<%if (user.help === true) { %>
 			<div class="info">
-				<p>Met de Digi-Wijzer volg je verhalen van verschillende personen. Hier zie je welk verhaal je nu volgt en waar je bent gebleven.</p>
 				<button type="button" aria-label="Verwijder extra informatie bericht">
 					<svg viewBox="0 0 16 16">
 						<g fill="white">
@@ -74,44 +85,39 @@
 						</g>
 					</svg>
 				</button>
+				<p>Met de Digi-Wijzer volg je verhalen van verschillende personen. Hier zie je welk verhaal je nu volgt en waar je bent gebleven.</p>
 			</div>
-				<ol>
-					<li>
-						<a href="">
-							<img src="../source/pictures/house.png"
-								alt="Een geïllustreerd huisje">
-							<span>Thuis</span>
-						</a>
-					</li>
-					<li>
-						<a href="/ov-detail">
-							<img src="../source/pictures/bus.svg"
-								alt="Een geïllustreerde bus">
-							<span>De OV test</span>
-						</a>
-					</li>
-					<li>
-						<a href="/quiz-detail">
-							<img src="../source/pictures/hacker.svg"
-								alt="Een geïllustreerde man met een bril en een capuchon op achter een laptop">
-							<span>Phishing quiz</span>
-						</a>
-					</li>
-					<li>
-						<a href="/oba-detail">
-							<img src="../source/pictures/oba.jpg"
-								alt="De letters 'o', 'b', en 'a' die samen het logo van de Openbare Bibliotheek van Amsterdam vormen">
-							<span>De OBA test</span>
-						</a>
-					</li>
-					<li>
-						<a href="/oba-detail">
-							<img src="../source/pictures/checklist.svg"
-								alt="Een geïllustreerd kladblok met daarop checklijst">
-							<span>Enquête</span>
-						</a>
-					</li>
-				</ol>
+			<% } %>
+			<ol>
+				<li>
+					<a href="/ov-detail">
+						<img src="../source/pictures/bus.svg"
+							alt="Een geïllustreerde bus">
+						<span>De OV test</span>
+					</a>
+				</li>
+				<li>
+					<a href="/quiz-detail">
+						<img src="../source/pictures/hacker.svg"
+							alt="Een geïllustreerde man met een bril en een capuchon op achter een laptop">
+						<span>Phishing quiz</span>
+					</a>
+				</li>
+				<li>
+					<a href="/oba-detail">
+						<img src="../source/pictures/oba.jpg"
+							alt="De letters 'o', 'b', en 'a' die samen het logo van de Openbare Bibliotheek van Amsterdam vormen">
+						<span>De OBA test</span>
+					</a>
+				</li>
+				<li>
+					<a href="/oba-detail">
+						<img src="../source/pictures/checklist.svg"
+							alt="Een geïllustreerd kladblok met daarop checklijst">
+						<span>Enquête</span>
+					</a>
+				</li>
+			</ol>
 		</section>
 		<section>
 			<h2>Nieuw</h2>
@@ -136,9 +142,8 @@
 			</section>
 			<section>
 				<h3>Hulpmiddelen</h3>
+				<%if (user.help === true) { %>
 				<div class="info">
-					<p>Met hulpmiddelen vergroot je jouw kennis over veilig internet gebruik. Je kunt ze allemaal vinden in de lijst bij
-						<a href="/overzicht">de Hulpmiddelen</a>.</p>
 					<button type="button" aria-label="Verwijder extra informatie bericht">
 						<svg viewBox="0 0 16 16">
 							<g fill="white">
@@ -149,7 +154,9 @@
 							</g>
 						</svg>
 					</button>
+					<p>Met hulpmiddelen vergroot je jouw kennis over veilig internet gebruik. Je kunt ze allemaal vinden in de lijst bij <a href="/overzicht">de Hulpmiddelen</a>.</p>
 				</div>
+				<% } %>
 				<ul>
 					<li>
 						<a href="https://werk-portal.nl/#/programmas/omgaan-met-de-computer-en-social-media/">

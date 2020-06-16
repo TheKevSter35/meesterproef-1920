@@ -10,6 +10,7 @@ const dashboard = require('./controllers/dashboard')
 const guest = require('./controllers/guest')
 const signup = require('./controllers/signup')
 const popup = require('./controllers/popup')
+const message = require('./controllers/message')
 
 router.get('/', welcome)
 	.get('/intro', introduction)
@@ -21,5 +22,6 @@ router.get('/', welcome)
 	.get('/add-plugin', addPlugin)
 	.get('/account-aanmaken', signup.get)
 	.post('/login', login.process)
+	.post('/delete-message', message.delete)
 
 module.exports = router

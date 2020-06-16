@@ -6,5 +6,6 @@ module.exports = function (req, res) {
 	req.session.score = 0
 	req.session.usedtools = []
 	req.session.level = 'Verkennen'
+	req.session.help = true
 	return res.redirect('/popup')
 }
