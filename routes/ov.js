@@ -1,30 +1,30 @@
 module.exports = function (app) {
-	const { review, checkLevel } = require('../score')
-	app.get('/quiz-detail', (req, res) => {
+	const { review, checkLevel } = require('../modules/score')
+	app.get('/ov-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
 			level: req.session.level
 		}
-		res.render('pages/quiz/quiz-detail',{
+		res.render('pages/ov/ov-detail',{
 			user: user
 		})
 	})
-	app.get('/quiz-game', (req, res) => {
+	app.get('/ov-game', (req, res) => {
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
-			level: req.session.level
+			level: req.session.level,
 		}
-		res.render('pages/quiz/quiz-game', {
+		res.render('pages/ov/ov-game', {
 			queries: req.query,
 			user: user
 
 		})
 	})
-	app.post('/quiz-result', (req, res) => {
+	app.post('/ov-result', (req, res) => {
 		const answers = req.body
-		const results = review(answers, 10)
+		const results = review(answers, 25, 4)
 		req.session.score += results.earnedPoints
 		req.session.level = checkLevel(req.session.score)
 		const user = {
@@ -32,7 +32,7 @@ module.exports = function (app) {
 			score: req.session.score,
 			level: req.session.level
 		}
-		res.render('pages/quiz/quiz-result', {
+		res.render('pages/ov/ov-result', {
 			score: results,
 			user: user
 		})

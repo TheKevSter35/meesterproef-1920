@@ -1,30 +1,30 @@
 module.exports = function (app) {
-	const { review, checkLevel } = require('../score')
-	app.get('/oba-detail', (req, res) => {
+	const { review, checkLevel } = require('../modules/score')
+	app.get('/quiz-detail', (req, res) => {
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
 			level: req.session.level
 		}
-		res.render('pages/oba/oba-detail',{
+		res.render('pages/quiz/quiz-detail',{
 			user: user
 		})
 	})
-	app.get('/oba-game', (req, res) => {
+	app.get('/quiz-game', (req, res) => {
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
 			level: req.session.level
 		}
-		res.render('pages/oba/oba-game', {
+		res.render('pages/quiz/quiz-game', {
 			queries: req.query,
 			user: user
 
 		})
 	})
-	app.post('/oba-result', (req, res) => {
+	app.post('/quiz-result', (req, res) => {
 		const answers = req.body
-		const results = review(answers, 25, 4)
+		const results = review(answers, 10)
 		req.session.score += results.earnedPoints
 		req.session.level = checkLevel(req.session.score)
 		const user = {
@@ -32,7 +32,7 @@ module.exports = function (app) {
 			score: req.session.score,
 			level: req.session.level
 		}
-		res.render('pages/oba/oba-result', {
+		res.render('pages/quiz/quiz-result', {
 			score: results,
 			user: user
 		})
