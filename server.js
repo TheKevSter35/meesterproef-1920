@@ -17,6 +17,7 @@ app.set('views', 'views')
 
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use(session({
 	secret: 'user', // replace secret with .env later
 	saveUninitialized: true,
