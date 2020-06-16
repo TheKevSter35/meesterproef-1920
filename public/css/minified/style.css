@@ -737,7 +737,6 @@ main~a[href$=gast] {
 main[id^=intro] {
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin-top: 3em;
 }
 
