@@ -51,7 +51,7 @@ function progressToNextLevel (score, level) {
 	}
 	return {
 		pointsToNextLevel: pointsToNextLevel,
-		nexLevel: level + 1
+		nextLevel: level + 1
 	}
 }
 
