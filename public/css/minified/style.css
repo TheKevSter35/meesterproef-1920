@@ -1331,10 +1331,27 @@ a#btnModal3 {
   height: 2em;
   border-radius: 100%;
   padding: .2em;
+  margin-left: 1em;
 }
 
-#plugin2 div>section:last-child p a {
+#plugin2 div>section:last-child p button:hover {
+  border: none;
+}
+
+#plugin2 div>section:last-child p {
+  height: 3em;
+  text-align: right;
+}
+
+#plugin2 div>section:last-child p button {
   cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  display: inline-flex;
+  line-height: 2em;
+  border: none;
 }
 
 #plugin2 form button {
@@ -1901,8 +1918,9 @@ html {
 }
 
 #usp>h2 {
-  padding: 1em 1em 3em;
+  padding: 1em 1em 2em;
   text-align: center;
+  font-size: 2em;
 }
 
 #usp ul li h2 {
@@ -1945,7 +1963,8 @@ section#dev footer#footerDevelopers {
 
 section#dev>h2 {
   color: #fff;
-  font-size: 2e;
+  font-size: 2em;
+  padding-bottom: .6em;
 }
 
 section#dev>p:nth-of-type(2) {
