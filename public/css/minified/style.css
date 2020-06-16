@@ -1062,12 +1062,12 @@ a.localFocusMarkerLinks {
   color: #ff445c;
 }
 #overview main>div#overviewModal {
-  padding-right: 30em;
+  padding: 5em 15em;
 }
 
 #overviewModal {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   top: 0;
   left: 0;
   width: 100%;
@@ -1089,6 +1089,7 @@ a.localFocusMarkerLinks {
 
 .overviewModalContent>h2 {
   margin-bottom: 1em;
+  text-align: center;
 }
 
 .overviewModalContent>p#introTextModal {
