@@ -7,13 +7,13 @@
 <body id="plugin2-result">
     <main>
         <section class="result">
-            <H1>Resultaat</H1>
+            <H1>Resultaat: OBA</H1>
             <div class="score-circle">
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
             <h2> Onvoldoende</h2>
-            <a href="/oba-detail">Opnieuw proberen</a></p>
+            <p><a href="/oba-detail">Opnieuw proberen</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
             <h2> Goed gedaan!</h2>
 
