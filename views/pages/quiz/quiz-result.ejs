@@ -11,30 +11,26 @@
             <div class="score-circle">
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
-            <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende Tip: Vraag in de chat als je er niet uitkomt. </h2>
+            <% if(score.earnedPoints <= 100)  { %>
+            <h2> Helaas, je hebt minder dan de helft goed. Als je er niet uitkomt, kun je hulp vragen in de chat. </h2>
             <p>
                 <a href="/quiz-detail">Opnieuw proberen</a></p>
           
-            <% } else if(score.earnedPoints == 60 )  { %>
-            <h2> Net voldoende</h2>
+            <% } else if(score.earnedPoints === 120 )  { %>
+            <h2>Net voldoende</h2>
         
-            <% } else if(score.earnedPoints == 70 )  { %>
-            <h2> Voldoende</h2>
+            <% } else if(score.earnedPoints === 140 )  { %>
+            <h2>Voldoende</h2>
               
-            <% } else if(score.earnedPoints == 80 )  { %>
-            <h2> Goed gedaan ruim voldoende </h2>
+            <% } else if(score.earnedPoints === 160 )  { %>
+            <h2>Goed gedaan!</h2>
    
-              
-            <% } else if(score.earnedPoints == 90 )  { %>
-            <h2> Net voldoende</h2>
+            <% } else if(score.earnedPoints === 180 )  { %>
+            <h2>Wauw, bijna een perfecte score!</h2>
   
-              
-            <% } else if(score.earnedPoints == 100 )  { %>
-            <h2> Perfecte Score heel goed gedaan</h2>
+            <% } else if(score.earnedPoints === 200 )  { %>
+            <h2>Een perfecte score! Heel goed gedaan!</h2>
        
-              
-
             <% } %>
             <p>
                 <a href="#tips">Kijk wat je er kan doen</a></p>
