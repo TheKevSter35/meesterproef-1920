@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 0em;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     background-color: #f6f6f6;
     color: #000;
@@ -31,14 +31,21 @@
     color: #000;
 
 }
+#detail main ul li img {
+    max-width: 20em;
+    transform: scale(.7);
+}
+#detail main ul li p {
+    padding-bottom: 2em;
+}
 
 #detail main ul li a {
     padding: 1em;
-    background-color: #FB5258;
-    position: absolute;
-    margin: 1em 0;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
     border-radius: 1em;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     width: auto;
     text-align: center;
@@ -55,7 +62,8 @@
 .settings p > a {
     padding: 1em;
     background-color: #fb5258;
-    margin: 1em 0;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
     border-radius: 1em;
     color: #fff !important;
     text-decoration: none;

@@ -16,8 +16,8 @@
 }
 
 #plugin2 section img {
-    width: 100%;
-    transform: scale(0.7);
+    max-width: 22em;
+    transform: scale(.7);
 }
 
 #plugin2 main>h2 {
@@ -28,11 +28,6 @@
     text-align: center;
 }
 
-#plugin2 form section {
-    text-align: center;
-    width: 50%;
-    margin: 0 2em;
-}
 
 #plugin2 form h2 {
     color: inherit;
@@ -148,7 +143,7 @@
     padding: 6em 2em;
     max-width: 100%;
     background: url(https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg),linear-gradient(-30deg,#5855b0,#a79cfb);
-    height: 100vh;
+    height: auto;
     padding-top: calc(100vh - 85vh);
     background-size: cover;
 }
@@ -181,14 +176,24 @@
     text-align: center;
     padding: 4em 1em 0em;
 }
+
 #plugin2-result section.result > p a {
-    background-color: #fff;
     padding: 1em;
-    border-radius: 2em;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
+    border-radius: 1em;
+    color: #fff;
     text-decoration: none;
-    color: #ff445b;
-    font-weight: bold;
+    width: auto;
+    text-align: center;
 }
+#plugin2-result  section.result>p:last-child a {
+    background-color: #fff;
+    color: #fb5258!important;
+    border-bottom: solid .25em #c5c5c5;
+}
+
 #plugin2-result .tips {
     padding-top: 4em;
 }
@@ -278,31 +283,35 @@
     background-color: #000;
     border-color: #000;
 }
-#plugin2 form button svg {
+/* #plugin2 form button svg {
     background-color: #ff445b;
     width: 2em;
     height: 2em;
     border-radius: 100%;
     padding: .2em;
     margin-left: 1em;
-}
-#plugin2 div>section:last-child p button:hover {
-    border: none;
-}
+} */
 #plugin2 div>section:last-child p {
-    height: 3em;
     text-align: right;
 }
 
 #plugin2 div>section:last-child p button {
-    cursor: pointer;
-    color: #000;
+    padding: 1em;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
+    border-radius: 1em;
+    color: #fff;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2em;
-    display: inline-flex;
-    line-height: 2em;
-    border: none;
+    width: auto;
+    text-align: center;
+    transition: 0.3s;
+}
+#plugin2 div>section:last-child p button:hover {
+    background-color: #fa2c33;
+    border-color: #fa2c33;
+    border-bottom: solid .25em #a8191e;
+
 }
 
 #plugin2 form button {
@@ -315,3 +324,4 @@
     background-color: unset;
     padding: 0;
 }
+

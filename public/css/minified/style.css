@@ -68,6 +68,12 @@ main[id$=board] section:nth-of-type(2) ol {
   max-width: 60em;
   padding: 3em 0;
   overflow-x: scroll;
+  list-style: none;
+  counter-reset: story;
+}
+
+main[id$=board] section:nth-of-type(2) ol a {
+  margin-top: -2.4em;
 }
 
 main[id$=board] section:nth-of-type(2) ol li {
@@ -75,7 +81,27 @@ main[id$=board] section:nth-of-type(2) ol li {
   min-height: 12em;
   max-width: 12em;
   max-height: 12em;
-  margin: 0 2em;
+  margin: 0 3.25em;
+  counter-increment: story;
+}
+
+main[id$=board] section:nth-of-type(2) ol li:before {
+  content: counter(story);
+  position: relative;
+  left: -1.5em;
+  top: 3em;
+  font-weight: 700;
+  font-size: 1.75em;
+  color: #7a84dc;
+}
+
+main[id$=board]>section:first-of-type section:last-of-type li {
+  width: initial;
+  height: initial;
+  border: initial;
+  border-radius: initial;
+  margin: initial;
+  box-shadow: initial;
 }
 
 main[id$=board] section:nth-of-type(2) ol li:last-of-type:after {
@@ -147,6 +173,7 @@ main[id$=board] section:nth-of-type(3) section:first-of-type li {
 
 main[id$=board] section:nth-of-type(3) section:first-of-type span {
   max-width: 12em;
+  margin: auto 2.5em;
 }
 
 main[id$=board] section:nth-of-type(3) section:first-of-type img {
@@ -156,15 +183,34 @@ main[id$=board] section:nth-of-type(3) section:first-of-type img {
 
 main[id$=board]>section section:last-of-type ol {
   display: initial;
+  margin-top: initial;
+  padding: initial;
+  margin-left: 2em;
+  counter-reset: ranking;
+  list-style-type: none;
 }
 
-main[id$=board]>section:first-of-type section:last-of-type li {
-  width: initial;
-  height: initial;
-  border: initial;
-  border-radius: initial;
-  margin: initial;
-  box-shadow: initial;
+main[id$=board]>section section:last-of-type ol li {
+  counter-increment: ranking;
+}
+
+main[id$=board]>section section:last-of-type ol span {
+  font-weight: 700;
+}
+
+main[id$=board]>section section:last-of-type li.user {
+  font-size: 1.25em;
+  margin: .75em auto;
+}
+
+main[id$=board]>section section:last-of-type li.user span {
+  font-size: 1.25em;
+}
+
+main[id$=board]>section section:last-of-type ol li::before {
+  content: counter(ranking) ".";
+  margin-right: .5em;
+  font-weight: 700;
 }
 
 main[id$=board]>section:first-of-type div:not(.info) {
@@ -191,13 +237,15 @@ main[id$=board]>section:first-of-type div:not(.info) {
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(2,1fr);
   gap: 1.5em;
+  max-height: 55em;
+  max-width: 60em;
 }
 
 main[id$=board]>section:first-of-type section:first-of-type {
   grid-area: 1/1;
 }
 
-main[id$=board]>section section:first-of-type svg:first-of-type {
+main[id$=board]>section section:first-of-type>div svg {
   width: 10em;
 }
 
@@ -241,7 +289,8 @@ main[id$=board]>section:first-of-type section:nth-of-type(3) {
 }
 
 main[id$=board]>section:first-of-type section:last-of-type {
-  grid-area: 2 span/4;
+  grid-area: 1/4;
+  min-width: 16em;
 }
 
 main[id$=board]>section section:first-of-type {
@@ -267,7 +316,7 @@ main[id$=board]>section section:first-of-type div:first-of-type {
   margin: 0 auto;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   background-color: #f6f6f6;
   color: #000;
@@ -289,11 +338,20 @@ main[id$=board]>section section:first-of-type div:first-of-type {
   color: #000;
 }
 
+#detail main ul li img {
+  max-width: 20em;
+  transform: scale(.7);
+}
+
+#detail main ul li p {
+  padding-bottom: 2em;
+}
+
 #detail main ul li a {
   padding: 1em;
   background-color: #fb5258;
-  position: absolute;
-  margin: 1em 0;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
   border-radius: 1em;
   color: #fff;
   text-decoration: none;
@@ -314,7 +372,8 @@ main[id$=board]>section section:first-of-type div:first-of-type {
 .settings p>a {
   padding: 1em;
   background-color: #fb5258;
-  margin: 1em 0;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
   border-radius: 1em;
   color: #fff!important;
   text-decoration: none;
@@ -599,6 +658,10 @@ body {
   min-height: 100vh;
 }
 
+svg text {
+  font-family: Avenir,Helvetica,Roboto,Arial,sans-serif;
+}
+
 ul {
   text-decoration: none;
   margin: 0;
@@ -702,6 +765,12 @@ body main h1 {
   main.choose p a:last-of-type,
   main.choose>p span:first-of-type {
     margin-left: 2.5em;
+  }
+}
+
+@media (max-width:960px) {
+  #plugin2-result main .result {
+    height: auto;
   }
 }
 
@@ -906,7 +975,8 @@ main.choose>p:nth-child(1)>a:nth-child(3):focus {
 }
 #overview {
   display: flex;
-  color: #fff;
+  color: #000;
+  background-color: #eee;
 }
 
 #overview main {
@@ -987,10 +1057,10 @@ main.choose>p:nth-child(1)>a:nth-child(3):focus {
 
 .plugins-list ul li {
   list-style: none;
-  color: #fff;
+  color: #fb5258;
   display: flex;
   flex-direction: column;
-  width: 14.8em;
+  width: 12.8em;
   position: relative;
   text-align: center;
   border: 2px solid transparent;
@@ -1001,12 +1071,13 @@ main.choose>p:nth-child(1)>a:nth-child(3):focus {
   margin-right: 1em;
   border-radius: 1em;
   height: auto;
-  box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
-  height: 14.8em;
+  border: 2px solid transparent;
+  height: 12.8em;
+  border-bottom: solid .25em #bdbcbc;
 }
 
 .plugins-list ul li img {
-  width: 6em;
+  width: 4em;
   margin: auto;
 }
 
@@ -1021,7 +1092,7 @@ main.choose>p:nth-child(1)>a:nth-child(3):focus {
 }
 
 .plugins-list ul li h2 {
-  color: #000;
+  color: inherit;
 }
 
 #webtoolsmap {
@@ -1169,7 +1240,7 @@ a#btnModal3 {
 }
 
 #plugin2 section img {
-  width: 100%;
+  max-width: 22em;
   transform: scale(.7);
 }
 
@@ -1179,12 +1250,6 @@ a#btnModal3 {
 
 #plugin2 section {
   text-align: center;
-}
-
-#plugin2 form section {
-  text-align: center;
-  width: 50%;
-  margin: 0 2em;
 }
 
 #plugin2 form h2 {
@@ -1296,7 +1361,7 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  height: 100vh;
+  height: auto;
   padding-top: calc(100vh - 85vh);
   background-size: cover;
 }
@@ -1333,12 +1398,21 @@ a#btnModal3 {
 }
 
 #plugin2-result section.result>p a {
-  background-color: #fff;
   padding: 1em;
-  border-radius: 2em;
+  background-color: #fb5258;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
+  border-radius: 1em;
+  color: #fff;
   text-decoration: none;
-  color: #ff445b;
-  font-weight: 700;
+  width: auto;
+  text-align: center;
+}
+
+#plugin2-result section.result>p:last-child a {
+  background-color: #fff;
+  color: #fb5258!important;
+  border-bottom: solid .25em #c5c5c5;
 }
 
 #plugin2-result .tips {
@@ -1429,33 +1503,27 @@ a#btnModal3 {
   border-color: #000;
 }
 
-#plugin2 form button svg {
-  background-color: #ff445b;
-  width: 2em;
-  height: 2em;
-  border-radius: 100%;
-  padding: .2em;
-  margin-left: 1em;
-}
-
-#plugin2 div>section:last-child p button:hover {
-  border: none;
-}
-
 #plugin2 div>section:last-child p {
-  height: 3em;
   text-align: right;
 }
 
 #plugin2 div>section:last-child p button {
-  cursor: pointer;
-  color: #000;
+  padding: 1em;
+  background-color: #fb5258;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
+  border-radius: 1em;
+  color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2em;
-  display: inline-flex;
-  line-height: 2em;
-  border: none;
+  width: auto;
+  text-align: center;
+  transition: .3s;
+}
+
+#plugin2 div>section:last-child p button:hover {
+  background-color: #fa2c33;
+  border-color: #fa2c33;
+  border-bottom: solid .25em #a8191e;
 }
 
 #plugin2 form button {
@@ -1473,10 +1541,6 @@ a#btnModal3 {
 
 #quiz-detail main {
   padding-top: calc(100vh - 90vh);
-}
-
-#detail main ul li img {
-  transform: scale(.6);
 }
 
 #quiz main {
@@ -1601,7 +1665,7 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  height: 100vh;
+  height: auto;
   padding-top: calc(100vh - 85vh);
   background-size: cover;
 }
@@ -1637,12 +1701,23 @@ a#btnModal3 {
   padding: 4em 1em 0;
 }
 
-#quiz-result section.result>p a {
+#quiz-result section.result>p:last-child a {
   background-color: #fff;
+  color: #fb5258!important;
+  border-bottom: solid .25em #c5c5c5;
+}
+
+#quiz-result section.result>p a {
   padding: 1em;
-  border-radius: 2em;
+  background-color: #fb5258;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
+  border-radius: 1em;
+  color: #fff!important;
   text-decoration: none;
-  color: #ff445b;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
   font-weight: 700;
 }
 
@@ -1673,6 +1748,7 @@ a#btnModal3 {
 
 #quiz-result .tips a {
   color: #fb5258;
+  font-weight: 700;
 }
 
 #quiz-result .tips li button {
@@ -1728,15 +1804,10 @@ a#btnModal3 {
   border-color: #000;
 }
 
-svg.feather.feather-chevron-right {
-  background-color: #ff445b;
-  width: 1.6em;
-  height: 1.6em;
-  border-radius: 100%;
-  padding: .2em;
-  position: relative;
-  top: .5em;
-  left: .4em;
+#quiz form div>section:first-child h2 {
+  margin-bottom: 0;
+  min-height: auto;
+  padding-left: 0;
 }
 
 #quiz div>section:last-child p {
@@ -1745,11 +1816,16 @@ svg.feather.feather-chevron-right {
 }
 
 #quiz div>section:last-child p a {
-  cursor: pointer;
-  color: #000;
+  padding: 1em;
+  background-color: #fb5258;
+  border-bottom: solid .25em #a8191e;
+  margin-right: 0;
+  border-radius: 1em;
+  color: #fff!important;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.2em;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
 }
 .sidebar {
   background-color: #f6f6f6;
@@ -1881,9 +1957,9 @@ html {
 #start>nav {
   position: absolute;
   z-index: 9;
-  width: 80%;
+  width: 100%;
   padding: 2em;
-  margin: 0 10%;
+  margin: 0 auto;
 }
 
 #start>nav ul li:hover {
@@ -1894,16 +1970,23 @@ html {
   max-width: 22em;
 }
 
+#start>nav ul a:hover {
+  color: #000;
+}
+
 #start>nav ul a {
   color: #fff;
   font-weight: 700;
   font-size: 1.4em;
+  transition: .3s;
 }
 
 #start>nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 90em;
+  margin: 0 auto;
 }
 
 #start>nav ul li {
@@ -1911,7 +1994,6 @@ html {
   ALIGN-CONTENT: left;
   width: auto;
   position: relative;
-  padding: 0 2em;
   color: #fff;
 }
 
@@ -2040,6 +2122,7 @@ html {
 
 #start #usp ul li {
   width: 33%;
+  padding: 1em;
 }
 
 #start #usp ul li p {

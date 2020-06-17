@@ -1,6 +1,7 @@
 #overview {
     display: flex;
-    color: #fff;
+    color: #000;
+    background-color: #eeeeee;
 }
 #overview main {
     padding: 0;
@@ -77,10 +78,10 @@
 }
 .plugins-list ul li {
     list-style: none;
-    color: #fff;
+    color: #FB5258;
     display: flex;
     flex-direction: column;
-    width: 14.8em;
+    width: 12.8em;
     position: relative;
     text-align: center;
     border: 2px solid transparent;
@@ -91,12 +92,14 @@
     margin-right: 1em;
     border-radius: 1em;
     height: auto;
-    box-shadow: 6px 12px 22px 0 rgba(0,0,0,.57);
-    height: 14.8em;
+    border: 2px solid transparent;
+    height: 12.8em;
+    border-bottom: solid .25em #bdbcbc;
 }
 
+
 .plugins-list ul li img {
-    width: 6em;
+    width: 4em;
     margin: auto;
 
 }
@@ -112,7 +115,7 @@
 }
 
 .plugins-list ul li h2 {
-    color: #000;
+    color: inherit;
 }
 
 #webtoolsmap {

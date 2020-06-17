@@ -18,6 +18,10 @@ body {
     min-height: 100vh;
 }
 
+svg text {
+	font-family: "Avenir", Helvetica, Roboto, Arial, sans-serif;
+}
+
 ul {
     text-decoration: none;
     margin: 0;
@@ -131,7 +135,9 @@ body main h1 {
 
 /*tablets landscape mode*/
 @media (max-width:960px) {
-    
+    #plugin2-result main .result {
+        height: auto;
+    }
 }
 
 /*tablet*/
@@ -150,7 +156,8 @@ body main h1 {
 	
 	header div > h1 {
 		font-size: 2em;
-	}
+    }
+    
 }
 
 
