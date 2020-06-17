@@ -31,14 +31,17 @@
     color: #000;
 
 }
+#detail main ul li p {
+    padding-bottom: 2em;
+}
 
 #detail main ul li a {
     padding: 1em;
-    background-color: #FB5258;
-    position: absolute;
-    margin: 1em 0;
+    background-color: #fb5258;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
     border-radius: 1em;
-    color: #FFF;
+    color: #fff;
     text-decoration: none;
     width: auto;
     text-align: center;
@@ -55,7 +58,8 @@
 .settings p > a {
     padding: 1em;
     background-color: #fb5258;
-    margin: 1em 0;
+    border-bottom: solid .25em #a8191e;
+    margin-right: 0;
     border-radius: 1em;
     color: #fff !important;
     text-decoration: none;
