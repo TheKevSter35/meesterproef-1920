@@ -4,9 +4,9 @@ html {
 #start>nav {
     position: absolute;
     z-index: 9;
-    width: 80%;
+    width: 100%;
     padding: 2em;
-    margin: 0 10%;
+    margin: 0 auto;
 }
 #start>nav ul li:hover{
 	background-color: transparent;
@@ -14,23 +14,27 @@ html {
 #start>nav ul li img {
     max-width: 22em;
 }
+#start>nav ul a:hover {
+    color: #000;
+}
 #start>nav ul a {
     color: #fff;
-    font-weight: bold;
-	font-size: 1.4em;
-
+    font-weight: 700;
+    font-size: 1.4em;
+    transition: 0.3s;
 }
 #start>nav ul {
     display: flex;
     flex-direction: row;
-	justify-content: space-between;
+    justify-content: space-between;
+    max-width: 90em;
+    margin: 0 auto;
 }
 #start>nav ul li {
     align-items: left;
     ALIGN-CONTENT: left;
     width: auto;
     position: relative;
-    padding: 0 2em;
     color: #fff;
 }
 #start main>section:nth-of-type(1) {
@@ -156,6 +160,7 @@ html {
 }
 #start #usp ul li {
     width: 33%;
+    padding: 1em;
 }
 #start #usp ul li p {
 	text-align: left;
