@@ -11,7 +11,7 @@
     margin: 0 auto;
     padding: 0em;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     background-color: #f6f6f6;
     color: #000;
@@ -30,6 +30,10 @@
 #detail main ul li h2 {
     color: #000;
 
+}
+#detail main ul li img {
+    max-width: 20em;
+    transform: scale(.7);
 }
 #detail main ul li p {
     padding-bottom: 2em;

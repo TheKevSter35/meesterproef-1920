@@ -16,7 +16,7 @@
 }
 
 #plugin2 section img {
-    width: 22em;
+    max-width: 22em;
     transform: scale(.7);
 }
 
@@ -28,10 +28,6 @@
     text-align: center;
 }
 
-#plugin2 form section {
-    text-align: center;
-    margin: 0 2em;
-}
 
 #plugin2 form h2 {
     color: inherit;
@@ -191,6 +187,12 @@
     width: auto;
     text-align: center;
 }
+#plugin2-result  section.result>p:last-child a {
+    background-color: #fff;
+    color: #fb5258!important;
+    border-bottom: solid .25em #c5c5c5;
+}
+
 #plugin2-result .tips {
     padding-top: 4em;
 }
