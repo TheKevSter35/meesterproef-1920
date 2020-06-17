@@ -18,6 +18,10 @@ body {
     min-height: 100vh;
 }
 
+svg text {
+	font-family: "Avenir", Helvetica, Roboto, Arial, sans-serif;
+}
+
 ul {
     text-decoration: none;
     margin: 0;
