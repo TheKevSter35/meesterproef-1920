@@ -1,13 +1,12 @@
-main ~ a[href$="gast"] {
-	text-align: right;
-	margin: 2em 3em 2em auto;
-	float: right;
+iframe ~ a[href$="gast"] {
+	margin-top: 4em;
 }
 
 main[id^="intro"] {
 	display: flex;
 	flex-direction: row;
 	margin-top: 3em;
+	align-items: center;
 }
 
 main[id^="intro"] > section {
@@ -15,12 +14,6 @@ main[id^="intro"] > section {
 	max-width: 30em;
 	margin-right: 5em;
 	padding: initial;
-	HEIGHT: AUTO;
-}
-
-main[id^="intro"] > section div {
-	max-height: 20em;
-	overflow-y: scroll
 }
 
 main[id^="intro"] > section h2 {
@@ -35,6 +28,12 @@ main[id^="intro"] > section p {
 
 main[id^="intro"] > section p:first-child {
 	margin-top: 0;
+}
+
+main[id^="intro"] > section ~ div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #Layer_1 {
