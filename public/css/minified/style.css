@@ -175,7 +175,7 @@ main[id$=board]>section:first-of-type section {
   margin: initial;
   background-color: #7a84dc;
   color: #fff;
-  padding-left: 2em;
+  padding: 2em;
 }
 
 main[id$=board]>section:first-of-type h3,
@@ -183,6 +183,7 @@ main[id$=board]>section:first-of-type h4 {
   font-weight: 900;
   color: #fff;
   font-size: 1.5em;
+  margin-top: 0;
 }
 
 main[id$=board]>section:first-of-type div:not(.info) {
@@ -200,6 +201,24 @@ main[id$=board]>section section:first-of-type svg:first-of-type {
   width: 10em;
 }
 
+main[id$=board]>section section:first-of-type p {
+  font-size: 1.1em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+main[id$=board]>section section:first-of-type span {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+main[id$=board]>section section:first-of-type h3~p span {
+  font-size: 1.75em;
+  margin-top: .25em;
+  text-indent: .4em;
+}
+
 main[id$=board]>section section:first-of-type svg:first-of-type path:last-of-type {
   fill: #000549;
 }
@@ -210,6 +229,11 @@ main[id$=board]>section section:first-of-type svg:first-of-type path:first-of-ty
 
 main[id$=board]>section:first-of-type section:nth-of-type(2) {
   grid-area: 1/2 span;
+}
+
+main[id$=board]>section:first-of-type section:nth-of-type(2) span {
+  font-size: 1.2em;
+  font-weight: 700;
 }
 
 main[id$=board]>section:first-of-type section:nth-of-type(3) {
@@ -224,7 +248,7 @@ main[id$=board]>section section:first-of-type {
   max-width: 30em;
 }
 
-main[id$=board]>section section:first-of-type div {
+main[id$=board]>section section:first-of-type div:first-of-type {
   display: flex;
   flex-direction: row;
   align-items: center;
