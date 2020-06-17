@@ -1952,7 +1952,7 @@ a#btnModal3 {
   width: 100%;
 }
 
-.sidebar li:nth-of-type(n+2) a:before {
+.sidebar .missions li:nth-of-type(n+2) a:before {
   content: "";
   display: block;
   position: absolute;
@@ -1964,7 +1964,7 @@ a#btnModal3 {
   margin-left: -2em;
 }
 
-.sidebar li:nth-of-type(n+2) a.complete:before {
+.sidebar .missions li:nth-of-type(n+2) a.complete:before {
   background-image: url("/source/icons/checkmark.svg");
 }
 
