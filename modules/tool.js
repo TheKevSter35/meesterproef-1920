@@ -1,6 +1,9 @@
 function checkForUsedTool (toolName, collection) {
+	if (!collection) {
+		return false
+	}
 	for (const tool of collection) {
-		if (tool.name === toolName) {
+		if (tool.toolname === toolName) {
 			return true
 		}
 	}
@@ -8,27 +11,29 @@ function checkForUsedTool (toolName, collection) {
 }
 
 function getToolFromCollection (toolName, collection) {
+	if (!collection) {
+		throw new Error('No tools in collection')
+	}
 	for (const tool of collection) {
-		if (tool.name === toolName) {
+		if (tool.toolname === toolName) {
 			return tool
 		}
 	}
 	throw new Error('Tool not found')
 }
 
-function updateToolInformation (tool, key, newInfo) {
-	if (newData === null || newData === undefined || newData === Infinity || newData === -Infinity) {
-		throw new Error("Data not valid")
-	}
-	for (const keyName of Object.keys(tool)) {
-		if (keyName === key) {
-			tool[keyName] = newInfo
-			return tool
+function updateScore (collection, toolName, score) {
+	return collection.map(function (tool) {
+		if (tool.toolname === toolName) {
+			tool.recentscore = score
+			if (tool.highscore < score) {
+				tool.highscore = score
+			}
 		}
-	}
-	throw new Error("Key not found")
+		return tool
+	})
 }
 
 exports.isUsed = checkForUsedTool
 exports.retrieve = getToolFromCollection
-exports.updateInfo = updateToolInformation
+exports.updateScore = updateScore
