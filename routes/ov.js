@@ -1,6 +1,19 @@
 module.exports = function (app) {
-	const { review, checkLevel, levelName } = require('../modules/score')
+	const { review, checkLevel, levelName, getTotalScore } = require('../modules/score')
+	const { isUsed, retrieve, updateScore } = require('../modules/tool')
 	app.get('/ov-detail', (req, res) => {
+		const usedTools = req.session.usedtools
+		if (isUsed('OV survey', usedTools) === false) {
+			const tool = {
+				toolname: 'OV survey',
+				description: 'A survey asking what data will be saved when you use a OV-chipkaart',
+				type: 'survey',
+				maxpoints: 100,
+				recentscore: 0,
+				highscore: 0
+			}
+			usedTools.push(tool)
+		}
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
@@ -23,9 +36,12 @@ module.exports = function (app) {
 		})
 	})
 	app.post('/ov-result', (req, res) => {
+		const toolCollection = req.session.usedtools
+		const tool = retrieve('OV survey', toolCollection)
 		const answers = req.body
 		const results = review(answers, 25, 4)
-		req.session.score += results.earnedPoints
+		updateScore(toolCollection, tool.toolname, results.earnedPoints)
+		req.session.score = getTotalScore(toolCollection)
 		req.session.level = levelName(checkLevel(req.session.score))
 		const user = {
 			name: req.session.name,
