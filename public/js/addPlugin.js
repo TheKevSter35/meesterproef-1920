@@ -3,12 +3,12 @@ let inputImageUpload 	= document.querySelector('#uploadFotoInput')
 let imagePlacholder		= document.querySelector('#imagePlacholder')
 
 // On image upload
-inputImageUpload.addEventListener('input', function (event) {
+inputImageUpload.addEventListener('change', function (event) {
 
 	if (event.target.files && event.target.files[0]) {
 
-		alert(event.target.files)
-		var reader = new FileReader()
+		alert(event.target.files[0])
+		let reader = new FileReader()
 
 		reader.onload = function(e) {
 			alert(e.target.result)
