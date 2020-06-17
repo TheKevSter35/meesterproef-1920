@@ -2,6 +2,9 @@ module.exports = function (app) {
 	const { review, checkLevel, levelName, getTotalScore } = require('../modules/score')
 	const { isUsed, retrieve, updateScore } = require('../modules/tool')
 	app.get('/ov-detail', (req, res) => {
+		if (!req.session.userID) {
+			return res.redirect('/')
+		}
 		const usedTools = req.session.usedtools
 		if (isUsed('OV survey', usedTools) === false) {
 			const tool = {
@@ -20,10 +23,14 @@ module.exports = function (app) {
 			level: req.session.level
 		}
 		res.render('pages/ov/ov-detail',{
-			user: user
+			user: user,
+			usedTools: req.session.usedtools
 		})
 	})
 	app.get('/ov-game', (req, res) => {
+		if (!req.session.userID) {
+			return res.redirect('/')
+		}
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
@@ -31,11 +38,14 @@ module.exports = function (app) {
 		}
 		res.render('pages/ov/ov-game', {
 			queries: req.query,
-			user: user
-
+			user: user,
+			usedTools: req.session.usedtools
 		})
 	})
 	app.post('/ov-result', (req, res) => {
+		if (!req.session.userID) {
+			return res.redirect('/')
+		}
 		const toolCollection = req.session.usedtools
 		const tool = retrieve('OV survey', toolCollection)
 		const answers = req.body
@@ -50,7 +60,8 @@ module.exports = function (app) {
 		}
 		res.render('pages/ov/ov-result', {
 			score: results,
-			user: user
+			user: user,
+			usedTools: req.session.usedtools
 		})
 	})
 }
