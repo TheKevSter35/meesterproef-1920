@@ -107,9 +107,10 @@
     margin: 0 16px 0 0;
 }
 .sidebar .missions h3 {
-    padding: 1em 1em 0.3em;
+    padding-left: 1em;
     display: flex;
-    text-align: left;
+	text-align: left;
+	margin-top: 0;
 }
 
 .sidebar .panel {
@@ -137,4 +138,26 @@
 	font-weight: 600;
 	margin: auto 0 auto auto;
 	color: #000549;
+}
+
+.sidebar .profile p {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.25em;
+}
+
+.sidebar .profile p span {
+	font-weight: 600;
+	font-size: 1.5em;
+	color: #000549;
+	margin-top: 0.2em;
+}
+
+.sidebar .profile p:first-of-type span {
+	font-weight: 800;
+	font-size: 1.75em;
+}
+
+.sidebar .profile p:last-of-type {
+	margin-top: 0.5em;
 }
