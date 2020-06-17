@@ -12,10 +12,10 @@
                 <p><%= score.earnedPoints %> / <%= score.totalPoints %></p>
             </div>
             <% if(score.earnedPoints <= 50)  { %>
-            <h2> Onvoldoende: Je moet niet zomaar je data geven.</h2><p><a href="/overzicht">Terug naar map</a></p>
+            <h2> Onvoldoende: Je moet niet zomaar je gegevens geven.</h2><p><a href="/overzicht">Terug naar de kaart</a></p>
             <% } else if(score.earnedPoints == 100 )  { %>
-            <h2> Goed gedaan!: Je hebt geleerd niet zomaar je data weg te geven. </h2>
-            <p><a href="/overzicht">Terug naar map</a></p>
+            <h2> Goed gedaan! Je hebt geleerd niet zomaar je gegevens weg te geven. </h2>
+            <p><a href="/overzicht">Terug naar de kaart</a></p>
 
             <% } %>
         </section>
