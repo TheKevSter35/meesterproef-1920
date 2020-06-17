@@ -65,7 +65,16 @@ function getLevelName (level) {
 	return levelNames[level - 1]
 }
 
+function calculateTotalScore (toolCollection, key = 'earnedpoints') {
+	let total = 0
+	toolCollection.map(function (tool) {
+		total += tool[key]
+	})
+	return total
+}
+
 exports.review = reviewAnswers
 exports.checkLevel = checkLevel
 exports.levelName = getLevelName
 exports.toNextLevel = progressToNextLevel
+exports.getTotalScore = calculateTotalScore
