@@ -715,6 +715,12 @@ body main h1 {
   }
 }
 
+@media (max-width:960px) {
+  #plugin2-result main .result {
+    height: auto;
+  }
+}
+
 @media (min-width:30em) and (max-width:60em) {
   h1 {
     font-size: 40px;
@@ -1302,7 +1308,7 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  height: 100vh;
+  height: auto;
   padding-top: calc(100vh - 85vh);
   background-size: cover;
 }
@@ -1606,7 +1612,7 @@ a#btnModal3 {
   padding: 6em 2em;
   max-width: 100%;
   background: url("https://wijzer.amsterdam/dist/img/header-pattern.7c2e17c1.svg"),linear-gradient(-30deg,#5855b0,#a79cfb);
-  height: 100vh;
+  height: auto;
   padding-top: calc(100vh - 85vh);
   background-size: cover;
 }

@@ -131,7 +131,9 @@ body main h1 {
 
 /*tablets landscape mode*/
 @media (max-width:960px) {
-    
+    #plugin2-result main .result {
+        height: auto;
+    }
 }
 
 /*tablet*/
@@ -150,7 +152,8 @@ body main h1 {
 	
 	header div > h1 {
 		font-size: 2em;
-	}
+    }
+    
 }
 
 
