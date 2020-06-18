@@ -7,6 +7,12 @@ Also the webapllication can be expanded with more games/tools from different dev
 
 ![e3f13b9d4d05722b06123c2fb5ab7c15](https://user-images.githubusercontent.com/43183768/84875798-c080e380-b086-11ea-998c-a23973f62cca.jpg)
 
+## Collaborators
+
+Kevin Curi// https://github.com/TheKevSter35
+Kevin Kreule// https://github.com/qiubee
+Randy Dalgliesh// https://github.com/randy554
+
 
 ## Install 
 
@@ -41,6 +47,15 @@ Together with the clients: Ontwerplab OBA en ontwerpcollectief idiotēs. We will
 * You get points if you guess it first
 * Game over screen with the winner of the game.
 
+
+## Localfocus 
+
+https://localfocus.nl/
+The client used Localfocus to show the locations from all there libary's in amsterdam. We used it to show the different games in the map. 
+
+<img width="" alt="9fcb5cd1f89b6b8d7256a864ca896d12" src="https://user-images.githubusercontent.com/43183768/85010766-d8c53100-b160-11ea-863c-a354542f53ee.png">
+
+
 ## Dependencies 
 
 ```
@@ -54,6 +69,7 @@ Together with the clients: Ontwerplab OBA en ontwerpcollectief idiotēs. We will
     "npm": "^6.14.5",
     "uuid": "^8.1.0"
 ```
+
 ## devDependencies 
 
 ```
@@ -63,13 +79,5 @@ Together with the clients: Ontwerplab OBA en ontwerpcollectief idiotēs. We will
     "gulp-concat-css": "^3.1.0",
     "nodemon": "^2.0.2"
 ```
-
-## Localfocus https://localfocus.nl/
-
-The client used Localfocus to show the locations from all there libary's in amsterdam. We used it to show the different games in the map. 
-
-<img width="" alt="9fcb5cd1f89b6b8d7256a864ca896d12" src="https://user-images.githubusercontent.com/43183768/85010766-d8c53100-b160-11ea-863c-a354542f53ee.png">
-
-
 
 
