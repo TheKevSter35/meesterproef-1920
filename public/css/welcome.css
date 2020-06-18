@@ -12,7 +12,7 @@ html {
 	background-color: transparent;
 }
 #start>nav ul li img {
-    max-width: 22em;
+    max-width: 15em;
 }
 #start>nav ul a:hover {
     color: #000;
