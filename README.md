@@ -83,8 +83,7 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 ![Screenshot_2020-06-18_15 34 17](https://user-images.githubusercontent.com/43183768/85027081-c9061680-b179-11ea-8e4e-0b588e8eb1fa.png)
 
 latitude en longitute
-
-<summary>## Code voorbeelden</summary>
+## Code voorbeelden
 
 <details>
  **Gulp**
@@ -271,6 +270,8 @@ latitude en longitute
  exports.getTotalScore = calculateTotalScore
  ```
 </details>
+
+
 ### Structuur
 
 - server/
