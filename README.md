@@ -37,13 +37,6 @@ npm run dev
 npm run watch
 ```
 
-## Table of contents
-
-Design rationale 
-Product biography 
-Reflection
-
-
 ### Design rationale 
 https://github.com/TheKevSter35/meesterproef-1920/wiki/Design-Rationale
 
