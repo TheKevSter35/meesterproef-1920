@@ -297,4 +297,4 @@ EJS is gebruikt om templates te maken. Met include voegen we EJS bestanden toe b
 
 ## Product biography
 
-To read the full design process of each individual team member, go the [**Product Biography**](https://github.com/TheKevSter35/meesterproef-1920/wiki/Product-Biografie) in the wiki.
+To read the full design process of each individual team member, go to [**Product Biography team**](https://github.com/TheKevSter35/meesterproef-1920/wiki/Product-Biografie-team) in the wiki.
