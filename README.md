@@ -84,192 +84,192 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 
 latitude en longitute
 
-<summary>Code voorbeelden</summary>
+<summary>## Code voorbeelden</summary>
 
 <details>
-    **Gulp**
+ **Gulp**
 
-    Voor CSS hebben wij gulp-clean-css gebruikt om alle css bestanden in 1 minified css bestand te maken. 
+ Voor CSS hebben wij gulp-clean-css gebruikt om alle css bestanden in 1 minified css bestand te maken. 
 
-    ```jsx
-    const gulp = require('gulp')
-    const cleanCSS = require('gulp-clean-css')
-    const concat = require('gulp-concat-css')
+ ```jsx
+ const gulp = require('gulp')
+ const cleanCSS = require('gulp-clean-css')
+ const concat = require('gulp-concat-css')
 
-    gulp.task('buildCSS', () => {
-    	return gulp.src('public/css/*.css')
-    		.pipe(cleanCSS({compatibility: 'ie8'}))
-    		.pipe(concat('style.css'))
-    		.pipe(gulp.dest('public/css/minified'))
-    })
+ gulp.task('buildCSS', () => {
+   return gulp.src('public/css/*.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(concat('style.css'))
+      .pipe(gulp.dest('public/css/minified'))
+ })
 
-    gulp.task('watch', function(){
-    	gulp.watch('public/css/*.css', gulp.series('buildCSS'))
-    })
-    ```
+ gulp.task('watch', function(){
+   gulp.watch('public/css/*.css', gulp.series('buildCSS'))
+ })
+ ```
 
-    EJS
+ EJS
 
-    EJS is gebruikt om templates te maken. Met include voegen we EJS bestanden toe bijvoorbeeld head.ejs waar de <head> bevindt.
+ EJS is gebruikt om templates te maken. Met include voegen we EJS bestanden toe bijvoorbeeld head.ejs waar de <head> bevindt.
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
+ ```html
+ <!DOCTYPE html>
+ <html lang="en">
 
-    <%- include ('../partials/head.ejs') %>
+ <%- include ('../partials/head.ejs') %>
 
-    <body id="start">
-        <main>
-            <section>
-                <h1>Login</h1>
-                <form action="/overview">
-                    <label for="username"> Naam</label>
-                    <input type="text" name="username" placeholder="Gebruikersnaam">
-                    <label for="username">wachtwoord</label>
-                    <input type="password" placeholder="wachtwoord">
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </main>
-    </body>
-    </html>
-    ```
+ <body id="start">
+     <main>
+         <section>
+             <h1>Login</h1>
+             <form action="/overview">
+                 <label for="username"> Naam</label>
+                 <input type="text" name="username" placeholder="Gebruikersnaam">
+                 <label for="username">wachtwoord</label>
+                 <input type="password" placeholder="wachtwoord">
+                 <button type="submit">Submit</button>
+             </form>
+         </section>
+     </main>
+ </body>
+ </html>
+ ```
 
-    **Routes** 
+ **Routes** 
 
-    ```jsx
-    const router = require('express').Router()
+ ```jsx
+ const router = require('express').Router()
 
-    // controllers
-    const welcome = require('./controllers/start')
-    const introduction = require('./controllers/introduction')
-    const login = require('./controllers/inlog')
-    const overview = require('./controllers/overview')
-    const addPlugin = require('./controllers/addplugin')
-    const dashboard = require('./controllers/dashboard')
-    const guest = require('./controllers/guest')
-    const signup = require('./controllers/signup')
-    const popup = require('./controllers/popup')
-    const message = require('./controllers/message')
+ // controllers
+ const welcome = require('./controllers/start')
+ const introduction = require('./controllers/introduction')
+ const login = require('./controllers/inlog')
+ const overview = require('./controllers/overview')
+ const addPlugin = require('./controllers/addplugin')
+ const dashboard = require('./controllers/dashboard')
+ const guest = require('./controllers/guest')
+ const signup = require('./controllers/signup')
+ const popup = require('./controllers/popup')
+ const message = require('./controllers/message')
 
-    router.get('/', welcome)
-    	.get('/intro', introduction)
-    	.get('/gast', guest)
-    	.get('/login', login.get)
-    	.get('/overzicht', overview.get)
-    	.get('/popup', popup.get)
-    	.get('/dashboard', dashboard.get)
-    	.get('/add-plugin', addPlugin)
-    	.get('/account-aanmaken', signup.get)
-    	.post('/login', login.process)
-    	.post('/delete-message', message.delete)
+ router.get('/', welcome)
+   .get('/intro', introduction)
+   .get('/gast', guest)
+   .get('/login', login.get)
+   .get('/overzicht', overview.get)
+   .get('/popup', popup.get)
+   .get('/dashboard', dashboard.get)
+   .get('/add-plugin', addPlugin)
+   .get('/account-aanmaken', signup.get)
+   .post('/login', login.process)
+   .post('/delete-message', message.delete)
 
-    module.exports = router
-    ```
+ module.exports = router
+ ```
 
-    **Session** 
+ **Session** 
 
-    ```jsx
-    exports.get = function (req, res) {
-    	if (!req.session.userID) {
-    		return res.redirect('/')
-    	}
-    	const user = {
-    		name: req.session.name,
-    		score: req.session.score,
-    		level: req.session.level
-    	}
-    	return res.render('pages/overview', {
-    		user: user,
-    		usedTools: req.session.usedtools
-    	})
-    }
-    ```
+ ```jsx
+ exports.get = function (req, res) {
+   if (!req.session.userID) {
+      return res.redirect('/')
+   }
+   const user = {
+      name: req.session.name,
+      score: req.session.score,
+      level: req.session.level
+   }
+   return res.render('pages/overview', {
+      user: user,
+      usedTools: req.session.usedtools
+   })
+ }
+ ```
 
-    **Score** 
+ **Score** 
 
-    ```jsx
-    function reviewAnswers (answers, pointsForCorrectAnswer, allAnswers) {
-    	let totalScore, totalAnswers, score, correctAnswers
-    	totalScore = totalAnswers = score = correctAnswers = 0
-    	Object.entries(answers).map((answer, index) => {
-    		if (answer[1] === '1') {
-    			score += pointsForCorrectAnswer
-    			correctAnswers += 1
-    		}
-    		totalScore += pointsForCorrectAnswer
-    		totalAnswers += index
-    	})
-    	if (allAnswers && isNaN(allAnswers) === false) {
-    		totalAnswers = allAnswers
-    		totalScore = pointsForCorrectAnswer * allAnswers
-    	}
-    	return {
-    		correctAnswers: correctAnswers,
-    		earnedPoints: score,
-    		totalPoints: totalScore
-    	}
-    }
+ ```jsx
+ function reviewAnswers (answers, pointsForCorrectAnswer, allAnswers) {
+   let totalScore, totalAnswers, score, correctAnswers
+   totalScore = totalAnswers = score = correctAnswers = 0
+   Object.entries(answers).map((answer, index) => {
+      if (answer[1] === '1') {
+         score += pointsForCorrectAnswer
+         correctAnswers += 1
+      }
+      totalScore += pointsForCorrectAnswer
+      totalAnswers += index
+   })
+   if (allAnswers && isNaN(allAnswers) === false) {
+      totalAnswers = allAnswers
+      totalScore = pointsForCorrectAnswer * allAnswers
+   }
+   return {
+      correctAnswers: correctAnswers,
+      earnedPoints: score,
+      totalPoints: totalScore
+   }
+ }
 
-    function checkLevel (score) {
-    	switch (true) {
-    	case (score < 500):
-    		return 1
-    	case (score >= 500 && score < 1500):
-    		return 2
-    	case (score >= 1500 && score < 3000):
-    		return 3
-    	case (score >= 3000 && score < 5000):
-    		return 4
-    	case (score >= 5000 && score < 7000):
-    		return 5
-    	}
-    }
+ function checkLevel (score) {
+   switch (true) {
+   case (score < 500):
+      return 1
+   case (score >= 500 && score < 1500):
+      return 2
+   case (score >= 1500 && score < 3000):
+      return 3
+   case (score >= 3000 && score < 5000):
+      return 4
+   case (score >= 5000 && score < 7000):
+      return 5
+   }
+ }
 
-    function progressToNextLevel (score, level) {
-    	let pointsToNextLevel = 0
-    	switch (level) {
-    	case 1:
-    		pointsToNextLevel = 500 - score
-    		break
-    	case 2:
-    		pointsToNextLevel = 1500 - score
-    		break
-    	case 3:
-    		pointsToNextLevel = 3000 - score
-    		break
-    	case 4:
-    		pointsToNextLevel = 5000 - score
-    		break
-    	case 5:
-    		pointsToNextLevel = 7000 - score
-    		break
-    	}
-    	return {
-    		pointsToNextLevel: pointsToNextLevel,
-    		nextLevel: level + 1
-    	}
-    }
+ function progressToNextLevel (score, level) {
+   let pointsToNextLevel = 0
+   switch (level) {
+   case 1:
+      pointsToNextLevel = 500 - score
+      break
+   case 2:
+      pointsToNextLevel = 1500 - score
+      break
+   case 3:
+      pointsToNextLevel = 3000 - score
+      break
+   case 4:
+      pointsToNextLevel = 5000 - score
+      break
+   case 5:
+      pointsToNextLevel = 7000 - score
+      break
+   }
+   return {
+      pointsToNextLevel: pointsToNextLevel,
+      nextLevel: level + 1
+   }
+ }
 
-    function getLevelName (level) {
-    	const levelNames = ['Verkennen', 'Ontdekken', 'Leren', 'Onderzoeken', 'Begrijpen']
-    	return levelNames[level - 1]
-    }
+ function getLevelName (level) {
+   const levelNames = ['Verkennen', 'Ontdekken', 'Leren', 'Onderzoeken', 'Begrijpen']
+   return levelNames[level - 1]
+ }
 
-    function calculateTotalScore (toolCollection, key = 'highscore') {
-    	let total = 0
-    	toolCollection.map(function (tool) {
-    		total += tool[key]
-    	})
-    	return total
-    }
+ function calculateTotalScore (toolCollection, key = 'highscore') {
+   let total = 0
+   toolCollection.map(function (tool) {
+      total += tool[key]
+   })
+   return total
+ }
 
-    exports.review = reviewAnswers
-    exports.checkLevel = checkLevel
-    exports.levelName = getLevelName
-    exports.toNextLevel = progressToNextLevel
-    exports.getTotalScore = calculateTotalScore
-    ```
+ exports.review = reviewAnswers
+ exports.checkLevel = checkLevel
+ exports.levelName = getLevelName
+ exports.toNextLevel = progressToNextLevel
+ exports.getTotalScore = calculateTotalScore
+ ```
 </details>
 ### Structuur
 
