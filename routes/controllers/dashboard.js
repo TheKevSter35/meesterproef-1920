@@ -15,6 +15,7 @@ exports.get = function (req, res) {
 	return res.render('pages/dashboard', {
 		currentLevel: currentLevel,
 		user: user,
-		level: level
+		level: level,
+		usedTools: req.session.usedtools
 	})
 }

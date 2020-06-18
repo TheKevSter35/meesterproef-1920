@@ -5,18 +5,36 @@
 		<img src="../source/pictures/person.svg" alt="avatar">
 		<h3><%= user.name %></h3>
 		<p>Kennisniveau: <span><%= user.level %></span></p>
-		<p>Totaal aantal punten: <strong><span><%= user.score %> punten</span></strong></p>
+		<p>Totaal aantal punten: <span><%= user.score %> punten</span></p>
 	</div>
 	<div class="missions">
 		<h3>Voortgang</h3>
 		<ul>
-
 			<li class="voortgang1"><a href="/overzicht"><img src="../source/icons/map.svg"  alt="map icon">Terug naar de kaart</a></li>
-			<li> <a href="/ov-detail"><img src="../source/pictures/ov.png"  alt="Openbaar Vervoer icon">1. OV</a></li>
-			<li> <a href="/quiz-detail"><img src="../source/pictures/phishing_quiz.png"  alt="Quiz icon">2. Phishing Quiz</a></li>
-			<li><a href="/oba-detail"><img src="../source/pictures/bibliotheek.png"  alt="Bibliotheek icon">3. OBA</a></li>
-			<li><a href="/data-game"><img src="../source/icons/enquete.png"  alt="survey icon">4. Enquete </a></li>
-			
+			<li>
+				<a <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "OV survey") { %> class="complete" <% } %><% } %> href="/ov-detail"><img src="../source/pictures/ov.png"  alt="Openbaar Vervoer icon">1. OV  <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "OV survey") { %><span>(<%= usedTools[i].highscore %> / <%= usedTools[i].maxpoints %>)</span><% } %><% } %>
+				</a>
+			</li>
+			<li>
+				<a <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "Phishing Quiz") { %> class="complete" <% } %><% } %> href="/quiz-detail"><img src="../source/pictures/phishing_quiz.png"  alt="Quiz icon">2. Phishing Quiz <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "Phishing Quiz") { %><span>(<%= usedTools[i].highscore %> / <%= usedTools[i].maxpoints %>)</span><% } %><% } %>
+				</a>
+			</li>
+			<li>
+				<a <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "OBA survey") { %> class="complete" <% } %><% } %> href="/oba-detail"><img src="../source/pictures/bibliotheek.png"  alt="Bibliotheek icon">3. OBA<% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "OBA survey") { %><span>(<%= usedTools[i].highscore %> / <%= usedTools[i].maxpoints %>)</span><% } %><% } %>
+				</a>
+			</li>
+			<li>
+				<a <% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "Data enquête") { %> class="complete" <% } %><% } %> href="/data-game"><img src="../source/pictures/enquete.png"  alt="survey icon">4. Enquete<% for (var i=0; i < usedTools.length; i++) { %>
+				<% if (usedTools[i].toolname === "Data enquête") { %><span>(<%= usedTools[i].highscore %> / <%= usedTools[i].maxpoints %>)</span><% } %><% } %>
+				</a>
+			</li>
 		</ul>
 	</div>
 	<div class="chat">

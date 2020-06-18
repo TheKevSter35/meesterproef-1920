@@ -1,6 +1,22 @@
-module.exports = function (app) {
-	const { review, checkLevel, levelName } = require('../modules/score')
+module.exports = async function (app) {
+	const { review, checkLevel, levelName, getTotalScore } = require('../modules/score')
+	const { isUsed, retrieve, updateScore } = require('../modules/tool')
 	app.get('/data-game', (req, res) => {
+		if (!req.session.userID) {
+			return res.redirect('/')
+		}
+		const usedTools = req.session.usedtools
+		if (isUsed('Data enquête', usedTools) === false) {
+			const tool = {
+				toolname: 'Data enquête',
+				description: 'A survey to ask whether to save all data from the user.',
+				type: 'survey',
+				maxpoints: 100,
+				recentscore: 0,
+				highscore: 0
+			}
+			usedTools.push(tool)
+		}
 		const user = {
 			name: req.session.name,
 			score: req.session.score,
@@ -8,14 +24,20 @@ module.exports = function (app) {
 		}
 		res.render('pages/data/data-game', {
 			queries: req.query,
-			user: user
-
+			user: user,
+			usedTools: req.session.usedtools
 		})
 	})
 	app.post('/data-result', (req, res) => {
+		if (!req.session.userID) {
+			return res.redirect('/')
+		}
+		const toolCollection = req.session.usedtools
+		const tool = retrieve('Data enquête', toolCollection)
 		const answers = req.body
-		const results = review(answers, 100)
-		req.session.score += results.earnedPoints
+		const results = review(answers, tool.maxpoints, 1)
+		updateScore(toolCollection, tool.toolname, results.earnedPoints)
+		req.session.score = getTotalScore(toolCollection)
 		req.session.level = levelName(checkLevel(req.session.score))
 		const user = {
 			name: req.session.name,
@@ -24,7 +46,8 @@ module.exports = function (app) {
 		}
 		res.render('pages/data/data-result', {
 			score: results,
-			user: user
+			user: user,
+			usedTools: req.session.usedtools
 		})
 	})
 }

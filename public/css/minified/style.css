@@ -1954,7 +1954,7 @@ a#btnModal3 {
 
 .sidebar .missions li a {
   display: flex;
-  padding: 16px 40px;
+  padding: 1em 2.5em 1em 3.25em;
   align-items: center;
   text-decoration: none;
   color: #002b37;
@@ -1970,13 +1970,59 @@ a#btnModal3 {
 }
 
 .sidebar .missions h3 {
-  padding: 1em 1em .3em;
+  padding-left: 1em;
   display: flex;
   text-align: left;
+  margin-top: 0;
 }
 
 .sidebar .panel {
   width: 100%;
+}
+
+.sidebar .missions li:nth-of-type(n+2) a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("/source/icons/checkmark-empty.svg");
+  background-size: 1.25em;
+  background-repeat: no-repeat;
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: -2em;
+}
+
+.sidebar .missions li:nth-of-type(n+2) a.complete:before {
+  background-image: url("/source/icons/checkmark.svg");
+}
+
+.sidebar a span {
+  display: block;
+  font-weight: 600;
+  margin: auto 0 auto auto;
+  color: #000549;
+}
+
+.sidebar .profile p {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25em;
+}
+
+.sidebar .profile p span {
+  font-weight: 600;
+  font-size: 1.5em;
+  color: #000549;
+  margin-top: .2em;
+}
+
+.sidebar .profile p:first-of-type span {
+  font-weight: 800;
+  font-size: 1.75em;
+}
+
+.sidebar .profile p:last-of-type {
+  margin-top: .5em;
 }
 html {
   scroll-behavior: smooth;

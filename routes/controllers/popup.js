@@ -8,6 +8,7 @@ exports.get = function (req, res) {
 		level: req.session.level
 	}
 	return res.render('pages/popup', {
-		user: user
+		user: user,
+		usedTools: req.session.usedtools
 	})
 }

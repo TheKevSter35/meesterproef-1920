@@ -1,17 +1,17 @@
-function reviewAnswers (answers, pointsOnCorrectAnswer, allAnswers) {
+function reviewAnswers (answers, pointsForCorrectAnswer, allAnswers) {
 	let totalScore, totalAnswers, score, correctAnswers
 	totalScore = totalAnswers = score = correctAnswers = 0
 	Object.entries(answers).map((answer, index) => {
 		if (answer[1] === '1') {
-			score += pointsOnCorrectAnswer
+			score += pointsForCorrectAnswer
 			correctAnswers += 1
 		}
-		totalScore += pointsOnCorrectAnswer
+		totalScore += pointsForCorrectAnswer
 		totalAnswers += index
 	})
 	if (allAnswers && isNaN(allAnswers) === false) {
 		totalAnswers = allAnswers
-		totalScore = pointsOnCorrectAnswer * allAnswers
+		totalScore = pointsForCorrectAnswer * allAnswers
 	}
 	return {
 		correctAnswers: correctAnswers,
@@ -65,7 +65,16 @@ function getLevelName (level) {
 	return levelNames[level - 1]
 }
 
+function calculateTotalScore (toolCollection, key = 'highscore') {
+	let total = 0
+	toolCollection.map(function (tool) {
+		total += tool[key]
+	})
+	return total
+}
+
 exports.review = reviewAnswers
 exports.checkLevel = checkLevel
 exports.levelName = getLevelName
 exports.toNextLevel = progressToNextLevel
+exports.getTotalScore = calculateTotalScore
