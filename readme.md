@@ -27,10 +27,6 @@ npm run dev
 npm run watch
 ```
 
-## Documentation
-
-To read the full design process of each individual team member, go the [**Product Biography**](https://github.com/TheKevSter35/meesterproef-1920/wiki/Product-Biografie) in the wiki.
-
 ## Design rationale (dutch)
 
 ### Debriefing
@@ -298,3 +294,7 @@ EJS is gebruikt om templates te maken. Met include voegen we EJS bestanden toe b
 - .gitignore
 - Procfile/ Voor heroku om the site te kunnen draaien.
 ```
+
+## Product biography
+
+To read the full design process of each individual team member, go the [**Product Biography**](https://github.com/TheKevSter35/meesterproef-1920/wiki/Product-Biografie) in the wiki.
