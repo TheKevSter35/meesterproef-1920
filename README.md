@@ -85,6 +85,10 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 
 ![Screenshot_2020-06-18_15 34 17](https://user-images.githubusercontent.com/43183768/85027081-c9061680-b179-11ea-8e4e-0b588e8eb1fa.png)
 
+Om de kaart te realiseren hebben wij uiteindelijk gebruikt gemaakt van een kaart CMS systeem. Dit systeem heet Localfocus. Met Localfocus kun je jouw eigen data inzichtelijk maken door middel van een kaart, grafiek of tabel visualisatie. Localfocus is een interne tool bij de OBA. Een van de hoofdreden waarom zij hier gebruik van maken, is het verzamelen van data activiteiten uit de kaart. Daarom was het een grote vraag om hiermee verder te gaan.
+
+![kaart_Digi-weet](https://user-images.githubusercontent.com/43183768/85030419-bb529000-b17d-11ea-8ad1-49dd70c30dfd.png)
+
 
 ## Code voorbeelden
 
@@ -93,7 +97,7 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 
  Voor CSS hebben wij gulp-clean-css gebruikt om alle css bestanden in 1 minified css bestand te maken. 
 
- ```jsx
+ ```js
  const gulp = require('gulp')
  const cleanCSS = require('gulp-clean-css')
  const concat = require('gulp-concat-css')
@@ -139,7 +143,7 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 
  **Routes** 
 
- ```jsx
+ ```js
  const router = require('express').Router()
 
  // controllers
@@ -171,7 +175,7 @@ Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweerg
 
  **Session** 
 
- ```jsx
+ ```js
  exports.get = function (req, res) {
    if (!req.session.userID) {
       return res.redirect('/')
