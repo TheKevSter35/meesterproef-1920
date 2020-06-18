@@ -37,7 +37,7 @@ npm run dev
 npm run watch
 ```
 
-### Design rationale 
+### Design rationale (Dutch Version)
 https://github.com/TheKevSter35/meesterproef-1920/wiki/Design-Rationale
 
 ### Product biography 
