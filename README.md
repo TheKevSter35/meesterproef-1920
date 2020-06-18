@@ -44,9 +44,6 @@ Together with the clients: Ontwerplab OBA en ontwerpcollectief idiotēs. We will
 * Toggle for streetview or list view.
 * Earn points.
 * Compare points with different users.
-* You get points if you guess it first
-* Game over screen with the winner of the game.
-
 
 ## Localfocus 
 
