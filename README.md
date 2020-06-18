@@ -39,15 +39,16 @@ npm run watch
 
 ## Design rationale (Dutch Version)
 
+***
 ### Debriefing
 
 Wij bevinden ons tegenwoordig in een samenleving waar we steeds meer afhankelijk zijn van het digitale wereldje. In dit wereldje delen we steeds vaker onze gegevens met bedrijven en instellingen zonder hier altijd goed bij stil te staan. Denk bijvoorbeeld aan het nemen van een nieuwe telefoon abonnement, winkelen met een bonuskaart of een account aanmaken bij een webshop. Al deze verschillende soorten data worden dagelijks over ons verzamelt. Waarom, door wie, hoe heeft dit invloed op mijn leven en wat kan ik er tegen doen? Voor de een liggen antwoorden op deze vragen wat meer voor de hand dan de ander. Het feit is dat een aanzienlijk groot deel van Amsterdam weinig tot geen digitale vaardigheden bezit. Deze doelgroep moet toch mee kunnen draaien met steeds meer digitaliserende maatschappij. Hoe kan hiervoor gezorgd worden? 
 
 Het Ontwerplab Digitale Stad is een samenwerkingsverband tussen de Gemeente Amsterdam, de OBA en ontwerpcollectief idiotes.  
 
-Samen moet de opdrachtgevers: Ontwerplab OBA en ontwerpcollectief idiotēs. Gaan Team Toolbox aan de slag om binnen 5-6 weken een digitaal interactief product te ontwikkelen om Niet digitale vaardige Amsterdammers meer transpiratie te geven over hun data en waarvoor het gebruikt gaat/kan worden. 
+Samen moet de opdrachtgevers: Ontwerplab OBA en ontwerpcollectief idiotēs. Gaan wij aan de slag om binnen 5-6 weken een digitaal interactief product te ontwikkelen om Niet digitale vaardige Amsterdammers meer transpiratie te geven over hun data en waarvoor het gebruikt gaat/kan worden. 
 
-Nog veel (minder digitaal vaardige) Amsterdammers zijn zich niet bewust over hoe zij zich online veilig kunnen bewegen. Zij zijn daarbij kwetsbaar voor het delen van persoonlijk gevoelige informatie en voor de online dataverzameling door verschillende organisaties. Zij weten niet wat voor data van hen wordt verzameld, waar de data voor bedoeld is en waarvoor het wordt gebruikt, en wie toegang heeft tot de data. 
+Nog veel (minder digitaal vaardige) Amsterdammers zijn zich niet bewust over hoe zij zich online veilig kunnen bewegen. Zij zijn daarbij kwetsbaar voor het delen van persoonlijk gevoelige informatie en voor de online dataverzameling door verschillende organisaties. Zij weten niet wat voor data van hen wordt verzameld, waar de data voor bedoeld is en waarvoor het wordt gebruikt, en wie toegang heeft tot de data.
 
 ### Probleemstelling
 
@@ -78,11 +79,13 @@ Wat voor functies bevat Digi-weet.
 
 ## Localfocus
 
-Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweergave pagina vinden gebruikers een kaart van Amsterdam. Op deze kaart zijn verschillende locaties spellen te vinden die de gebruikers kunnen spelen. Er zijn zowel losse spellen te spelen als spellen die onderdeel maken van een route met een reeks spellen. Deze routes bevatten een verhaal die de gebruikers stapsgewijs begeleiden in spelen van de gerelateerde spellen. De markers (iconen) van de spellen zijn geplaatst op specifieke locaties in Amsterdam. Dit gaat door middel van longitude en latitude data in een Google sheet bestand die weer gelinkt zijn aan een kaart.
+![kaart_Digi-weet](https://user-images.githubusercontent.com/43183768/85029393-885bcc80-b17c-11ea-9ef5-0545ccce9e49.png)
+ 
+Een cruciaal onderdeel van deze applicatie is de kaartweergave. Op de kaartweergave pagina vinden gebruikers een kaart van Amsterdam. Op deze kaart zijn verschillende locaties spellen te vinden die de gebruikers kunnen spelen. Er zijn zowel losse spellen te spelen, als spellen die onderdeel maken van een route met een reeks spellen. Deze routes bevatten een verhaal die de gebruikers stapsgewijs begeleiden in het spelen van de gerelateerde spellen. De markers (iconen) van de spellen zijn geplaatst op specifieke locaties in Amsterdam. Dit gaat door middel van longitude en latitude data in een Google sheet bestand die weer gelinkt zijn aan een kaart.
 
 ![Screenshot_2020-06-18_15 34 17](https://user-images.githubusercontent.com/43183768/85027081-c9061680-b179-11ea-8e4e-0b588e8eb1fa.png)
 
-latitude en longitute
+
 ## Code voorbeelden
 
 <details>
@@ -299,6 +302,8 @@ latitude en longitute
 - package.json
 - .gitignore
 - Procfile/ Voor heroku om the site te kunnen draaien.
+
+***
 
 ### Product biography 
 Kevin Curi// https://github.com/TheKevSter35/meesterproef-1920/wiki/
