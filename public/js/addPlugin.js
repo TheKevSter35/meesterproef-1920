@@ -17,7 +17,7 @@ inputImageUpload.addEventListener('change', function (event) {
 
 		})
 
-		reader.readAsDataURL(event.target.files[0]) // convert to base64 string
+		reader.readAsDataURL(event.target.files[0]) // convert to base64 url
 
 	}
 
